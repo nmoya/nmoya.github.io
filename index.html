@@ -1,1 +1,100 @@
-Hello World
+<html>
+	<head>
+		<meta charset = "utf-8" />
+		<meta name="description" content="Nikolas Moya Portfolio">
+		<meta name="keywords" content="nikolas moya, programmer, nodejs, php, python">
+		<meta name="author" content="Marilia Ferreira and Nikolas Moya">
+		<title>Nikolas Moya Portfolio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<script src="assets/js/modernizr.custom.js"></script>
+		
+	</head>
+<body class="cbp-spmenu-push">
+
+	<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+			<h3>Menu</h3>
+			<a href="#">home</a>
+			<a href="#">about me</a>
+			<a href="#">my projects</a>
+			<a href="#">photography</a>
+			<a href="#">contact</a>
+	</nav>
+
+	<div class="container">
+		<div class="column full menu">
+			<!-- <button id="showRight">Show/Hide Right Slide Menu</button> -->
+		</div>
+
+		<div class="column full">
+			<header class="title-nikolas">
+				<div class="alignment-title">NIKOLAS<br /> MOYA //</div>
+			</header>
+		</div>
+
+	</div>
+
+
+
+	
+	
+
+
+	
+
+	<!--<div class="container">
+		  <div class="row">
+		    <div class="column full">column full</div>
+		  </div>
+		  
+		  <div class="row">
+		    <div class="column two-thirds">column two thirds</div>
+		    <div class="column one-third">column one third</div>
+		  </div>
+		  
+		  <div class="row">
+		    <div class="column half">column half</div>
+		    <div class="column half">column half</div>
+		  </div>
+		  
+		  <div class="row">
+		    <div class="column one-third">column one third</div>
+		    <div class="column one-third">column one third</div>
+		    <div class="column one-third">column one third</div>
+		  </div>
+		  
+		  <div class="row">
+		    <div class="column one-fourth">column one fourth</div>
+		    <div class="column one-fourth">column one fourth</div>
+		    <div class="column one-fourth">column one fourth</div>
+		    <div class="column one-fourth">column one fourth</div>
+		  </div>
+	</div> -->
+
+
+	<script src="js/classie.js"></script>
+		<script>
+			var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+				showRight = document.getElementById( 'showRight' ),
+				showRightPush = document.getElementById( 'showRightPush' ),
+				body = document.body;
+
+			
+			showRight.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( menuRight, 'cbp-spmenu-open' );
+				disableOther( 'showRight' );
+			};
+			
+
+			function disableOther( button ) {
+				
+				if( button !== 'showRight' ) {
+					classie.toggle( showRight, 'disabled' );
+				}
+				
+			}
+		</script>
+
+</body>
+</html>
