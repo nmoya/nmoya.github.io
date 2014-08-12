@@ -1,0 +1,354 @@
+
+
+f*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*--------------------------------------------------------------   FONTS   ------------------------*/
+
+
+
+
+/*--------------------------------------------------------------   GLOBALS   ------------------------*/
+body{
+    font-family: "freight-text-pro", serif;
+	color: #3c3c3c; 
+  /*background-color: #f0f2f3;*/
+
+}
+
+h1{
+    
+    font-family: "freight-sans-pro",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+	font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    text-align: center;
+    margin-top: -10px;
+
+}
+
+h2{
+  
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #b7b7b6;
+  text-align: center; 
+}
+
+h3{
+  
+    font-family: "freight-text-pro",sans-serif;
+font-style: italic;
+font-weight: 400;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: #b7b7b6;
+  text-align: center;
+}
+
+h4{
+  font-family: "freight-text-pro",sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.6em;
+  font-weight: 300;
+  color: #b7b7b6;
+  text-align: center;
+}
+
+h5{
+  font-family: "freight-text-pro",sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.0em;
+  font-weight: 100;
+  color: #b7b7b6;
+  text-align: center;
+  
+}
+
+p{
+	line-height: 170%;
+	font-size: 1.2em; 
+}
+
+a{
+	color: #b7b7b6;
+	text-decoration: none;
+	-o-transition:.5s;
+  	-ms-transition:.5s;
+  	-moz-transition:.5s;
+  	-webkit-transition:.5s;
+  /* ...and now for the proper property */
+  	transition:.5s;
+}
+
+a:visited{
+  color: #b7b7b6;
+  text-decoration: none;
+}
+
+a:hover{
+	color: #08dee6; 
+	text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header{
+  margin-top: 5%;
+  padding-bottom: 5%;
+}
+
+
+/*--------------------------------------------------------------   CLASSES/IDS   ------------------------*/
+
+.divisor{
+    margin-top: -1%;
+}
+
+.projeto-1{
+ width: 75%;
+ margin-left: 7%;
+ border-top:1px solid #f0f0f0;
+ margin-bottom: 5%;
+ padding: 2% 5% 5% 5%;
+  
+}
+
+
+.imagem-projeto img{
+  margin-left: 9%;
+  width: 80%;
+  border:1px solid #d3d3d3;
+
+}
+
+
+
+
+.social{
+border:1px solid #d3d3d3;
+padding: 15px 40px; 
+
+width:5px;
+border-radius:25px;
+}
+
+
+
+.container{
+	margin: 0 auto;
+	width: 100%;
+  
+}
+
+.content{
+  width: 100%;
+  border-top:1px solid #d3d3d3;
+  border-bottom:1px solid #d3d3d3;
+  
+  margin-top: 5%;
+  /*background-color: purple;*/
+  margin-bottom: 4%;
+  padding-bottom: 2%;
+    
+}
+
+.project-description{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.project-title-description{
+    text-align: left;
+    font-size: 2.5em;
+    line-height: 1%;
+}
+
+.breadcrumb{
+    text-align: left;
+}
+
+
+
+
+
+
+
+/*---- LINK EFFECT ---*/
+
+
+
+
+section {
+	position: relative;
+	z-index: 1; /* needed for setting pseudo-element z-index */
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+section a {
+	position: relative;
+	display: inline-block;
+	outline: none;
+	color: #404d5b;
+	vertical-align: bottom;
+	text-decoration: none;
+	white-space: nowrap;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+section a:hover{
+    color: #cbcbcb;
+}
+
+section a::before,
+section a::after {
+	pointer-events: none;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+/* Curtain */
+.link-curtain {
+	background: rgba(255,255,255,1);
+    margin-top: -2%;
+}
+
+.link-curtain a {
+	overflow: hidden;
+	font-weight: 500;
+}
+
+.link-curtain a::before,
+.link-curtain a::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.link-curtain a::before {
+	border-top: 1px solid #d3d3d3;
+	background: transparent;
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+	-webkit-transform: translateY( calc(100% - 2px) );
+	transform: translateY( calc(100% - 2px) );
+}
+
+.link-curtain a:hover::before,
+.link-curtain a:focus::before {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.link-curtain a:hover::before,
+.link-curtain a:focus::before,
+.link-curtain a:hover::after,
+.link-curtain a:focus::after {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+
+.link-curtain a::after {
+	z-index: -1;
+	background: rgba(240,240,240,1);
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.link-curtain a:hover::after,
+.link-curtain a:focus::after {
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------   MEDIA QUERIES!   ------------------------*/
+
+
+/*------------------------ MEDIA QUERIES FOR SMARTPHONE ------------------------*/
+@media screen and (max-width: 320px){
+
+
+
+}
+
+/*------------------------ MEDIA QUERIES FOR SMARTPHONE / LANDSCAPE ------------------------*/
+
+/*media queries for smartphone landscape max 480px width*/
+@media screen and (max-width: 480px) and (min-width: 321px){
+
+
+
+}
+
+  /*media queries for smartphone landscape max 568px width (iphone 5 landscape)*/
+@media screen and (max-width: 568px) and (min-width: 481px){
+
+
+
+}
+
+/*------------------------ MEDIA QUERIES FOR SMALL TABLETS ------------------------*/
+
+@media screen and (max-width: 600px) and (min-width: 569px){
+
+
+
+
+}
+
+/*------------------------ MEDIA QUERIES FOR SMALL TABLETS / LANDSCAPE and IPADS / PORTRAIT ------------------------*/
+
+@media screen and (max-width: 800px) and (min-width: 601px){
+
+
+}
+
+/*------------------------ MEDIA QUERIES FOR IPAD / LANDSCAPE ------------------------*/
+
+@media screen and (max-width: 1024px) and (min-width: 801){ /*it is working for screen 1280 width*/
+
+
+}
+
+@media screen and (max-width: 1280px) and (min-width: 1025){
+
+}
+
+
+
+
+@media screen and (max-width: 1920px) and (min-width: 1281){
+
+ 
+}
+
