@@ -64,6 +64,8 @@ void setup (){
   size (600, 600);
   noCursor();
   textSize(32);
+  noStroke();
+  smooth();
   
 }
 
