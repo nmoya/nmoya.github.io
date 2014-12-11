@@ -3,7 +3,8 @@ PImage out;
 
 void setup()
 { 
-  img = loadImage("./assets/images/whale.jpg");
+  img = loadImage("https://raw.githubusercontent.com/nmoya/nmoya.github.io/master/processing/iftedt/assets/images/whale.jpg");
+  //  img = loadImage("./assets/images/whale.jpg");
   out = createImage(img.width, img.height, RGB);
   out = compute_gradient(img);
   //size(img.width*2, img.height);
