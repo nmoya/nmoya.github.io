@@ -1,424 +1,219 @@
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+/* --------------------------------------------------------------   FONTS   ------------------------ */
+/* --------------------------------------------------------------   GLOBALS   ------------------------ */
+body {
+  font-family: "proxima-nova",sans-serif;
+  color: #3c3c3c;
+  font-weight: 300;
 }
-
-@font-face {
-    font-family: 'geniusthin';
-    src: url('fonts/Genius-100-Thin-webfont.eot');
-    src: url('fonts/Genius-100-Thin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Genius-100-Thin-webfont.woff') format('woff'),
-         url('fonts/Genius-100-Thin-webfont.ttf') format('truetype'),
-         url('fonts/Genius-100-Thin-webfont.svg#geniusthin') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-.container {
-  margin: 0 auto;
-  
-  width: 100%;
-}
-
-.column {
-  float: left;
-  margin-left: 5%;
-}
- 
-.column:first-child {
-  margin-left: 0;
-}
-
-.column.full {
-  width: 100%;
-}
-  
-.column.two-thirds {
-  width: 65%;
-}
-  
-.column.half {
-  width: 47.5%;
-}
- 
-.column.one-third {
-  width: 30%;
-}
- 
-.column.one-fourth {
-  width: 21.25%;
-}
-
-.row {
-  overflow: hidden;
-}
-
-.menu{
-  height: 100px;
-}
-
-header{
-  width: 70%;
-  margin-left: 10%;
-  height: 500px;
-}
-
-.title-nikolas{
-  background-color: #f6f6f6;
-  font-family: 'geniusthin';
-  color: #313131;
-  font-size: 6em;
-  line-height: 100%;
-  letter-spacing: 0.2em;
+h1 {
+  font-family: "brandon-grotesque",sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 2.2em;
   text-align: center;
 }
-
-.alignment-title{
-  float: left;
-  margin-top: 17%;
-  margin-left: 19%;
-}
-
-
-/*------------------------ MEDIA QUERIES FOR SMARTPHONE ------------------------*/
-@media screen and (max-width: 480px){
-
-  .column.full,
-  .column.two-thirds,
-  .column.half,
-  .column.one-third,
-  .column.one-fourth {
-   
-    width: 100%;
-  }
-
-  header{
-  width: 90%;
-  height: 175px;
-  margin: 0;
-}
-
-  .title-nikolas{
-    background-color: #f6f6f6;
-    font-family: 'geniusthin';
-    color: #313131;
-    font-size: 2.5em;
-    line-height: 100%;
-    letter-spacing: 0.13em;
-    text-align: center;
-  }
-
-  .alignment-title{
-    float: left;
-    margin-top: 15%;
-    margin-left: 13%;
-  }
-
-  .menu{
-    height: 50px;
-  }
-
-}
-
-/*------------------------ MEDIA QUERIES FOR SMARTPHONE LANDSCAPE ------------------------*/
-
-@media screen and (max-width: 639px) and (min-width: 480) {
-  header{
-    width: 90%;
-    height: 280px;
-    margin: 0;
-  }
-
-  .title-nikolas{
-    background-color: #f6f6f6;
-    font-family: 'geniusthin';
-    color: #313131;
-    font-size: 4em;
-    line-height: 100%;
-    letter-spacing: 0.13em;
-    text-align: center;
-  }
-
-  .alignment-title{
-    float: left;
-    margin-top: 10%;
-    margin-left: 13%;
-  }
-
-  .menu{
-    height: 50px;
-  }
-}
-
-/*------------------------ MEDIA QUERIES FOR SMALL TABLET ------------------------*/
-
-@media screen and (max-width: 640px) and (min-width: 568px) {
-  header{
-  width: 90%;
-  height: 280px;
-  margin: 0;
-}
-
-  .title-nikolas{
-    background-color: #f6f6f6;
-    font-family: 'geniusthin';
-    color: #313131;
-    font-size: 4em;
-    line-height: 100%;
-    letter-spacing: 0.13em;
-    text-align: center;
-  }
-
-  .alignment-title{
-    float: left;
-    margin-top: 15%;
-    margin-left: 21%;
-  }
-}
-
-/*------------------------ MEDIA QUERIES FOR SMALL TABLET LANDSCAPE ------------------------*/
-
-@media screen and (max-width: 800px) and (min-width: 769px) {
-
-  header{
-    width: 70%;
-    height: 280px;
-    margin-left: 10.5%;
-  }
-
-  .title-nikolas{
-    background-color: #f6f6f6;
-    font-family: 'geniusthin';
-    color: #313131;
-    font-size: 4em;
-    line-height: 100%;
-    letter-spacing: 0.13em;
-    text-align: center;
-  }
-
-  .alignment-title{
-    float: left;
-    margin-top: 14%;
-    margin-left: 22%;
-  }
-}
-
-
-/*------------------------ MEDIA QUERIES FOR TABLET ------------------------*/
-
-@media screen and (max-width: 768px) and (min-width: 641px) {
-	.column.full {
-    width: 70%;
-    border: 1px #000;
-    padding: 4px;
-    margin-left: 16%;
-  }
-
-  header{
-    width: 100%;
-    height: 350px;
-    margin: 0;
-  }
-
-.title-nikolas{
-    background-color: #f6f6f6;
-    font-family: 'geniusthin';
-    color: #313131;
-    font-size: 4em;
-    line-height: 100%;
-    letter-spacing: 0.13em;
-    text-align: center;
-  }
-
-  .alignment-title{
-    float: left;
-    margin-top: 21%;
-    margin-left: 20%;
-  }
-
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*------------------------ MENU SLIDE ------------------------*/
-/* General styles for all menus */
-.cbp-spmenu {
-  background: #47a3da;
-  position: fixed;
-}
-
-.cbp-spmenu h3 {
-  color: #afdefa;
-  font-size: 1.9em;
-  padding: 20px;
-  margin: 0;
+h2 {
+  font-size: 1.2em;
   font-weight: 300;
-  background: #0d77b6;
+  color: #b7b7b6;
+  text-align: center;
+  font-family: "brandon-grotesque",sans-serif;
 }
-
-.cbp-spmenu a {
-  display: block;
-  color: #fff;
-  font-size: 1.1em;
+h3 {
+  font-family: "brandon-grotesque",sans-serif;
+  font-style: italic;
   font-weight: 300;
+  font-size: 1em;
+  color: #b7b7b6;
+  text-align: center;
+}
+h4 {
+  font-family: "brandon-grotesque",sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.6em;
+  /*color: #b7b7b6;*/
+  color: #404d5b;
+  text-align: center;
+}
+h5 {
+  font-family: "brandon-grotesque",sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 1.0em;
+  color: #b7b7b6;
+  text-align: center;
+}
+p {
+  line-height: 170%;
+  font-size: 1.2em;
+}
+a, a:visited{
+/*  color: #b7b7b6;*/
+  color: #3c3c3c;
+  text-decoration: none;
+  border-bottom: 1px dashed #acacac;
+}
+a:hover{
+  color: #b7b7b6;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+header {
+  margin-top: 5%;
+}
+footer {
+  margin-bottom: 1%;
+  padding-bottom: 1%;
 }
 
-.cbp-spmenu a:hover {
-  background: #258ecd;
+/* --------------------------------------------------------------   CLASSES/IDS   ------------------------ */
+.navigation-menu {
+  margin: -1% auto;
 }
-
-.cbp-spmenu a:active {
-  background: #afdefa;
-  color: #47a3da;
+.navigation-menu h1 {
+  letter-spacing: 8px;
 }
-
-/* Orientation-dependent styles for the content of the menu */
-
-.cbp-spmenu-vertical {
-  width: 240px;
-  height: 100%;
-  top: 0;
-  z-index: 1000;
+.navigation-menu h3 {
+  margin: 0% auto;
 }
-
-.cbp-spmenu-vertical a {
-  border-bottom: 1px solid #258ecd;
-  padding: 1em;
-}
-
-.cbp-spmenu-horizontal {
-  width: 100%;
-  height: 150px;
-  left: 0;
-  z-index: 1000;
-  overflow: hidden;
-}
-
-.cbp-spmenu-horizontal h3 {
-  height: 100%;
-  width: 20%;
-  float: left;
-}
-
-.cbp-spmenu-horizontal a {
-  float: left;
-  width: 20%;
-  padding: 0.8em;
-  border-left: 1px solid #258ecd;
-}
-
-/* Vertical menu that slides from the left or right */
-
-.cbp-spmenu-left {
-  left: -240px;
-}
-
-.cbp-spmenu-right {
-  right: -240px;
-}
-
-.cbp-spmenu-left.cbp-spmenu-open {
-  left: 0px;
-}
-
-.cbp-spmenu-right.cbp-spmenu-open {
-  right: 0px;
-}
-
-/* Horizontal menu that slides from the top or bottom */
-
-.cbp-spmenu-top {
-  top: -150px;
-}
-
-.cbp-spmenu-bottom {
-  bottom: -150px;
-}
-
-.cbp-spmenu-top.cbp-spmenu-open {
-  top: 0px;
-}
-
-.cbp-spmenu-bottom.cbp-spmenu-open {
-  bottom: 0px;
-}
-
-/* Push classes applied to the body */
-
-.cbp-spmenu-push {
-  overflow-x: hidden;
+.navigation-menu a {
   position: relative;
-  left: 0;
+  font-size: 1.1em;
+  /*color: #404d5b;*/
+  color: #b7b7b6;
+  text-decoration: none;
+  border-bottom: 0px;
+  margin-right: 10px;
+}
+.navigation-menu a:hover {
+  color: #404d5b;
+}
+.ending-rule {
+  border: 1px solid #f0f0f0; 
+  width: 50%;
+  margin-top: -5%;
+  margin-bottom: 0%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.active-link {
+  color: #404d5b !important;
 }
 
-.cbp-spmenu-push-toright {
-  left: 240px;
+.about-me {
+  /*border: 2px solid;*/
+  margin: 5% auto;
+  width: 75%;
+}
+.about-me img {
+  height: 350;
+  float: left;
+  margin-left: 13%;
+  margin-right: 3%;
+}
+.about-me h1{
+  font-style: italic;
+  margin: 0% 13%;
+  line-height: 95%;
+}
+.about-me p {
+  font-style: normal;
+  text-align: justify;
+  color: black;
+  margin: 5% 13%;
 }
 
-.cbp-spmenu-push-toleft {
-  left: -240px;
+
+.contact-info{
+  margin: 5% auto;
+  width: 50%;
+}
+.contact-info a{
+  border-bottom: 0px;
+}
+.contact-info img:hover {
+  opacity: 0.85;
+}
+.contact-info img {
+  width: 100px;
+  margin: 1% 4%;
 }
 
-/* Transitions */
 
-.cbp-spmenu,
-.cbp-spmenu-push {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+.project {
+  margin: 5% auto;
+  margin-bottom: 10%;
+  width: 75%;
+}
+.project img {
+  width: 80%;
+  margin-left: 13%;
+  box-shadow: 10px 10px 10px 5px #cccccc;
+}
+.project p {
+  font-style: normal;
+  text-align: justify;
+  color: black;
+  margin: 4% auto;
+}
+.social {
+  border: 1px solid #d3d3d3;
+  padding: 15px 40px;
+  width: 5px;
+  border-radius: 25px;
+}
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+.content {
+  width: 100%;
+  /* border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3; */
+  margin-top: 5%;
+  margin-bottom: 4%;
+  padding-bottom: 2%;
+}
+.project-description {
+  width: 80%;
+  margin-left: 10%;
+}
+.project-title-description {
+  text-align: left;
+  font-size: 2.5em;
+  line-height: 1%;
 }
 
-/* Example media queries ----- MENU -----*/
-
-@media screen and (max-width: 55.1875em){
-
-  .cbp-spmenu-horizontal {
-    font-size: 75%;
-    height: 110px;
-  }
-
-  .cbp-spmenu-top {
-    top: -110px;
-  }
-
-  .cbp-spmenu-bottom {
-    bottom: -110px;
-  }
-
+/* --------------------------------------------------------------   MEDIA QUERIES!   ------------------------ */
+/* ------------------------ MEDIA QUERIES FOR SMARTPHONE ------------------------ */
+@media screen and (max-width:320px) {
 }
 
-@media screen and (max-height: 26.375em){
+/* ------------------------ MEDIA QUERIES FOR SMARTPHONE / LANDSCAPE ------------------------ */
+/* media queries for smartphone landscape max 480px width */
+@media screen and (max-width:480px) and (min-width:321px) {
+}
 
-  .cbp-spmenu-vertical {
-    font-size: 90%;
-    width: 190px;
-  }
+/* media queries for smartphone landscape max 568px width (iphone 5 landscape) */
+@media screen and (max-width:568px) and (min-width:481px) {
+}
 
-  .cbp-spmenu-left,
-  .cbp-spmenu-push-toleft {
-    left: -190px;
-  }
+/* ------------------------ MEDIA QUERIES FOR SMALL TABLETS ------------------------ */
+@media screen and (max-width:600px) and (min-width:569px) {
+}
 
-  .cbp-spmenu-right {
-    right: -190px;
-  }
+/* ------------------------ MEDIA QUERIES FOR SMALL TABLETS / LANDSCAPE and IPADS / PORTRAIT ------------------------ */
+@media screen and (max-width:800px) and (min-width:601px) {
+}
 
-  .cbp-spmenu-push-toright {
-    left: 190px;
-  }
+/* ------------------------ MEDIA QUERIES FOR IPAD / LANDSCAPE ------------------------ */
+@media screen and (max-width:1024px) and (min-width:801) {
+  /* it is working for screen 1280 width */
+}
+@media screen and (max-width:1280px) and (min-width:1025) {
+}
+@media screen and (max-width:1920px) and (min-width:1281) {
 }
