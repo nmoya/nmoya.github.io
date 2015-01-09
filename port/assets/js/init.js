@@ -5,7 +5,7 @@ $(function() {
 	}
 	$("header").load("header.html", function() {
 		$("footer").load("footer.html", function() {
-			arr = $(".fixedElement a");
+			arr = $(".navigation-menu a");
 			page = get_last_url_segment(document.URL);
 			if (page == '')
 				page = "index.html";

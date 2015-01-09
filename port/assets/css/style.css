@@ -67,25 +67,18 @@ footer {
   margin-bottom: 1%;
   padding-bottom: 1%;
 }
-img[src*="social.png"]:hover {
-  opacity: 0.85;
-}
-img[src*="social.png"] {
-  width: 150px;
-  height: 150px;
-}
 
 /* --------------------------------------------------------------   CLASSES/IDS   ------------------------ */
-.fixedElement {
+.navigation-menu {
   margin: -1% auto;
 }
-.fixedElement h1 {
+.navigation-menu h1 {
   letter-spacing: 8px;
 }
-.fixedElement h3 {
+.navigation-menu h3 {
   margin: 0% auto;
 }
-.fixedElement a {
+.navigation-menu a {
   position: relative;
   font-size: 1.1em;
   /*color: #404d5b;*/
@@ -94,20 +87,19 @@ img[src*="social.png"] {
   border-bottom: 0px;
   margin-right: 10px;
 }
-.fixedElement a:hover {
+.navigation-menu a:hover {
   color: #404d5b;
 }
-.active-link {
-  color: #404d5b !important;
-}
-
 .ending-rule {
   border: 1px solid #f0f0f0; 
   width: 50%;
   margin-top: -5%;
-  margin-left: 25%;
-  margin-right: 25%;
   margin-bottom: 0%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.active-link {
+  color: #404d5b !important;
 }
 .about-me {
   /*border: 2px solid;*/
@@ -132,16 +124,18 @@ img[src*="social.png"] {
   margin: 5% 13%;
 }
 .contact-info{
-  margin: 0% 7%;
-  border-top: 1px solid #f0f0f0;
-  /*margin-bottom: 5%;*/
-  padding: 2% 5% 6% 6%;
+  margin: 5% auto;
+  width: 50%;
+}
+.contact-info a{
+  border-bottom: 0px;
+}
+.contact-info img:hover {
+  opacity: 0.85;
 }
 .contact-info img {
-}
-
-.divisor {
-  margin-top: -1%;
+  width: 100px;
+  margin: 1% 4%;
 }
 .projeto-1 {
   width: 75%;
