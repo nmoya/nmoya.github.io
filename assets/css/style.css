@@ -196,7 +196,7 @@ footer {
 
 .experiments{
   margin: 5% auto;
-  margin-bottom: 1%;
+  margin-bottom: 5%;
   width: 75%;
   line-height: 200%;
   text-align: justify;
@@ -209,11 +209,13 @@ footer {
   margin: 3% auto;
   width: 75%;
   border-bottom: 1px solid #f0f0f0; 
-  border-width: 50%;
   opacity: 0.65;
 }
 .side-project:hover{
   opacity: 1.0;
+}
+.side-project a:hover{
+  color: #3c3c3c;
 }
 .side-project img {
   height: 150;
@@ -228,6 +230,7 @@ footer {
 .side-project h2 {
   text-align: justify;
   margin-bottom: auto;
+  color: #404d5b;
 }
 
 /* --------------------------------------------------------------   MEDIA QUERIES!   ------------------------ */
