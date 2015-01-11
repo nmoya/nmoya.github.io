@@ -196,7 +196,7 @@ footer {
 
 .experiments{
   margin: 5% auto;
-  margin-bottom: 10%;
+  margin-bottom: 1%;
   width: 75%;
   line-height: 200%;
   text-align: justify;
@@ -205,11 +205,15 @@ footer {
 }
 
 .side-project{
-  margin: 5% auto;
-  margin-bottom: 13%;
+/*  border: 1px solid;*/
+  margin: 3% auto;
   width: 75%;
   border-bottom: 1px solid #f0f0f0; 
   border-width: 50%;
+  opacity: 0.65;
+}
+.side-project:hover{
+  opacity: 1.0;
 }
 .side-project img {
   height: 150;
@@ -221,10 +225,9 @@ footer {
   text-align: justify;
   color: black;
 }
-.side-project h5 {
-  height: 150;
-  float: left;
-  margin-right: 3%;
+.side-project h2 {
+  text-align: justify;
+  margin-bottom: auto;
 }
 
 /* --------------------------------------------------------------   MEDIA QUERIES!   ------------------------ */
