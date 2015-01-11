@@ -159,6 +159,13 @@ footer {
   color: black;
   margin: 4% auto;
 }
+.project h5 {
+  line-height: 1px;
+  font-style: normal;
+  text-align: right;
+  margin-right: 7%;
+}
+
 .social {
   border: 1px solid #d3d3d3;
   padding: 15px 40px;
@@ -185,6 +192,39 @@ footer {
   text-align: left;
   font-size: 2.5em;
   line-height: 1%;
+}
+
+.experiments{
+  margin: 5% auto;
+  margin-bottom: 10%;
+  width: 75%;
+  line-height: 200%;
+  text-align: justify;
+  font-style: normal;
+  color: black;
+}
+
+.side-project{
+  margin: 5% auto;
+  margin-bottom: 13%;
+  width: 75%;
+  border-bottom: 1px solid #f0f0f0; 
+  border-width: 50%;
+}
+.side-project img {
+  height: 150;
+  float: left;
+  margin-right: 3%;
+}
+.side-project p {
+  font-style: normal;
+  text-align: justify;
+  color: black;
+}
+.side-project h5 {
+  height: 150;
+  float: left;
+  margin-right: 3%;
 }
 
 /* --------------------------------------------------------------   MEDIA QUERIES!   ------------------------ */
