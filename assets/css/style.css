@@ -130,6 +130,7 @@ footer {
 .contact-info{
   margin: 5% auto;
   width: 50%;
+  text-align: center;
 }
 .contact-info a{
   border-bottom: 0px;
