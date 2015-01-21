@@ -5,11 +5,18 @@ var game = new Phaser.Game(1120, 630, Phaser.AUTO, 'phaser-example', {
     render: render
 });
 
-function preload() {
-    game.load.tilemap('map', './assets/tilemaps/maps/map.json', null, Phaser.Tilemap.TILED_JSON);
-    game.load.image('MainTileset', './assets/tilemaps/tiled/tiles.png');
-    game.load.image('ship', './assets/sprites/thrust_ship2.png');
-
+//Infinite map
+var gameState = {};
+var map, cursors;
+var availableSections = {};
+var visibleSections = [];
+var scrollingGroup;
+var last_key = "map2";
+var graph = {
+    "start": ["map2"],
+    "map1": ["map2"],
+    "map2": ["map3"],
+    "map3": ["map1"]
 }
 
 
@@ -18,62 +25,66 @@ var tiley = 70;
 var tilewidth = 16;
 var tileheight = 9;
 var ship;
-var map;
-var layer;
-var cursors;
-var walls;
+var displacement = 0;
+var scrolling_speed = -7;
 
 
-
-function concatenateTileMap(tilemap, map) {
-    var data = map
-    if (data === null) {
-        return;
-    }
-    tilemap.layers.concat(data.layers);
-    tilemap.tilesets.concat(data.tilesets);
-    tilemap.tiles.concat(data.tiles);
-    // tilemap.collideIndexes = tilemap.collideIndexes;
-    // tilemap.collision = data.collision;
+function randomInt(min, max) {
+    return Math.round(min + Math.random() * (max - min));
 }
 
-function create() {
+function randomFloat(min, max) {
+    return min + Math.random() * (max - min);
+}
 
-    // game.physics.startSystem(Phaser.Physics.P2JS);
+
+function preload() {
+    game.load.tilemap('map', './assets/tilemaps/maps/map.json', null, Phaser.Tilemap.TILED_JSON);
+    game.load.image('MainTileset', './assets/tilemaps/tiled/tiles.png');
+    game.load.image('ship', './assets/sprites/thrust_ship2.png');
+}
+
+
+function create() {
     game.stage.backgroundColor = '#2d2d2d';
 
-    map = game.add.tilemap("map0"); //, 70, 70, tilewidth * 3, 9);
+    // Infinite scrolling
+    map = game.add.tilemap('map');
     map.addTilesetImage('MainTileset');
     map.setCollisionBetween(1, 156);
+    scrollingGroup = game.add.group(undefined, 'scroller', true);
 
-    layer = map.createLayer('layer0');
-    layer.scrollFactorX = 0.5;
-    layer.resizeWorld();
-    // game.physics.p2.convertTilemap(map, layer);
-    // walls = game.physics.p2.setBoundsToWorld(true, true, true, true, false);
+    for (var i = 1; i <= 3; i++) {
+        var curr = "map" + i.toString();
+        availableSections[curr] = []
+        for (var j = 0; j < 3; j++) {
+            availableSections[curr].push({
+                "layer": map.createLayer(curr, map.widthInPixels, map.heightInPixels, scrollingGroup),
+                "name": curr
+            });
+        }
+    }
+    for (var key in availableSections) {
+        for (var i = 0; i < availableSections[key].length; i++) {
+            availableSections[key][i]["layer"].fixedToCamera = false;
+            availableSections[key][i]["layer"].visible = false;
+        }
+    }
+    last_key = "start";
+    placeNextSection();
+    placeNextSection();
 
-    ship = game.add.sprite(200, 200, 'ship');
-    // game.physics.p2.enable(ship);
+    // Player
+    ship = game.add.sprite(200, 150, 'ship');
     game.physics.enable(ship);
-    game.camera.follow(ship);
-
-    //  By default the ship will collide with the World bounds,
-    //  however because you have changed the size of the world (via layer.resizeWorld) to match the tilemap
-    //  you need to rebuild the physics world boundary as well. The following
-    //  line does that. The first 4 parameters control if you need a boundary on the left, right, top and bottom of your world.
-    //  The final parameter (false) controls if the boundary should use its own collision group or not. In this case we don't require
-    //  that, so it's set to false. But if you had custom collision groups set-up then you would need this set to true.
-
-
-    //  Even after the world boundary is set-up you can still toggle if the ship collides or not with this:
-    // ship.body.collideWorldBounds = false;
 
 
     cursors = game.input.keyboard.createCursorKeys();
-
+    // cursors.right.onUp.add(placeNextSection);
 }
 
 function update() {
+    scrollingGroup.x += scrolling_speed;
 
     if (cursors.left.isDown) {
         ship.body.x -= 7;
@@ -85,12 +96,43 @@ function update() {
     } else if (cursors.down.isDown) {
         ship.body.y += 5;
     }
-    game.physics.arcade.collide(ship, layer, function() {
-        console.log("hello world");
-    });
+
+    if ((Math.abs(scrollingGroup.x) - displacement) > 1110) {
+        displacement = Math.abs(scrollingGroup.x);
+        placeNextSection();
+    }
+    // for (var i = 0; i < visibleSections.length; i++) {
+    //     game.physics.arcade.collide(ship, visibleSections[i]["layer"], gameOver);
+    // }
+
 
 }
 
+function gameOver() {
+    // scrolling_speed = 0;
+    // alert("game over, press f5");
+    console.log("game over");
+}
+
+
 function render() {
 
+}
+
+function placeNextSection() {
+    var random = Math.floor(Math.random() * (graph[last_key].length));
+    var newKey = graph[last_key][random];
+    last_key = newKey;
+    var newSection = availableSections[newKey].splice(0, 1)[0];
+    if (visibleSections.length != 0)
+        newSection["layer"].x = visibleSections[visibleSections.length - 1]["layer"].x + map.widthInPixels
+    else
+        newSection["layer"].x = 0;
+    newSection["layer"].visible = true;
+    visibleSections.push(newSection);
+    var hide = visibleSections.splice(0, visibleSections.length - 5);
+    for (var i in hide) {
+        hide[i]["layer"].visible = false;
+        availableSections[hide[i]["name"]].push(hide[i]);
+    }
 }
