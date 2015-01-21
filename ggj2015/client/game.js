@@ -27,6 +27,7 @@ var tileheight = 9;
 var ship;
 var displacement = 0;
 var scrolling_speed = -7;
+var collision_check = 0;
 
 
 function randomInt(min, max) {
@@ -75,7 +76,7 @@ function create() {
     placeNextSection();
 
     // Player
-    ship = game.add.sprite(200, 150, 'ship');
+    ship = game.add.sprite(0, 150, 'ship');
     game.physics.enable(ship);
 
 
@@ -97,19 +98,19 @@ function update() {
         ship.body.y += 5;
     }
 
-    if ((Math.abs(scrollingGroup.x) - displacement) > 1110) {
+    if ((Math.abs(scrollingGroup.x) - displacement) > 1120) {
+        collision_check += 1;
         displacement = Math.abs(scrollingGroup.x);
         placeNextSection();
+        if (collision_check == 5)
+            collision_check = 0;
     }
-    // for (var i = 0; i < visibleSections.length; i++) {
-    //     game.physics.arcade.collide(ship, visibleSections[i]["layer"], gameOver);
-    // }
-
+    game.physics.arcade.collide(ship, visibleSections[collision_check]["layer"], gameOver);
 
 }
 
 function gameOver() {
-    // scrolling_speed = 0;
+    scrolling_speed = 0;
     // alert("game over, press f5");
     console.log("game over");
 }
