@@ -105,7 +105,7 @@ function update() {
         if (collision_check == 5)
             collision_check = 0;
     }
-    game.physics.arcade.collide(ship, visibleSections[collision_check]["layer"], gameOver);
+    // game.physics.arcade.collide(ship, visibleSections[collision_check]["layer"], gameOver);
 
 }
 
