@@ -1,4 +1,4 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', {
+var game = new Phaser.Game(1120, 630, Phaser.AUTO, 'phaser-example', {
     preload: preload,
     create: create,
     update: update,
@@ -6,48 +6,55 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', {
 });
 
 function preload() {
-
-    game.load.tilemap('map', 'assets/tilemaps/collision_test.json', null, Phaser.Tilemap.TILED_JSON);
-    game.load.image('ground_1x1', './assets/tilemaps/tiles/ground_1x1.png');
-    game.load.image('walls_1x2', './assets/tilemaps/tiles/walls_1x2.png');
-    game.load.image('tiles2', './assets/tilemaps/tiles/tiles2.png');
+    game.load.tilemap('map', './assets/tilemaps/maps/map.json', null, Phaser.Tilemap.TILED_JSON);
+    game.load.image('MainTileset', './assets/tilemaps/tiled/tiles.png');
     game.load.image('ship', './assets/sprites/thrust_ship2.png');
 
 }
 
+
+var tilex = 70;
+var tiley = 70;
+var tilewidth = 16;
+var tileheight = 9;
 var ship;
 var map;
 var layer;
 var cursors;
+var walls;
+
+
+
+function concatenateTileMap(tilemap, map) {
+    var data = map
+    if (data === null) {
+        return;
+    }
+    tilemap.layers.concat(data.layers);
+    tilemap.tilesets.concat(data.tilesets);
+    tilemap.tiles.concat(data.tiles);
+    // tilemap.collideIndexes = tilemap.collideIndexes;
+    // tilemap.collision = data.collision;
+}
 
 function create() {
 
-    game.physics.startSystem(Phaser.Physics.P2JS);
-
+    // game.physics.startSystem(Phaser.Physics.P2JS);
     game.stage.backgroundColor = '#2d2d2d';
 
-    map = game.add.tilemap('map');
+    map = game.add.tilemap("map0"); //, 70, 70, tilewidth * 3, 9);
+    map.addTilesetImage('MainTileset');
+    map.setCollisionBetween(1, 156);
 
-    map.addTilesetImage('ground_1x1');
-    map.addTilesetImage('walls_1x2');
-    map.addTilesetImage('tiles2');
-
-    layer = map.createLayer('Tile Layer 1');
-
+    layer = map.createLayer('layer0');
+    layer.scrollFactorX = 0.5;
     layer.resizeWorld();
-
-    //  Set the tiles for collision.
-    //  Do this BEFORE generating the p2 bodies below.
-    map.setCollisionBetween(1, 12);
-
-    //  Convert the tilemap layer into bodies. Only tiles that collide (see above) are created.
-    //  This call returns an array of body objects which you can perform addition actions on if
-    //  required. There is also a parameter to control optimising the map build.
-    game.physics.p2.convertTilemap(map, layer);
+    // game.physics.p2.convertTilemap(map, layer);
+    // walls = game.physics.p2.setBoundsToWorld(true, true, true, true, false);
 
     ship = game.add.sprite(200, 200, 'ship');
-    game.physics.p2.enable(ship);
-
+    // game.physics.p2.enable(ship);
+    game.physics.enable(ship);
     game.camera.follow(ship);
 
     //  By default the ship will collide with the World bounds,
@@ -56,10 +63,11 @@ function create() {
     //  line does that. The first 4 parameters control if you need a boundary on the left, right, top and bottom of your world.
     //  The final parameter (false) controls if the boundary should use its own collision group or not. In this case we don't require
     //  that, so it's set to false. But if you had custom collision groups set-up then you would need this set to true.
-    game.physics.p2.setBoundsToWorld(true, true, true, true, false);
+
 
     //  Even after the world boundary is set-up you can still toggle if the ship collides or not with this:
     // ship.body.collideWorldBounds = false;
+
 
     cursors = game.input.keyboard.createCursorKeys();
 
@@ -68,18 +76,18 @@ function create() {
 function update() {
 
     if (cursors.left.isDown) {
-        ship.body.rotateLeft(100);
+        ship.body.x -= 7;
     } else if (cursors.right.isDown) {
-        ship.body.rotateRight(100);
-    } else {
-        ship.body.setZeroRotation();
+        ship.body.x += 5;
     }
-
     if (cursors.up.isDown) {
-        ship.body.thrust(400);
+        ship.body.y -= 5;
     } else if (cursors.down.isDown) {
-        ship.body.reverse(400);
+        ship.body.y += 5;
     }
+    game.physics.arcade.collide(ship, layer, function() {
+        console.log("hello world");
+    });
 
 }
 
