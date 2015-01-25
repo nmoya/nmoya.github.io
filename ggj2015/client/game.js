@@ -60,6 +60,7 @@ function create() {
     map.addTilesetImage('MainTileset');
 
     scrollingGroup = game.add.group(undefined, 'scroller', true);
+    game.world.addAt(scrollingGroup, 0);
     for (i = 1; i <= 3; i++) {
         curr = "map" + i.toString();
         availableSections[curr] = []
