@@ -1,4 +1,4 @@
-var game = new Phaser.Game(1120, 630, Phaser.AUTO, 'phaser-example', {
+var game = new Phaser.Game(1120, 600, Phaser.AUTO, 'phaser-example', {
     preload: preload,
     create: create,
     update: update,
@@ -48,7 +48,9 @@ function preload() {
     game.load.tilemap('map', './assets/tilemaps/maps/map.json', null, Phaser.Tilemap.TILED_JSON);
     game.load.spritesheet('explosion', 'assets/sprites/explode.png', 128, 128);
     game.load.image('MainTileset', './assets/tilemaps/tiled/tiles.png');
-    game.load.image('ship', './assets/sprites/thrust_ship2.png');
+    game.load.image('hpizza', './assets/sprites/happy-pizza.png');
+    game.load.image('spizza', './assets/sprites/scared-pizza.png');
+
 }
 
 
@@ -94,18 +96,18 @@ function create() {
     scrollingSpeed = originalScrollingSpeed;
 
     // Player
-    player = game.add.sprite(playerStartX, playerStartY, 'ship');
+    player = game.add.sprite(playerStartX, playerStartY, 'hpizza');
     game.physics.enable(player);
     player.body.collideWorldBounds = true;
 
     explosionSprite = game.add.sprite(0, -200, 'explosion');
     explosionAnimation = explosionSprite.animations.add('explode');
     explosionAnimation.onComplete.add(function() {
-        explosionSprite.y = -630;
+        explosionSprite.y = -600;
     }, this);
 
     scoreString = "Score : "
-    scoreText = game.add.text(10, 570, scoreString + score, {
+    scoreText = game.add.text(10, 540, scoreString + score, {
         font: '34px Arial',
         fill: '#fff'
     });
