@@ -5,27 +5,35 @@ var game = new Phaser.Game(1120, 630, Phaser.AUTO, 'phaser-example', {
     render: render
 });
 
-var map, cursors;
+var map;
+var cursors;
 var availableSections = {};
 var visibleSections = [];
 var scrollingGroup;
-var last_key = "map2";
+var currentState = "map2";
 var graph = {
     "start": ["map2"],
     "map1": ["map2"],
-    "map2": ["map3", "map2"],
+    "map2": ["map3"],
     "map3": ["map1"]
 }
 
-var tilex = 70;
-var tiley = 70;
+var tileX = 70;
+var tileY = 70;
 var tilewidth = 16;
 var tileheight = 9;
-var ship;
+var player;
+var explosionSprite, explosionAnimation;
+var playerStartX = 0;
+var playerStartY = 150;
 var displacement = 0;
-var scrolling_speed = -5;
-var collision_check = 0;
+var originalScrollingSpeed = -2;
+var scrollingSpeed = -2;
+var scoreIncrement = 100;
 
+var scoreText = null;
+var scoreString;
+var score = 0;
 
 function randomInt(min, max) {
     return Math.round(min + Math.random() * (max - min));
@@ -37,7 +45,8 @@ function randomFloat(min, max) {
 
 
 function preload() {
-    game.load.tilemap('map', './assets/tilemaps/maps/parsed_map.json', null, Phaser.Tilemap.TILED_JSON);
+    game.load.tilemap('map', './assets/tilemaps/maps/map.json', null, Phaser.Tilemap.TILED_JSON);
+    game.load.spritesheet('explosion', 'assets/sprites/explode.png', 128, 128);
     game.load.image('MainTileset', './assets/tilemaps/tiled/tiles.png');
     game.load.image('ship', './assets/sprites/thrust_ship2.png');
 }
@@ -47,97 +56,165 @@ function create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.stage.backgroundColor = '#2d2d2d';
 
-    // Infinite scrolling
-    map = game.add.tilemap('map');
+    map = game.add.tilemap("map");
     map.addTilesetImage('MainTileset');
-    map.setCollisionBetween(1, 200, true, 3, false);
+
     scrollingGroup = game.add.group(undefined, 'scroller', true);
-    for (var i = 1; i <= 3; i++) {
-        var curr = "map" + i.toString();
+    for (i = 1; i <= 3; i++) {
+        curr = "map" + i.toString();
         availableSections[curr] = []
-        for (var j = 0; j < 3; j++) {
-            var layer_name = curr + (j + 1).toString();
-            tmp_layer = map.createLayer(layer_name, map.widthInPixels, map.heightInPixels, scrollingGroup);
-            tmp_layer.name = layer_name;
+        for (j = 0; j < 3; j++) {
+            layer_name = curr + (j + 1).toString();
+            tmpLayer = map.createLayer(curr, map.widthInPixels, map.heightInPixels, scrollingGroup);
+            tmpLayer.name = layer_name;
+            tmpLayer.resizeWorld();
             availableSections[curr].push({
-                "layer": tmp_layer,
+                "layer": tmpLayer,
                 "name": curr
             });
-            // console.log(tmp_layer);
         }
     }
-    for (var key in availableSections) {
-        for (var i = 0; i < availableSections[key].length; i++) {
+    for (key in availableSections) {
+        for (i = 0; i < availableSections[key].length; i++) {
             availableSections[key][i]["layer"].smoothed = false;
             availableSections[key][i]["layer"].fixedToCamera = false;
             availableSections[key][i]["layer"].visible = false;
             availableSections[key][i]["layer"].debug = true;
         }
     }
-    last_key = "start";
+    scrollingGroup.x = -1120;
+    scrollingGroup.y = 0;
+    currentState = "start";
+    placeNextSection();
+    currentState = "start";
     placeNextSection();
     placeNextSection();
 
     // Player
-    ship = game.add.sprite(0, 150, 'ship');
-    game.physics.enable(ship);
-    ship.body.collideWorldBounds = true;
+    player = game.add.sprite(playerStartX, playerStartY, 'ship');
+    game.physics.enable(player);
+    player.body.collideWorldBounds = true;
+
+    explosionSprite = game.add.sprite(0, -200, 'explosion');
+    explosionAnimation = explosionSprite.animations.add('explode');
+    explosionAnimation.onComplete.add(function() {
+        explosionSprite.y = -630;
+    }, this);
+
+    scoreString = "Score : "
+    scoreText = game.add.text(10, 570, scoreString + score, {
+        font: '34px Arial',
+        fill: '#fff'
+    });
+
+    //  Text
+    stateText = game.add.text(game.world.centerX, game.world.centerY, ' ', {
+        font: '84px Arial',
+        fill: '#fff'
+    });
+    stateText.anchor.setTo(0.5, 0.5);
+    stateText.visible = false;
 
     cursors = game.input.keyboard.createCursorKeys();
     // cursors.right.onUp.add(placeNextSection);
 }
 
 function update() {
-    scrollingGroup.x += scrolling_speed;
-
-    if (cursors.left.isDown) {
-        ship.body.x -= 7;
-    } else if (cursors.right.isDown) {
-        ship.body.x += 5;
-    }
-    if (cursors.up.isDown) {
-        ship.body.y -= 5;
-    } else if (cursors.down.isDown) {
-        ship.body.y += 5;
-    }
+    if (cursors.left.isDown)
+        player.body.x -= 7;
+    else if (cursors.right.isDown)
+        player.body.x += 5;
+    if (cursors.up.isDown)
+        player.body.y -= 5;
+    else if (cursors.down.isDown)
+        player.body.y += 5;
 
     if ((Math.abs(scrollingGroup.x) - displacement) == 1120) {
-        collision_check += 1;
         displacement = Math.abs(scrollingGroup.x);
+        increaseScore(scoreIncrement);
         placeNextSection();
-        if (collision_check == 5)
-            collision_check = 0;
     }
-    game.physics.arcade.collide(ship, visibleSections[0]["layer"], gameOver);
+    currTileX = Math.round((player.body.x + (-scrollingGroup.x % 1120)) / tileX)
+    currTileY = Math.round(player.body.y / tileY);
 
+    if (currTileX < 16)
+        curr_layer = visibleSections[0]["name"];
+    else
+        curr_layer = visibleSections[1]["name"];
+
+    currTileX = currTileX % 16;
+
+    currLayerIdx = map.getLayer(curr_layer);
+    currTile = map.getTile(currTileX, currTileY, currLayerIdx, true);
+    console.log(currTile.x, currTile.y, currTile.index, curr_layer);
+    scrollingGroup.x += scrollingSpeed;
+    if (currTile.index != -1)
+        gameOver();
+}
+
+function increaseScore(increment) {
+    score += increment;
+    scoreText.text = scoreString + score
 }
 
 function gameOver() {
-    scrolling_speed = 0;
-    // alert("game over, press f5");
-    console.log("game over");
+
+    explosionSprite.x = player.x;
+    explosionSprite.y = player.y;
+    player.kill();
+    explosionSprite.play("explode", 24, false);
+    scrollingSpeed = 0;
+
+    stateText.text = " GAME OVER \n Click to restart";
+    stateText.visible = true;
+    game.input.onTap.addOnce(restart, this);
 }
 
+function restart() {
+    stateText.visible = false;
 
-function render() {
-
-}
-
-function placeNextSection() {
-    var random = Math.floor(Math.random() * (graph[last_key].length));
-    var newKey = graph[last_key][random];
-    last_key = newKey;
-    var newSection = availableSections[newKey].splice(0, 1)[0];
-    if (visibleSections.length != 0)
-        newSection["layer"].x = visibleSections[visibleSections.length - 1]["layer"].x + map.widthInPixels
-    else
-        newSection["layer"].x = 0;
-    newSection["layer"].visible = true;
-    visibleSections.push(newSection);
-    map.setCollisionBetween(1, 200, true, map.getLayer(newSection["layer"].name), false);
-    var hide = visibleSections.splice(0, visibleSections.length - 3);
+    var hide = visibleSections.splice(0, visibleSections.length);
     for (var i in hide) {
         hide[i]["layer"].visible = false;
         availableSections[hide[i]["name"]].push(hide[i]);
     }
+    scrollingGroup.x = -1120;
+
+    currentState = "start";
+    placeNextSection();
+    currentState = "start";
+    placeNextSection();
+    placeNextSection();
+
+    player.revive();
+    player.x = playerStartX;
+    player.y = playerStartY;
+
+    increaseScore(-score);
+    scrollingSpeed = originalScrollingSpeed;
+
+}
+
+function render() {
+    // game.debug.body(map);
+}
+
+function placeNextSection() {
+    var hide = visibleSections.splice(0, visibleSections.length - 2);
+    for (var i in hide) {
+        hide[i]["layer"].visible = false;
+        availableSections[hide[i]["name"]].push(hide[i]);
+    }
+    var random = Math.floor(Math.random() * (graph[currentState].length));
+    var newKey = graph[currentState][random];
+    currentState = newKey;
+    var newSection = availableSections[newKey].splice(0, 1)[0];
+    if (visibleSections.length != 0)
+        newSection["layer"].x = visibleSections[visibleSections.length - 1]["layer"].x + map.widthInPixels
+    else {
+        newSection["layer"].x = 0;
+    }
+    newSection["layer"].visible = true;
+    visibleSections.push(newSection);
+
 }
