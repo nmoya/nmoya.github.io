@@ -24,7 +24,7 @@ var tileWidth = 16;
 var tileHeight = 9;
 var player;
 var explosionSprite, explosionAnimation;
-var playerStartX = 0;
+var playerStartX = 100;
 var playerStartY = 150;
 var displacement = 0;
 var originalScrollingSpeed = -5;
