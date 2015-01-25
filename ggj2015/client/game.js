@@ -14,16 +14,16 @@ var currentState = "map2";
 var displacement = 0;
 var placements = 0;
 var graph = {
-    "start": ["map2"],
-    "map1": ["map2"],
+    "start": ["map1"],
+    "map1": ["map2", "map3"],
     "map2": ["map3"],
-    "map3": ["map1"]
+    "map3": ["map2"]
 }
 
-var tileX = 70;
-var tileY = 70;
-var tileWidth = 16;
-var tileHeight = 9;
+var tileX = 20;
+var tileY = 20;
+var tileWidth = 56;
+var tileHeight = 30;
 
 var player, hpizza, spizza, background;
 
@@ -50,9 +50,9 @@ function randomFloat(min, max) {
 
 
 function preload() {
-    game.load.tilemap('map', './assets/tilemaps/maps/map.json', null, Phaser.Tilemap.TILED_JSON);
+    game.load.tilemap('map', './assets/tilemaps/maps/gamemap.json', null, Phaser.Tilemap.TILED_JSON);
     game.load.spritesheet('explosion', 'assets/sprites/explode.png', 128, 128);
-    game.load.image('MainTileset', './assets/tilemaps/tiled/tiles.png');
+    game.load.image('MainTileset', './assets/tilemaps/tiled/ggjtiles.png');
     game.load.image('hpizza', './assets/sprites/happy-pizza.png');
     game.load.image('spizza', './assets/sprites/scared-pizza.png');
     game.load.image('hpoop', './assets/sprites/happy-poop.png');
