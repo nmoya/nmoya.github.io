@@ -10,8 +10,7 @@ var cursors;
 var availableSections = {};
 var visibleSections = [];
 var scrollingGroup;
-var last_key = "map2";
-var last_layer_index = null;
+var currentState = "map2";
 var graph = {
     "start": ["map2"],
     "map1": ["map2"],
@@ -19,15 +18,21 @@ var graph = {
     "map3": ["map1"]
 }
 
-var tilex = 70;
-var tiley = 70;
+var tileX = 70;
+var tileY = 70;
 var tilewidth = 16;
 var tileheight = 9;
-var ship;
+var player;
+var playerStartX = 0;
+var playerStartY = 150;
 var displacement = 0;
-var scrolling_speed = -2;
-var collision_check = 0;
+var originalScrollingSpeed = -2;
+var scrollingSpeed = -2;
+var scoreIncrement = 100;
 
+var scoreText = null;
+var scoreString;
+var score = 0;
 
 function randomInt(min, max) {
     return Math.round(min + Math.random() * (max - min));
@@ -40,8 +45,6 @@ function randomFloat(min, max) {
 
 function preload() {
     game.load.tilemap('map', './assets/tilemaps/maps/map.json', null, Phaser.Tilemap.TILED_JSON);
-    // game.load.tilemap('map2', './assets/tilemaps/maps/map2.json', null, Phaser.Tilemap.TILED_JSON);
-    // game.load.tilemap('map3', './assets/tilemaps/maps/map3.json', null, Phaser.Tilemap.TILED_JSON);
     game.load.image('MainTileset', './assets/tilemaps/tiled/tiles.png');
     game.load.image('ship', './assets/sprites/thrust_ship2.png');
 }
@@ -60,14 +63,13 @@ function create() {
         availableSections[curr] = []
         for (j = 0; j < 3; j++) {
             layer_name = curr + (j + 1).toString();
-            tmp_layer = map.createLayer(curr, map.widthInPixels, map.heightInPixels, scrollingGroup);
-            tmp_layer.name = layer_name;
-            tmp_layer.resizeWorld();
+            tmpLayer = map.createLayer(curr, map.widthInPixels, map.heightInPixels, scrollingGroup);
+            tmpLayer.name = layer_name;
+            tmpLayer.resizeWorld();
             availableSections[curr].push({
-                "layer": tmp_layer,
+                "layer": tmpLayer,
                 "name": curr
             });
-            // map.setCollisionBetween(1, 200, false, layer_name, false);
         }
     }
     for (key in availableSections) {
@@ -76,21 +78,34 @@ function create() {
             availableSections[key][i]["layer"].fixedToCamera = false;
             availableSections[key][i]["layer"].visible = false;
             availableSections[key][i]["layer"].debug = true;
-            // game.physics.arcade.enable(availableSections[key][i]["layer"]);
         }
     }
     scrollingGroup.x = -1120;
     scrollingGroup.y = 0;
-    last_key = "start";
+    currentState = "start";
     placeNextSection();
-    last_key = "start";
+    currentState = "start";
     placeNextSection();
     placeNextSection();
 
     // Player
-    ship = game.add.sprite(0, 150, 'ship');
-    game.physics.enable(ship);
-    ship.body.collideWorldBounds = true;
+    player = game.add.sprite(playerStartX, playerStartY, 'ship');
+    game.physics.enable(player);
+    player.body.collideWorldBounds = true;
+
+    scoreString = "Score : "
+    scoreText = game.add.text(10, 570, scoreString + score, {
+        font: '34px Arial',
+        fill: '#fff'
+    });
+
+    //  Text
+    stateText = game.add.text(game.world.centerX, game.world.centerY, ' ', {
+        font: '84px Arial',
+        fill: '#fff'
+    });
+    stateText.anchor.setTo(0.5, 0.5);
+    stateText.visible = false;
 
     cursors = game.input.keyboard.createCursorKeys();
     // cursors.right.onUp.add(placeNextSection);
@@ -98,64 +113,75 @@ function create() {
 
 function update() {
     if (cursors.left.isDown) {
-        ship.body.x -= 7;
+        player.body.x -= 7;
     } else if (cursors.right.isDown) {
-        ship.body.x += 5;
+        player.body.x += 5;
     }
     if (cursors.up.isDown) {
-        ship.body.y -= 5;
+        player.body.y -= 5;
     } else if (cursors.down.isDown) {
-        ship.body.y += 5;
+        player.body.y += 5;
     }
 
     if ((Math.abs(scrollingGroup.x) - displacement) == 1120) {
         displacement = Math.abs(scrollingGroup.x);
+        increaseScore(scoreIncrement);
         placeNextSection();
     }
-    // curr_tile = map.getTileWorldXY(ship.body.x, ship.body.y, tilex, tiley, 4);
-    // console.log(curr_tile.x, curr_tile.y, curr_tile.index);
-    curr_tile_x = Math.round((ship.body.x + (-scrollingGroup.x % 1120)) / tilex) % 16;
-    curr_tile_y = Math.round(ship.body.y / tiley);
+    currTileX = Math.round((player.body.x + (-scrollingGroup.x % 1120)) / tileX) % 16;
+    currTileY = Math.round(player.body.y / tileY);
 
-    //console.log(visibleSections[0]["name"], visibleSections[1]["name"], visibleSections[2]["name"]);
-    if (ship.body.x > (-scrollingGroup.x % 1120)) {
+    if (player.body.x > (-scrollingGroup.x % 1120))
         curr_layer = visibleSections[1]["name"];
-        //console.log("I am in layer", ship.body.x > (-scrollingGroup.x % 1120), visibleSections[1]["layer"].name);
-        // map.setCollisionBetween(1, 200, false, last_layer_index, false);
-        // last_layer_index = visibleSections[1]["layer"].name;
-        // map.setCollisionBetween(1, 200, true, last_layer_index, false);
-        // game.physics.arcade.collide(ship, visibleSections[1]["layer"], gameOver);
-    } else {
+    else
         curr_layer = visibleSections[0]["name"];
-        //console.log("I am in layer", ship.body.x > (-scrollingGroup.x % 1120), visibleSections[0]["layer"].name);
-        // if (last_layer_index != null) {
-        //     console.log("Cancelling colision on ", last_layer_index);
-        //     last_layer_index = map.getLayer(last_layer_index);
-        //     map.setCollisionBetween(1, 200, false, last_layer_index, false);
-        // } else {
-        //     last_layer_index = visibleSections[0]["layer"].name;
-        //     map.setCollisionBetween(1, 200, true, last_layer_index, false);
-        //     console.log("Checking collision on ", last_layer_index);
-        // }
 
-        //game.physics.arcade.collide(ship, visibleSections[0]["layer"], gameOver);
-    }
-    curr_layer_idx = map.getLayer(curr_layer);
-    //tile = map.getTileWorldXY(ship.body.x, ship.body.y, 70, 70, curr_layer);
-    //console.log(tile);
-    //console.log(tile.x, tile.y, tile.index);
-    // curr_tile = map.layers[curr_layer_idx].data[curr_tile_y][curr_tile_x];
-    curr_tile = map.getTile(curr_tile_x, curr_tile_y, curr_layer_idx, true);
-    console.log(curr_tile.x, curr_tile.y, curr_tile.index, curr_layer);
-    scrollingGroup.x += scrolling_speed;
+    currLayerIdx = map.getLayer(curr_layer);
+    currTile = map.getTile(currTileX, currTileY, currLayerIdx, true);
+    console.log(currTile.x, currTile.y, currTile.index, curr_layer);
+    scrollingGroup.x += scrollingSpeed;
+    // if (currTile.index != -1)
+    //     gameOver();
+}
+
+function increaseScore(increment) {
+    score += increment;
+    scoreText.text = scoreString + score
 }
 
 function gameOver() {
-    scrolling_speed = 0;
-    // alert("game over, press f5");
-    console.log("game over on ");
+
+    scrollingSpeed = 0;
+    player.kill();
+    stateText.text = " GAME OVER \n Click to restart";
+    stateText.visible = true;
+    game.input.onTap.addOnce(restart, this);
 }
 
+function restart() {
+    stateText.visible = false;
+
+    var hide = visibleSections.splice(0, visibleSections.length);
+    for (var i in hide) {
+        hide[i]["layer"].visible = false;
+        availableSections[hide[i]["name"]].push(hide[i]);
+    }
+    scrollingGroup.x = -1120;
+
+    currentState = "start";
+    placeNextSection();
+    currentState = "start";
+    placeNextSection();
+    placeNextSection();
+
+    player.revive();
+    player.x = playerStartX;
+    player.y = playerStartY;
+
+    increaseScore(-score);
+    scrollingSpeed = originalScrollingSpeed;
+
+}
 
 function render() {
     // game.debug.body(map);
@@ -167,9 +193,9 @@ function placeNextSection() {
         hide[i]["layer"].visible = false;
         availableSections[hide[i]["name"]].push(hide[i]);
     }
-    var random = Math.floor(Math.random() * (graph[last_key].length));
-    var newKey = graph[last_key][random];
-    last_key = newKey;
+    var random = Math.floor(Math.random() * (graph[currentState].length));
+    var newKey = graph[currentState][random];
+    currentState = newKey;
     var newSection = availableSections[newKey].splice(0, 1)[0];
     if (visibleSections.length != 0)
         newSection["layer"].x = visibleSections[visibleSections.length - 1]["layer"].x + map.widthInPixels
