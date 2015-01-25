@@ -20,8 +20,8 @@ var graph = {
 
 var tileX = 70;
 var tileY = 70;
-var tilewidth = 16;
-var tileheight = 9;
+var tileWidth = 16;
+var tileHeight = 9;
 var player;
 var explosionSprite, explosionAnimation;
 var playerStartX = 0;
@@ -79,7 +79,6 @@ function create() {
             availableSections[key][i]["layer"].smoothed = false;
             availableSections[key][i]["layer"].fixedToCamera = false;
             availableSections[key][i]["layer"].visible = false;
-            availableSections[key][i]["layer"].debug = true;
         }
     }
     scrollingGroup.x = -1120;
@@ -112,11 +111,13 @@ function create() {
         font: '84px Arial',
         fill: '#fff'
     });
+    game.world.bringToTop(scoreText);
+    game.world.bringToTop(stateText);
+
     stateText.anchor.setTo(0.5, 0.5);
     stateText.visible = false;
 
     cursors = game.input.keyboard.createCursorKeys();
-    // cursors.right.onUp.add(placeNextSection);
 }
 
 function update() {
@@ -137,12 +138,12 @@ function update() {
     currTileX = Math.round((player.body.x + (-scrollingGroup.x % 1120)) / tileX)
     currTileY = Math.round(player.body.y / tileY);
 
-    if (currTileX < 16)
+    if (currTileX < tileWidth)
         curr_layer = visibleSections[0]["name"];
     else
         curr_layer = visibleSections[1]["name"];
 
-    currTileX = currTileX % 16;
+    currTileX = currTileX % tileWidth;
 
     currLayerIdx = map.getLayer(curr_layer);
     currTile = map.getTile(currTileX, currTileY, currLayerIdx, true);
