@@ -25,7 +25,7 @@ var tileY = 70;
 var tileWidth = 16;
 var tileHeight = 9;
 
-var player, hpizza, spizza;
+var player, hpizza, spizza, background;
 
 var explosionSprite, explosionAnimation;
 var playerStartX = 100;
@@ -55,19 +55,22 @@ function preload() {
     game.load.image('MainTileset', './assets/tilemaps/tiled/tiles.png');
     game.load.image('hpizza', './assets/sprites/happy-pizza.png');
     game.load.image('spizza', './assets/sprites/scared-pizza.png');
+    game.load.image('hpoop', './assets/sprites/happy-poop.png');
+    game.load.image('background', 'assets/sprites/background.jpg');
 
 }
 
 
 function create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
-    game.stage.backgroundColor = '#2d2d2d';
 
+    background = game.add.tileSprite(0, 0, 1120, 600, 'background');
     map = game.add.tilemap("map");
     map.addTilesetImage('MainTileset');
 
     scrollingGroup = game.add.group(undefined, 'scroller', true);
-    game.world.addAt(scrollingGroup, 0);
+    game.world.addAt(background, 0);
+    game.world.addAt(scrollingGroup, 1);
     for (i = 1; i <= 3; i++) {
         curr = "map" + i.toString();
         availableSections[curr] = []
@@ -104,12 +107,15 @@ function create() {
     // Player sprites
     hpizza = game.add.sprite(playerStartX, playerStartY, 'hpizza');
     game.physics.enable(hpizza);
-    hpizza.body.collideWorldBounds = false;
+    hpizza.body.collideWorldBounds = true;
 
     spizza = game.add.sprite(offScreenX, offScreenY, 'spizza');
     game.physics.enable(spizza);
     spizza.body.collideWorldBounds = false;
 
+    hpoop = game.add.sprite(offScreenX, offScreenY, 'hpoop');
+    game.physics.enable(hpoop);
+    hpoop.body.collideWorldBounds = false;
     // Player starts as hpizza
     player = hpizza;
 
@@ -158,8 +164,9 @@ function update() {
         placeNextSection();
         placements += 1;
         if (placements == 2) {
-            chancePlayerSprite(hpizza, spizza);
-        }
+            changePlayerSprite(hpizza, spizza);
+        } else if (placements == 3)
+            changePlayerSprite(spizza, hpoop);
     }
     currTileX = game.math.snapToFloor((player.body.x + (-scrollingGroup.x % 1120)), tileX) / tileX;
     currTileY = game.math.snapToFloor(player.body.y, tileY) / tileY;
@@ -179,12 +186,13 @@ function update() {
     }
 }
 
-function chancePlayerSprite(old, _new) {
+function changePlayerSprite(old, _new) {
     _new.body.x = old.x;
     _new.body.y = old.y;
-    old.body.x = offScreenX;
-    old.body.y = offScreenY;
-    player = spizza;
+    _new.collideWorldBounds = true;
+    old.kill();
+
+    player = _new;
 }
 
 function setScore(value) {
@@ -222,6 +230,10 @@ function restart() {
     stateText.destroy();
     scoreText.destroy();
     player.destroy();
+    hpizza.destroy();
+    spizza.destroy();
+    hpoop.destroy();
+    background.destroy();
     create();
 
 }
