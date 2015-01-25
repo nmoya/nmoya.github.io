@@ -54,7 +54,7 @@ function randomFloat(min, max) {
 function preload() {
     game.load.tilemap('map', './assets/tilemaps/maps/gamemap.json', null, Phaser.Tilemap.TILED_JSON);
     game.load.spritesheet('explosion', 'assets/sprites/explode.png', 128, 128);
-    game.load.image('MainTileset', './assets/tilemaps/tiled/ggjtiles.png');
+    game.load.image('MainTileset', './assets/tilemaps/tiled/ggjtilesv3.png');
     game.load.image('hpizza', './assets/sprites/happy-pizza.png');
     game.load.image('spizza', './assets/sprites/scared-pizza.png');
     game.load.image('hpoop', './assets/sprites/happy-poop.png');
