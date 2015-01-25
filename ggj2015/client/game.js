@@ -11,6 +11,8 @@ var availableSections = {};
 var visibleSections = [];
 var scrollingGroup;
 var currentState = "map2";
+var displacement = 0;
+var placements = 0;
 var graph = {
     "start": ["map2"],
     "map1": ["map2"],
@@ -22,11 +24,14 @@ var tileX = 70;
 var tileY = 70;
 var tileWidth = 16;
 var tileHeight = 9;
-var player;
+
+var player, hpizza, spizza;
+
 var explosionSprite, explosionAnimation;
 var playerStartX = 100;
 var playerStartY = 150;
-var displacement = 0;
+var offScreenX = -1120;
+var offScreenY = -1120;
 var originalScrollingSpeed = -5;
 var scrollingSpeed = originalScrollingSpeed;
 var scoreIncrement = 100;
@@ -86,6 +91,7 @@ function create() {
         }
     }
     displacement = 0;
+    placements = 0;
     scrollingGroup.x = -1120;
     scrollingGroup.y = 0;
     currentState = "start";
@@ -95,10 +101,17 @@ function create() {
     placeNextSection();
     scrollingSpeed = originalScrollingSpeed;
 
-    // Player
-    player = game.add.sprite(playerStartX, playerStartY, 'hpizza');
-    game.physics.enable(player);
-    player.body.collideWorldBounds = true;
+    // Player sprites
+    hpizza = game.add.sprite(playerStartX, playerStartY, 'hpizza');
+    game.physics.enable(hpizza);
+    hpizza.body.collideWorldBounds = false;
+
+    spizza = game.add.sprite(offScreenX, offScreenY, 'spizza');
+    game.physics.enable(spizza);
+    spizza.body.collideWorldBounds = false;
+
+    // Player starts as hpizza
+    player = hpizza;
 
     explosionSprite = game.add.sprite(0, -200, 'explosion');
     explosionAnimation = explosionSprite.animations.add('explode');
@@ -143,6 +156,10 @@ function update() {
         displacement = Math.abs(scrollingGroup.x);
         setScore(score + scoreIncrement);
         placeNextSection();
+        placements += 1;
+        if (placements == 2) {
+            chancePlayerSprite(hpizza, spizza);
+        }
     }
     currTileX = game.math.snapToFloor((player.body.x + (-scrollingGroup.x % 1120)), tileX) / tileX;
     currTileY = game.math.snapToFloor(player.body.y, tileY) / tileY;
@@ -160,6 +177,14 @@ function update() {
     if (currTile.index != -1 && currTile.index != 9) {
         gameOver();
     }
+}
+
+function chancePlayerSprite(old, _new) {
+    _new.body.x = old.x;
+    _new.body.y = old.y;
+    old.body.x = offScreenX;
+    old.body.y = offScreenY;
+    player = spizza;
 }
 
 function setScore(value) {
