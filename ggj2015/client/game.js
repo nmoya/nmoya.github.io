@@ -18,7 +18,7 @@ var graph = {
     "map1": ["map2", "map4"],
     "map2": ["map3"],
     "map3": ["map2", "map5"],
-    "map4": ["map3", "map2", "map5"],
+    "map4": ["map3", "map5"],
     "map5": ["map4"]
 }
 
