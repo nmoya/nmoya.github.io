@@ -10,14 +10,16 @@ var cursors;
 var availableSections = {};
 var visibleSections = [];
 var scrollingGroup;
-var currentState = "map2";
+var currentState = "start";
 var displacement = 0;
 var placements = 0;
 var graph = {
     "start": ["map1"],
-    "map1": ["map2", "map3"],
+    "map1": ["map2", "map4"],
     "map2": ["map3"],
-    "map3": ["map2"]
+    "map3": ["map2", "map5"],
+    "map4": ["map3", "map2", "map5"],
+    "map5": ["map4"]
 }
 
 var tileX = 20;
@@ -29,7 +31,7 @@ var player, hpizza, spizza, background;
 
 var explosionSprite, explosionAnimation;
 var playerStartX = 100;
-var playerStartY = 150;
+var playerStartY = 300;
 var offScreenX = -1120;
 var offScreenY = -1120;
 var originalScrollingSpeed = -5;
@@ -57,12 +59,18 @@ function preload() {
     game.load.image('spizza', './assets/sprites/scared-pizza.png');
     game.load.image('hpoop', './assets/sprites/happy-poop.png');
     game.load.image('background', 'assets/sprites/background.jpg');
+    game.load.audio('backgroundaudio', "assets/audio/background.mp3");
+
 
 }
 
 
 function create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
+
+    backgroundaudio = game.add.audio('backgroundaudio');
+
+    backgroundaudio.play();
 
     background = game.add.tileSprite(0, 0, 1120, 600, 'background');
     map = game.add.tilemap("map");
@@ -71,7 +79,7 @@ function create() {
     scrollingGroup = game.add.group(undefined, 'scroller', true);
     game.world.addAt(background, 0);
     game.world.addAt(scrollingGroup, 1);
-    for (i = 1; i <= 3; i++) {
+    for (i = 1; i <= Object.keys(graph).length - 1; i++) {
         curr = "map" + i.toString();
         availableSections[curr] = []
         for (j = 0; j < 3; j++) {
@@ -108,14 +116,17 @@ function create() {
     hpizza = game.add.sprite(playerStartX, playerStartY, 'hpizza');
     game.physics.enable(hpizza);
     hpizza.body.collideWorldBounds = true;
+    hpizza.anchor.setTo(0.5, 0.5);
 
     spizza = game.add.sprite(offScreenX, offScreenY, 'spizza');
     game.physics.enable(spizza);
     spizza.body.collideWorldBounds = false;
+    spizza.anchor.setTo(0.5, 0.5);
 
     hpoop = game.add.sprite(offScreenX, offScreenY, 'hpoop');
     game.physics.enable(hpoop);
     hpoop.body.collideWorldBounds = false;
+    hpoop.anchor.setTo(0.5, 0.5);
     // Player starts as hpizza
     player = hpizza;
 
@@ -163,9 +174,9 @@ function update() {
         setScore(score + scoreIncrement);
         placeNextSection();
         placements += 1;
-        if (placements == 2) {
+        if (placements == 5) {
             changePlayerSprite(hpizza, spizza);
-        } else if (placements == 3)
+        } else if (placements == 15)
             changePlayerSprite(spizza, hpoop);
     }
     currTileX = game.math.snapToFloor((player.body.x + (-scrollingGroup.x % 1120)), tileX) / tileX;
