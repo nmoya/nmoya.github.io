@@ -27,13 +27,13 @@ var explosionSprite, explosionAnimation;
 var playerStartX = 0;
 var playerStartY = 150;
 var displacement = 0;
-var originalScrollingSpeed = -2;
-var scrollingSpeed = -2;
+var originalScrollingSpeed = -5;
+var scrollingSpeed = originalScrollingSpeed;
 var scoreIncrement = 100;
 
 var scoreText = null;
 var scoreString;
-var score = 0;
+var score = -100;
 
 function randomInt(min, max) {
     return Math.round(min + Math.random() * (max - min));
@@ -83,6 +83,7 @@ function create() {
             // availableSections[key][i]["layer"].debug = true;
         }
     }
+    displacement = 0;
     scrollingGroup.x = -1120;
     scrollingGroup.y = 0;
     currentState = "start";
@@ -90,6 +91,7 @@ function create() {
     currentState = "start";
     placeNextSection();
     placeNextSection();
+    scrollingSpeed = originalScrollingSpeed;
 
     // Player
     player = game.add.sprite(playerStartX, playerStartY, 'ship');
@@ -107,7 +109,7 @@ function create() {
         font: '34px Arial',
         fill: '#fff'
     });
-    scoreText.z = 10;
+    setScore(-100);
 
     //  Text
     stateText = game.add.text(game.world.centerX, game.world.centerY, ' ', {
@@ -124,22 +126,24 @@ function create() {
 }
 
 function update() {
-    if (cursors.left.isDown)
-        player.body.x -= 7;
-    else if (cursors.right.isDown)
-        player.body.x += 5;
-    if (cursors.up.isDown)
-        player.body.y -= 5;
-    else if (cursors.down.isDown)
-        player.body.y += 5;
+    if (player.alive) {
+        if (cursors.left.isDown)
+            player.body.x -= 7;
+        else if (cursors.right.isDown)
+            player.body.x += 5;
+        if (cursors.up.isDown)
+            player.body.y -= 5;
+        else if (cursors.down.isDown)
+            player.body.y += 5;
+    }
 
     if ((Math.abs(scrollingGroup.x) - displacement) == 1120) {
         displacement = Math.abs(scrollingGroup.x);
-        increaseScore(scoreIncrement);
+        setScore(score + scoreIncrement);
         placeNextSection();
     }
-    currTileX = Math.round((player.body.x + (-scrollingGroup.x % 1120)) / tileX)
-    currTileY = Math.round(player.body.y / tileY);
+    currTileX = game.math.snapToFloor((player.body.x + (-scrollingGroup.x % 1120)), tileX) / tileX;
+    currTileY = game.math.snapToFloor(player.body.y, tileY) / tileY;
 
     if (currTileX < tileWidth)
         curr_layer = visibleSections[0]["name"];
@@ -156,8 +160,8 @@ function update() {
     }
 }
 
-function increaseScore(increment) {
-    score += increment;
+function setScore(value) {
+    score = value;
     scoreText.text = scoreString + score
 }
 
@@ -175,27 +179,23 @@ function gameOver() {
 }
 
 function restart() {
-    stateText.visible = false;
-
     var hide = visibleSections.splice(0, visibleSections.length);
     for (var i in hide) {
-        hide[i]["layer"].visible = false;
-        availableSections[hide[i]["name"]].push(hide[i]);
+        hide[i]["layer"].destroy();
     }
-    scrollingGroup.x = -1120;
-
-    currentState = "start";
-    placeNextSection();
-    currentState = "start";
-    placeNextSection();
-    placeNextSection();
-
-    player.revive();
-    player.x = playerStartX;
-    player.y = playerStartY;
-
-    increaseScore(-score);
-    scrollingSpeed = originalScrollingSpeed;
+    for (key in availableSections) {
+        for (i = 0; i < availableSections[key].length; i++) {
+            availableSections[key][i]["layer"].destroy();
+        }
+    }
+    availableSections = [];
+    explosionSprite.destroy();
+    availableSections = [];
+    visibleSections = [];
+    stateText.destroy();
+    scoreText.destroy();
+    player.destroy();
+    create();
 
 }
 

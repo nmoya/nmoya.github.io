@@ -33,21 +33,17 @@
     }],
     "nextobjectid": 1,
     "orientation": "orthogonal",
-    "properties": {
-
-    },
+    "properties": {},
     "renderorder": "right-down",
     "tileheight": 70,
     "tilesets": [{
         "firstgid": 1,
-        "image": "..\/tiled\/tiles.png",
+        "image": "../tiled/tiles.png",
         "imageheight": 910,
         "imagewidth": 840,
         "margin": 0,
         "name": "MainTileset",
-        "properties": {
-
-        },
+        "properties": {},
         "spacing": 0,
         "tileheight": 70,
         "tilewidth": 70
