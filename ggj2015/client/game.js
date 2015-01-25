@@ -79,6 +79,7 @@ function create() {
             availableSections[key][i]["layer"].smoothed = false;
             availableSections[key][i]["layer"].fixedToCamera = false;
             availableSections[key][i]["layer"].visible = false;
+            // availableSections[key][i]["layer"].debug = true;
         }
     }
     scrollingGroup.x = -1120;
@@ -105,6 +106,7 @@ function create() {
         font: '34px Arial',
         fill: '#fff'
     });
+    scoreText.z = 10;
 
     //  Text
     stateText = game.add.text(game.world.centerX, game.world.centerY, ' ', {
@@ -147,10 +149,10 @@ function update() {
 
     currLayerIdx = map.getLayer(curr_layer);
     currTile = map.getTile(currTileX, currTileY, currLayerIdx, true);
-    console.log(currTile.x, currTile.y, currTile.index, curr_layer);
     scrollingGroup.x += scrollingSpeed;
-    if (currTile.index != -1)
+    if (currTile.index != -1 && currTile.index != 9) {
         gameOver();
+    }
 }
 
 function increaseScore(increment) {
