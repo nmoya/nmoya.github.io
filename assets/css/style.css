@@ -154,6 +154,31 @@ footer {
   margin-left: 13%;
   box-shadow: 10px 10px 10px 5px #cccccc;
 }
+.project iframe{
+  overflow-y: hidden;
+  display: block;
+  width: 50%;
+  height: 100%;
+  -ms-zoom: 1.2;
+  -moz-transform: scale(1.2);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(1.2);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(1.2);
+  -webkit-transform-origin: 0 0;
+}
+.iframe-container {
+  display: block;
+  margin-left: 30%;
+  margin-top: -4.5%;
+}
+.iframe-container h5{
+  display: block;
+  line-height: 1px;
+  font-style: normal;
+  text-align: right;
+  margin-right: 7%;
+}
 .project p {
   font-style: normal;
   text-align: justify;
