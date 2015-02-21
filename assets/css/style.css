@@ -1,12 +1,12 @@
 /* --------------------------------------------------------------   FONTS   ------------------------ */
 /* --------------------------------------------------------------   GLOBALS   ------------------------ */
 body {
-  font-family: "proxima-nova",sans-serif;
+  font-family: "proxima-nova", sans-serif;
   color: #3c3c3c;
   font-weight: 300;
 }
 h1 {
-  font-family: "brandon-grotesque",sans-serif;
+  font-family: "brandon-grotesque", sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 2.2em;
@@ -17,10 +17,10 @@ h2 {
   font-weight: 300;
   color: #b7b7b6;
   text-align: center;
-  font-family: "brandon-grotesque",sans-serif;
+  font-family: "brandon-grotesque", sans-serif;
 }
 h3 {
-  font-family: "brandon-grotesque",sans-serif;
+  font-family: "brandon-grotesque", sans-serif;
   font-style: italic;
   font-weight: 300;
   font-size: 1em;
@@ -28,16 +28,17 @@ h3 {
   text-align: center;
 }
 h4 {
-  font-family: "brandon-grotesque",sans-serif;
+  font-family: "brandon-grotesque", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 1.6em;
-  /*color: #b7b7b6;*/
+  /* color: #b7b7b6;
+  */
   color: #404d5b;
   text-align: center;
 }
 h5 {
-  font-family: "brandon-grotesque",sans-serif;
+  font-family: "brandon-grotesque", sans-serif;
   font-style: normal;
   font-weight: 100;
   font-size: 1.0em;
@@ -48,14 +49,23 @@ p {
   line-height: 170%;
   font-size: 1.2em;
 }
-a, a:visited{
-/*  color: #b7b7b6;*/
+a, a:visited {
+  /* color: #b7b7b6;
+  */
   color: #3c3c3c;
   text-decoration: none;
   border-bottom: 1px dashed #acacac;
+  -moz-transition: all .1s ease-in;
+  -o-transition: all .1s ease-in;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
 }
-a:hover{
+a:hover {
   color: #b7b7b6;
+  -moz-transition: all .1s ease-in;
+  -o-transition: all .1s ease-in;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
 }
 img {
   max-width: 100%;
@@ -82,7 +92,8 @@ footer {
 .navigation-menu a {
   position: relative;
   font-size: 1.1em;
-  /*color: #404d5b;*/
+  /* color: #404d5b;
+  */
   color: #b7b7b6;
   text-decoration: none;
   border-bottom: 0px;
@@ -92,7 +103,7 @@ footer {
   color: #404d5b;
 }
 .ending-rule {
-  border: 1px solid #f0f0f0; 
+  border: 1px solid #f0f0f0;
   width: 50%;
   margin-top: -5%;
   margin-bottom: 0%;
@@ -102,9 +113,9 @@ footer {
 .active-link {
   color: #404d5b !important;
 }
-
 .about-me {
-  /*border: 2px solid;*/
+  /* border: 2px solid;
+  */
   margin: 5% auto;
   width: 75%;
 }
@@ -114,7 +125,7 @@ footer {
   margin-left: 13%;
   margin-right: 3%;
 }
-.about-me h1{
+.about-me h1 {
   font-style: italic;
   margin: 0% 13%;
   line-height: 95%;
@@ -125,14 +136,12 @@ footer {
   color: black;
   margin: 5% 13%;
 }
-
-
-.contact-info{
+.contact-info {
   margin: 5% auto;
   width: 50%;
   text-align: center;
 }
-.contact-info a{
+.contact-info a {
   border-bottom: 0px;
 }
 .contact-info img:hover {
@@ -142,8 +151,6 @@ footer {
   width: 100px;
   margin: 1% 4%;
 }
-
-
 .project {
   margin: 5% auto;
   margin-bottom: 10%;
@@ -154,7 +161,7 @@ footer {
   margin-left: 13%;
   box-shadow: 10px 10px 10px 5px #cccccc;
 }
-.project iframe{
+.project iframe {
   overflow-y: hidden;
   display: block;
   width: 50%;
@@ -172,7 +179,7 @@ footer {
   margin-left: 30%;
   margin-top: -4.5%;
 }
-.iframe-container h5{
+.iframe-container h5 {
   display: block;
   line-height: 1px;
   font-style: normal;
@@ -191,7 +198,6 @@ footer {
   text-align: right;
   margin-right: 7%;
 }
-
 .social {
   border: 1px solid #d3d3d3;
   padding: 15px 40px;
@@ -205,7 +211,8 @@ footer {
 .content {
   width: 100%;
   /* border-top: 1px solid #d3d3d3;
-  border-bottom: 1px solid #d3d3d3; */
+  border-bottom: 1px solid #d3d3d3;
+  */
   margin-top: 5%;
   margin-bottom: 4%;
   padding-bottom: 2%;
@@ -219,8 +226,7 @@ footer {
   font-size: 2.5em;
   line-height: 1%;
 }
-
-.experiments{
+.experiments {
   margin: 5% auto;
   margin-bottom: 5%;
   width: 75%;
@@ -229,18 +235,18 @@ footer {
   font-style: normal;
   color: black;
 }
-
-.side-project{
-/*  border: 1px solid;*/
+.side-project {
+  /* border: 1px solid;
+  */
   margin: 3% auto;
   width: 75%;
-  border-bottom: 1px solid #f0f0f0; 
+  border-bottom: 1px solid #f0f0f0;
   opacity: 0.65;
 }
-.side-project:hover{
+.side-project:hover {
   opacity: 1.0;
 }
-.side-project a:hover{
+.side-project a:hover {
   color: #3c3c3c;
 }
 .side-project img {
