@@ -1,0 +1,37 @@
+html, body, * {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #fff;
+}
+
+h1 {
+	text-align: center;
+	font-weight: 600;
+}
+
+p {
+	margin: 5% auto;
+	letter-spacing: 1px;
+	width: 70%;
+}
+
+.dispositivos {
+	border-top: 1px solid #ccc;
+	padding-top: 3%;
+	margin: 0 auto;
+	width: 90%;
+}
+
+.dispositivo {
+	float: left;
+}
+
+.dispositivo:nth-child(1) {
+	margin-right: 12%;
+}
+.dispositivo:nth-child(2) {
+	margin-right: 8%;
+}
+
+figcaption {
+	margin-left: 5%;
+}
