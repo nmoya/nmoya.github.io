@@ -12,8 +12,6 @@ function getAllThreads(request_url, callback) {
       for (var j = 0; j < tmp.length; j++) {
         if (tmp[j].name)
           names.push(tmp[j].name)
-        else
-          console.log(tmp[j])
       }
       list_of_threads.push({
         "id": response.data[i].id,
@@ -21,7 +19,7 @@ function getAllThreads(request_url, callback) {
       });
     }
     if (response.paging)
-      getAllThreads(response.paging.next)
+      getAllThreads(response.paging.next, callback)
     else {
       console.log("calling callback");
       callback();
