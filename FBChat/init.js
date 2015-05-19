@@ -123,7 +123,7 @@ function main()
     user_id = response.id;
     user_name = response.name;
     console.log(user_id, user_name);
-    alert("uncomment me");
-    // getAllConversations("/" + user_id + '/inbox', user_name, generateSelectOptions);
+    // alert("uncomment me");
+    getAllConversations("/" + user_id + '/inbox', user_name, generateSelectOptions);
   });
 }
