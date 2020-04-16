@@ -28,6 +28,76 @@
   color: #61dafb;
 }
 
+body {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+body .App {
+  margin: 30px;
+}
+
+.form-layout {
+  width: 100%;
+  display: block;
+  text-align: left;
+}
+
+.form-control {
+}
+
+/* https://coolors.co/edae49-d1495b-00798c-30638e-003d5b */
+.btn-outline-secondary {
+  background-color: #edae49;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #edae49;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.help-input {
+  display: block;
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.input-group-append {
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+.answer {
+  display: block;
+  text-align: left;
+}
+
+/* https://coolors.co/533a71-6184d8-50c5b7-9cec5b-f0f465 */
+.answer-correct {
+  border: 1px solid #3bb273;
+  color: #3bb273;
+}
+
+.answer-wrong {
+  border: 1px solid #d1495b;
+  color: #d1495b;
+}
+
+.answer p {
+  padding: 14px;
+  margin: 0px;
+}
+
+.answer-group {
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
