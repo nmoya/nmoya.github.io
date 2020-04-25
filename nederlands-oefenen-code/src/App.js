@@ -18,12 +18,12 @@ const VerbsData = {
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename={'/nederlands-oefenen'}>
         <Switch>
-          <Route exact path="/">
+          <Route exact path={`${process.env.PUBLIC_URL}/`}>
             <Home />
           </Route>
-          <Route path="/:id">
+          <Route path={`${process.env.PUBLIC_URL}/:id`}>
             <Practice />
           </Route>
         </Switch>
@@ -38,10 +38,10 @@ function Home() {
       <h1>Welkom! Kies jouew moeilijkheid:</h1>
       {/* Remember to give different URLs to each button and add to the router above */}
       {/* <Link to="/basiswerkwoorden"><button class="btn btn-primary" type="submit">Basiswerkwoorden (Oranje)</button></Link> */}
-      <Link to="/werkworden"><button class="btn btn-primary" type="submit">Basiswerkwoorden (Oranje)</button></Link>
+      <Link to={`${process.env.PUBLIC_URL}/werkworden`}><button class="btn btn-primary" type="submit">Basiswerkwoorden (Oranje)</button></Link>
       <br></br>
       <br></br>
-      <Link to="/h1"><button class="btn btn-primary" type="submit">Hoofdstuck 1</button></Link>
+      <Link to={`${process.env.PUBLIC_URL}/h1`}><button class="btn btn-primary" type="submit">Hoofdstuck 1</button></Link>
     </div>
   );
 }
