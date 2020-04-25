@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "./static/css/main.addba373.chunk.css",
-    "main.js": "./static/js/main.a551714f.chunk.js",
-    "main.js.map": "./static/js/main.a551714f.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.104f1bcf.js",
-    "runtime-main.js.map": "./static/js/runtime-main.104f1bcf.js.map",
-    "static/css/2.89f067aa.chunk.css": "./static/css/2.89f067aa.chunk.css",
-    "static/js/2.8a2dd701.chunk.js": "./static/js/2.8a2dd701.chunk.js",
-    "static/js/2.8a2dd701.chunk.js.map": "./static/js/2.8a2dd701.chunk.js.map",
-    "index.html": "./index.html",
-    "precache-manifest.c80a0904971996bf577417d8507fb0c4.js": "./precache-manifest.c80a0904971996bf577417d8507fb0c4.js",
-    "service-worker.js": "./service-worker.js",
-    "static/css/2.89f067aa.chunk.css.map": "./static/css/2.89f067aa.chunk.css.map",
-    "static/css/main.addba373.chunk.css.map": "./static/css/main.addba373.chunk.css.map",
-    "static/js/2.8a2dd701.chunk.js.LICENSE.txt": "./static/js/2.8a2dd701.chunk.js.LICENSE.txt"
+    "main.css": "/nederlands-oefenen/static/css/main.addba373.chunk.css",
+    "main.js": "/nederlands-oefenen/static/js/main.154c7220.chunk.js",
+    "main.js.map": "/nederlands-oefenen/static/js/main.154c7220.chunk.js.map",
+    "runtime-main.js": "/nederlands-oefenen/static/js/runtime-main.a861ca9d.js",
+    "runtime-main.js.map": "/nederlands-oefenen/static/js/runtime-main.a861ca9d.js.map",
+    "static/css/2.89f067aa.chunk.css": "/nederlands-oefenen/static/css/2.89f067aa.chunk.css",
+    "static/js/2.8a2dd701.chunk.js": "/nederlands-oefenen/static/js/2.8a2dd701.chunk.js",
+    "static/js/2.8a2dd701.chunk.js.map": "/nederlands-oefenen/static/js/2.8a2dd701.chunk.js.map",
+    "index.html": "/nederlands-oefenen/index.html",
+    "precache-manifest.11ae7b3991efe67a28ca5a292003236b.js": "/nederlands-oefenen/precache-manifest.11ae7b3991efe67a28ca5a292003236b.js",
+    "service-worker.js": "/nederlands-oefenen/service-worker.js",
+    "static/css/2.89f067aa.chunk.css.map": "/nederlands-oefenen/static/css/2.89f067aa.chunk.css.map",
+    "static/css/main.addba373.chunk.css.map": "/nederlands-oefenen/static/css/main.addba373.chunk.css.map",
+    "static/js/2.8a2dd701.chunk.js.LICENSE.txt": "/nederlands-oefenen/static/js/2.8a2dd701.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.104f1bcf.js",
+    "static/js/runtime-main.a861ca9d.js",
     "static/css/2.89f067aa.chunk.css",
     "static/js/2.8a2dd701.chunk.js",
     "static/css/main.addba373.chunk.css",
-    "static/js/main.a551714f.chunk.js"
+    "static/js/main.154c7220.chunk.js"
   ]
 }
