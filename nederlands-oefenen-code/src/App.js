@@ -20,10 +20,10 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="nederlands-oefenen/">
+          <Route exact path="/">
             <Home />
           </Route>
-          <Route path="nederlands-oefenen/:id">
+          <Route path="/:id">
             <Practice />
           </Route>
         </Switch>
@@ -97,7 +97,7 @@ class PracticeWithoutRouter extends React.Component {
         exercise: {},
         areAllCorrect: null
       },
-      difficulty: undefined
+      difficulty: "werkworden"
     }
   }
 
