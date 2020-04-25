@@ -20,10 +20,10 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="nederlands-oefenen/">
             <Home />
           </Route>
-          <Route path="/:id">
+          <Route path="nederlands-oefenen/:id">
             <Practice />
           </Route>
         </Switch>
@@ -103,9 +103,11 @@ class PracticeWithoutRouter extends React.Component {
 
   prepareExercise = () => {
     let exercisePool = VerbsData[this.state.difficulty]
-    this.setState({
-      exercise: exercisePool[exercisePool.length * Math.random() | 0]
-    })
+    if (typeof exercisePool !== 'undefined') {
+      this.setState({
+        exercise: exercisePool[exercisePool.length * Math.random() | 0]
+      })
+    }
   }
 
   checkAnswer = (input) => {
@@ -154,15 +156,13 @@ class PracticeWithoutRouter extends React.Component {
 }
 
 class CorrectWord extends React.Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
     return (
       <span>{this.props.word} ✅ </span>
     );
   }
 }
+
 class WrongWord extends React.Component {
   constructor(props) {
     super(props)
