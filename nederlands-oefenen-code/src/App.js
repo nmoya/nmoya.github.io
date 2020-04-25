@@ -7,7 +7,13 @@ import {
   withRouter
 } from "react-router-dom";
 import './App.css';
-import VerbsData from './werkworden.json';
+import werkworden_json from './werkworden.json';
+import h1_json from './h1.json';
+
+const VerbsData = {
+  "werkworden": werkworden_json,
+  "h1": h1_json
+}
 
 function App() {
   return (
@@ -15,7 +21,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Practice />
+            <Home />
           </Route>
           <Route path="/:id">
             <Practice />
@@ -32,7 +38,10 @@ function Home() {
       <h1>Welkom! Kies jouew moeilijkheid:</h1>
       {/* Remember to give different URLs to each button and add to the router above */}
       {/* <Link to="/basiswerkwoorden"><button class="btn btn-primary" type="submit">Basiswerkwoorden (Oranje)</button></Link> */}
-      <Link to="/basiswerkwoorden"><button class="btn btn-primary" type="submit">Basiswerkwoorden (Oranje)</button></Link>
+      <Link to="/werkworden"><button class="btn btn-primary" type="submit">Basiswerkwoorden (Oranje)</button></Link>
+      <br></br>
+      <br></br>
+      <Link to="/h1"><button class="btn btn-primary" type="submit">Hoofdstuck 1</button></Link>
     </div>
   );
 }
@@ -93,8 +102,9 @@ class PracticeWithoutRouter extends React.Component {
   }
 
   prepareExercise = () => {
+    let exercisePool = VerbsData[this.state.difficulty]
     this.setState({
-      exercise: VerbsData[VerbsData.length * Math.random() | 0]
+      exercise: exercisePool[exercisePool.length * Math.random() | 0]
     })
   }
 
@@ -119,15 +129,13 @@ class PracticeWithoutRouter extends React.Component {
         currentStreak: newStreak,
         maxStreak: newMaxScore,
       }
-    })
-    this.prepareExercise()
+    }, this.prepareExercise)
   }
 
   componentDidMount = () => {
     this.setState({
       difficulty: this.props.match.params.id,
-    })
-    this.prepareExercise()
+    }, this.prepareExercise)
   }
 
   render() {
@@ -137,6 +145,9 @@ class PracticeWithoutRouter extends React.Component {
         <br></br>
         <VerbForm verb={this.state.exercise.Infinitief} translation={this.state.exercise.Vertaling} answerCallback={this.checkAnswer} />
         {this.state.lastAnswer.areAllCorrect === null ? null : <ResultsComponent lastAnswer={this.state.lastAnswer} />}
+        <br></br>
+        <br></br>
+        <h5>Difficulty: {this.state.difficulty}</h5>
       </div>
     );
   }
