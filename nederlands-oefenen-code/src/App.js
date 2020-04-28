@@ -113,7 +113,7 @@ class PracticeWithoutRouter extends React.Component {
   checkAnswer = (input) => {
     const criteria = ["Imperfectum", "Perfectum"]
     const answer = input.split(",").map(x => x.trim())
-    const results = answer.map((value, idx) => value === this.state.exercise[criteria[idx]])
+    const results = answer.map((value, idx) => value.toLowerCase() === this.state.exercise[criteria[idx]].toLowerCase())
     const allCorrect = results.reduce((acc, value) => {
       return acc && value
     }, true)
