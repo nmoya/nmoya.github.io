@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/nederlands-oefenen/static/css/main.addba373.chunk.css",
-    "main.js": "/nederlands-oefenen/static/js/main.97084485.chunk.js",
-    "main.js.map": "/nederlands-oefenen/static/js/main.97084485.chunk.js.map",
+    "main.js": "/nederlands-oefenen/static/js/main.8e42f853.chunk.js",
+    "main.js.map": "/nederlands-oefenen/static/js/main.8e42f853.chunk.js.map",
     "runtime-main.js": "/nederlands-oefenen/static/js/runtime-main.a861ca9d.js",
     "runtime-main.js.map": "/nederlands-oefenen/static/js/runtime-main.a861ca9d.js.map",
-    "static/css/2.81e2c8a5.chunk.css": "/nederlands-oefenen/static/css/2.81e2c8a5.chunk.css",
-    "static/js/2.4973129f.chunk.js": "/nederlands-oefenen/static/js/2.4973129f.chunk.js",
-    "static/js/2.4973129f.chunk.js.map": "/nederlands-oefenen/static/js/2.4973129f.chunk.js.map",
+    "static/css/2.89f067aa.chunk.css": "/nederlands-oefenen/static/css/2.89f067aa.chunk.css",
+    "static/js/2.cd00c53f.chunk.js": "/nederlands-oefenen/static/js/2.cd00c53f.chunk.js",
+    "static/js/2.cd00c53f.chunk.js.map": "/nederlands-oefenen/static/js/2.cd00c53f.chunk.js.map",
     "index.html": "/nederlands-oefenen/index.html",
-    "precache-manifest.b9b2b2cc36bf6844180d16eab114f242.js": "/nederlands-oefenen/precache-manifest.b9b2b2cc36bf6844180d16eab114f242.js",
+    "precache-manifest.bc6f8d615c8127565bc71427b982514d.js": "/nederlands-oefenen/precache-manifest.bc6f8d615c8127565bc71427b982514d.js",
     "service-worker.js": "/nederlands-oefenen/service-worker.js",
-    "static/css/2.81e2c8a5.chunk.css.map": "/nederlands-oefenen/static/css/2.81e2c8a5.chunk.css.map",
+    "static/css/2.89f067aa.chunk.css.map": "/nederlands-oefenen/static/css/2.89f067aa.chunk.css.map",
     "static/css/main.addba373.chunk.css.map": "/nederlands-oefenen/static/css/main.addba373.chunk.css.map",
-    "static/js/2.4973129f.chunk.js.LICENSE.txt": "/nederlands-oefenen/static/js/2.4973129f.chunk.js.LICENSE.txt"
+    "static/js/2.cd00c53f.chunk.js.LICENSE.txt": "/nederlands-oefenen/static/js/2.cd00c53f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a861ca9d.js",
-    "static/css/2.81e2c8a5.chunk.css",
-    "static/js/2.4973129f.chunk.js",
+    "static/css/2.89f067aa.chunk.css",
+    "static/js/2.cd00c53f.chunk.js",
     "static/css/main.addba373.chunk.css",
-    "static/js/main.97084485.chunk.js"
+    "static/js/main.8e42f853.chunk.js"
   ]
 }
