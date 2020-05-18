@@ -9,10 +9,14 @@ import {
 import './App.css';
 import werkworden_json from './werkworden.json';
 import h1_json from './h1.json';
+import h2_json from './h2.json';
+import h3_json from './h3.json';
 
 const VerbsData = {
   "werkworden": werkworden_json,
-  "h1": h1_json
+  "h1": h1_json,
+  "h2": h2_json,
+  "h3": h3_json
 }
 
 function App() {
@@ -35,13 +39,20 @@ function App() {
 function Home() {
   return (
     <div>
-      <h1>Welkom! Kies jouew moeilijkheid:</h1>
+      <h1>Welkom! Kies jouew werkworden collectie:</h1>
       {/* Remember to give different URLs to each button and add to the router above */}
       {/* <Link to="/basiswerkwoorden"><button class="btn btn-primary" type="submit">Basiswerkwoorden (Oranje)</button></Link> */}
+      <br></br><br></br><br></br>
       <Link to={`/werkworden`}><button class="btn btn-primary" type="submit">Basiswerkwoorden (Oranje)</button></Link>
       <br></br>
       <br></br>
-      <Link to={`/h1`}><button class="btn btn-primary" type="submit">Hoofdstuck 1</button></Link>
+      <Link to={`/h1`}><button class="btn btn-primary" type="submit">Hoofdstuck 1 werkworden</button></Link>
+      <br></br>
+      <br></br>
+      <Link to={`/h2`}><button class="btn btn-primary" type="submit">Hoofdstuck 2 werkworden</button></Link>
+      <br></br>
+      <br></br>
+      <Link to={`/h3`}><button class="btn btn-primary" type="submit">Hoofdstuck 3 werkworden</button></Link>
     </div>
   );
 }
@@ -73,7 +84,7 @@ class VerbForm extends React.Component {
         <div className="input-group mb-3">
           <div className="input-group-append">
             <form className="form-layout" onSubmit={this.handleSubmit}>
-              <span className="help-input">Type "Imperfectum" and "(is) perfectum":</span>
+              <span className="help-input">If the verb is <b>gaan</b> you need to type: 'ging, is gegaan':</span>
               <input value={this.state.answer} onChange={this.handleChange} type="text" className="form-control" placeholder="Imperfectum, (is) perfectum" />
               <button className="btn btn-outline-secondary" type="submit" id="submit-answer">Check</button>
             </form>
@@ -149,7 +160,7 @@ class PracticeWithoutRouter extends React.Component {
         {this.state.lastAnswer.areAllCorrect === null ? null : <ResultsComponent lastAnswer={this.state.lastAnswer} />}
         <br></br>
         <br></br>
-        <h5>Difficulty: {this.state.difficulty}</h5>
+        <h5>Set of verbs: {this.state.difficulty}</h5>
       </div>
     );
   }
