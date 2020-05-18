@@ -25,7 +25,7 @@ This will copy the entire project that was built inside the build folder to the 
 ### Converting CSV to JSON
 
 Make sure you have `csvtojson` installed globally:
-`npm -i -g csvtojson`
+`npm install -g csvtojson`
 
 Run: csvtojson <file.csv> > <destination.json>
 
