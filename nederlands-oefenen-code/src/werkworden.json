@@ -1,338 +1,109 @@
 [
-    {
-        "Infinitief": "beginnen",
-        "Imperfectum": "begon",
-        "Imperfectum_plural": "begonnen",
-        "Perfectum": "is begonen",
-        "Vertaling": "to begin"
-    },
-    {
-        "Infinitief": "begrijpen",
-        "Imperfectum": "begreep",
-        "Imperfectum_plural": "begrepen",
-        "Perfectum": "begrepen",
-        "Vertaling": "to understand"
-    },
-    {
-        "Infinitief": "betreffen",
-        "Imperfectum": "betrof",
-        "Imperfectum_plural": "betroffen",
-        "Perfectum": "betroffen",
-        "Vertaling": "to concern"
-    },
-    {
-        "Infinitief": "bewegen",
-        "Imperfectum": "bewoog",
-        "Imperfectum_plural": "bewogen",
-        "Perfectum": "bewogen",
-        "Vertaling": "to move"
-    },
-    {
-        "Infinitief": "bewijzen",
-        "Imperfectum": "bewees",
-        "Imperfectum_plural": "bewezen",
-        "Perfectum": "bewezen",
-        "Vertaling": "to prove"
-    },
-    {
-        "Infinitief": "bidden",
-        "Imperfectum": "bad",
-        "Imperfectum_plural": "baden",
-        "Perfectum": "gebeden",
-        "Vertaling": "to pray"
-    },
-    {
-        "Infinitief": "bieden",
-        "Imperfectum": "bood",
-        "Imperfectum_plural": "boden",
-        "Perfectum": "geboden",
-        "Vertaling": "to offer"
-    },
-    {
-        "Infinitief": "blijken",
-        "Imperfectum": "bleek",
-        "Imperfectum_plural": "bleven",
-        "Perfectum": "is gebleken",
-        "Vertaling": "to turn out"
-    },
-    {
-        "Infinitief": "blijven",
-        "Imperfectum": "bleef",
-        "Imperfectum_plural": "bleven",
-        "Perfectum": "is gebleven",
-        "Vertaling": "to stay"
-    },
-    {
-        "Infinitief": "breken",
-        "Imperfectum": "brak",
-        "Imperfectum_plural": "braken",
-        "Perfectum": "gebroken",
-        "Vertaling": "to break"
-    },
-    {
-        "Infinitief": "brengen",
-        "Imperfectum": "bracht",
-        "Imperfectum_plural": "brachten",
-        "Perfectum": "gebracht",
-        "Vertaling": "to bring"
-    },
-    {
-        "Infinitief": "buigen",
-        "Imperfectum": "boog",
-        "Imperfectum_plural": "bogen",
-        "Perfectum": "gebogen",
-        "Vertaling": "to bend"
-    },
-    {
-        "Infinitief": "denken",
-        "Imperfectum": "dacht",
-        "Imperfectum_plural": "dachten",
-        "Perfectum": "gedacht",
-        "Vertaling": "to think"
-    },
-    {
-        "Infinitief": "doen",
-        "Imperfectum": "deed",
-        "Imperfectum_plural": "deden",
-        "Perfectum": "gedaan",
-        "Vertaling": "to do"
-    },
-    {
-        "Infinitief": "dragen",
-        "Imperfectum": "droeg",
-        "Imperfectum_plural": "droegen",
-        "Perfectum": "gedragen",
-        "Vertaling": "to wear"
-    },
-    {
-        "Infinitief": "drijven",
-        "Imperfectum": "dreef",
-        "Imperfectum_plural": "dreven",
-        "Perfectum": "is gedreven",
-        "Vertaling": "to float"
-    },
-    {
-        "Infinitief": "dringen",
-        "Imperfectum": "drong",
-        "Imperfectum_plural": "drongen",
-        "Perfectum": "gedrongen",
-        "Vertaling": "to insist"
-    },
-    {
-        "Infinitief": "drinken",
-        "Imperfectum": "dronk",
-        "Imperfectum_plural": "dronken",
-        "Perfectum": "gedronken",
-        "Vertaling": "to drink"
-    },
-    {
-        "Infinitief": "dwingen",
-        "Imperfectum": "dwong",
-        "Imperfectum_plural": "dwongen",
-        "Perfectum": "gedwongen",
-        "Vertaling": "to force"
-    },
-    {
-        "Infinitief": "ervaren",
-        "Imperfectum": "ervoer",
-        "Imperfectum_plural": "ervoeren",
-        "Perfectum": "ervaren",
-        "Vertaling": "to experience"
-    },
-    {
-        "Infinitief": "eten",
-        "Imperfectum": "at",
-        "Imperfectum_plural": "aten",
-        "Perfectum": "gegeten",
-        "Vertaling": "to eat"
-    },
-    {
-        "Infinitief": "gaan",
-        "Imperfectum": "ging",
-        "Imperfectum_plural": "gingen",
-        "Perfectum": "is gegaan",
-        "Vertaling": "to go"
-    },
-    {
-        "Infinitief": "gedragen",
-        "Imperfectum": "gedroeg",
-        "Imperfectum_plural": "gedroegen",
-        "Perfectum": "gedragen",
-        "Vertaling": "to behave"
-    },
-    {
-        "Infinitief": "genezen",
-        "Imperfectum": "genas",
-        "Imperfectum_plural": "genazen",
-        "Perfectum": "genezen",
-        "Vertaling": "to cure"
-    },
-    {
-        "Infinitief": "genieten",
-        "Imperfectum": "genoot",
-        "Imperfectum_plural": "genoten",
-        "Perfectum": "genoten",
-        "Vertaling": "to enjoy"
-    },
-    {
-        "Infinitief": "geven",
-        "Imperfectum": "gaf",
-        "Imperfectum_plural": "gaven",
-        "Perfectum": "gegeven",
-        "Vertaling": "to give"
-    },
-    {
-        "Infinitief": "glijden",
-        "Imperfectum": "gleed",
-        "Imperfectum_plural": "gleden",
-        "Perfectum": "is gegleden",
-        "Vertaling": "to slide"
-    },
-    {
-        "Infinitief": "grijpen",
-        "Imperfectum": "greep",
-        "Imperfectum_plural": "grepen",
-        "Perfectum": "gegrepen",
-        "Vertaling": "to grab"
-    },
-    {
-        "Infinitief": "hangen",
-        "Imperfectum": "hing",
-        "Imperfectum_plural": "hingen",
-        "Perfectum": "gehangen",
-        "Vertaling": "to hang"
-    },
-    {
-        "Infinitief": "hebben",
-        "Imperfectum": "had",
-        "Imperfectum_plural": "hadden",
-        "Perfectum": "gehad",
-        "Vertaling": "to have"
-    },
-    {
-        "Infinitief": "helpen",
-        "Imperfectum": "hielp",
-        "Imperfectum_plural": "hielpen",
-        "Perfectum": "geholpen",
-        "Vertaling": "to help"
-    },
-    {
-        "Infinitief": "houden",
-        "Imperfectum": "hield",
-        "Imperfectum_plural": "hielden",
-        "Perfectum": "gehouden",
-        "Vertaling": "to keep"
-    },
-    {
-        "Infinitief": "kiezen",
-        "Imperfectum": "koos",
-        "Imperfectum_plural": "kozen",
-        "Perfectum": "gekozen",
-        "Vertaling": "to choose"
-    },
-    {
-        "Infinitief": "kijken",
-        "Imperfectum": "keek",
-        "Imperfectum_plural": "keken",
-        "Perfectum": "gekeken",
-        "Vertaling": "to look"
-    },
-    {
-        "Infinitief": "klimmen",
-        "Imperfectum": "klom",
-        "Imperfectum_plural": "klommen",
-        "Perfectum": "geklommen",
-        "Vertaling": "to climb"
-    },
-    {
-        "Infinitief": "komen",
-        "Imperfectum": "kwam",
-        "Imperfectum_plural": "kwamen",
-        "Perfectum": "is gekomen",
-        "Vertaling": "to come"
-    },
-    {
-        "Infinitief": "kopen",
-        "Imperfectum": "kocht",
-        "Imperfectum_plural": "kochten",
-        "Perfectum": "gekocht",
-        "Vertaling": "to buy"
-    },
-    {
-        "Infinitief": "krijgen",
-        "Imperfectum": "kreeg",
-        "Imperfectum_plural": "kregen",
-        "Perfectum": "gekregen",
-        "Vertaling": "to get"
-    },
-    {
-        "Infinitief": "kruipen",
-        "Imperfectum": "kroop",
-        "Imperfectum_plural": "kropen",
-        "Perfectum": "gekropen",
-        "Vertaling": "to crawl"
-    },
-    {
-        "Infinitief": "kunnen",
-        "Imperfectum": "kon",
-        "Imperfectum_plural": "konden",
-        "Perfectum": "gekund",
-        "Vertaling": "be able"
-    },
-    {
-        "Infinitief": "lachen",
-        "Imperfectum": "lachte",
-        "Imperfectum_plural": "lachten",
-        "Perfectum": "gelachen",
-        "Vertaling": "to laugh"
-    },
-    {
-        "Infinitief": "laten",
-        "Imperfectum": "liet",
-        "Imperfectum_plural": "lieten",
-        "Perfectum": "gelaten",
-        "Vertaling": "to leave"
-    },
-    {
-        "Infinitief": "lezen",
-        "Imperfectum": "las",
-        "Imperfectum_plural": "lazen",
-        "Perfectum": "gelezen",
-        "Vertaling": "to read"
-    },
-    {
-        "Infinitief": "liegen",
-        "Imperfectum": "loog",
-        "Imperfectum_plural": "logen",
-        "Perfectum": "gelogen",
-        "Vertaling": "to lie"
-    },
-    {
-        "Infinitief": "liggen",
-        "Imperfectum": "lag",
-        "Imperfectum_plural": "lagen",
-        "Perfectum": "gelegen",
-        "Vertaling": "to lie"
-    },
-    {
-        "Infinitief": "lijden",
-        "Imperfectum": "leed",
-        "Imperfectum_plural": "leden",
-        "Perfectum": "geleden",
-        "Vertaling": "to suffer"
-    },
-    {
-        "Infinitief": "lijken",
-        "Imperfectum": "leek",
-        "Imperfectum_plural": "leken",
-        "Perfectum": "geleken",
-        "Vertaling": "to appear"
-    },
-    {
-        "Infinitief": "lopen",
-        "Imperfectum": "liep",
-        "Imperfectum_plural": "liepen",
-        "Perfectum": "is gelopen",
-        "Vertaling": "to walk"
-    }
+{"Infinitief":"beginnen","Imperfectum":"begon","Imperfectum_plural":"begonnen","Perfectum":"is begonen","Vertaling":"to begin"},
+{"Infinitief":"begrijpen","Imperfectum":"begreep","Imperfectum_plural":"begrepen","Perfectum":"begrepen","Vertaling":"to understand"},
+{"Infinitief":"betreffen","Imperfectum":"betrof","Imperfectum_plural":"betroffen","Perfectum":"betroffen","Vertaling":"to concern"},
+{"Infinitief":"bewegen","Imperfectum":"bewoog","Imperfectum_plural":"bewogen","Perfectum":"bewogen","Vertaling":"to move"},
+{"Infinitief":"bewijzen","Imperfectum":"bewees","Imperfectum_plural":"bewezen","Perfectum":"bewezen","Vertaling":"to prove"},
+{"Infinitief":"bidden","Imperfectum":"bad","Imperfectum_plural":"baden","Perfectum":"gebeden","Vertaling":"to pray"},
+{"Infinitief":"bieden","Imperfectum":"bood","Imperfectum_plural":"boden","Perfectum":"geboden","Vertaling":"to offer"},
+{"Infinitief":"blijken","Imperfectum":"bleek","Imperfectum_plural":"bleven","Perfectum":"is gebleken","Vertaling":"to turn out"},
+{"Infinitief":"blijven","Imperfectum":"bleef","Imperfectum_plural":"bleven","Perfectum":"is gebleven","Vertaling":"to stay"},
+{"Infinitief":"breken","Imperfectum":"brak","Imperfectum_plural":"braken","Perfectum":"gebroken","Vertaling":"to break"},
+{"Infinitief":"brengen","Imperfectum":"bracht","Imperfectum_plural":"brachten","Perfectum":"gebracht","Vertaling":"to bring"},
+{"Infinitief":"buigen","Imperfectum":"boog","Imperfectum_plural":"bogen","Perfectum":"gebogen","Vertaling":"to bend"},
+{"Infinitief":"denken","Imperfectum":"dacht","Imperfectum_plural":"dachten","Perfectum":"gedacht","Vertaling":"to think"},
+{"Infinitief":"doen","Imperfectum":"deed","Imperfectum_plural":"deden","Perfectum":"gedaan","Vertaling":"to do"},
+{"Infinitief":"dragen","Imperfectum":"droeg","Imperfectum_plural":"droegen","Perfectum":"gedragen","Vertaling":"to wear"},
+{"Infinitief":"drijven","Imperfectum":"dreef","Imperfectum_plural":"dreven","Perfectum":"is gedreven","Vertaling":"to float"},
+{"Infinitief":"dringen","Imperfectum":"drong","Imperfectum_plural":"drongen","Perfectum":"gedrongen","Vertaling":"to insist"},
+{"Infinitief":"drinken","Imperfectum":"dronk","Imperfectum_plural":"dronken","Perfectum":"gedronken","Vertaling":"to drink"},
+{"Infinitief":"dwingen","Imperfectum":"dwong","Imperfectum_plural":"dwongen","Perfectum":"gedwongen","Vertaling":"to force"},
+{"Infinitief":"ervaren","Imperfectum":"ervoer","Imperfectum_plural":"ervoeren","Perfectum":"ervaren","Vertaling":"to experience"},
+{"Infinitief":"eten","Imperfectum":"at","Imperfectum_plural":"aten","Perfectum":"gegeten","Vertaling":"to eat"},
+{"Infinitief":"gaan","Imperfectum":"ging","Imperfectum_plural":"gingen","Perfectum":"is gegaan","Vertaling":"to go"},
+{"Infinitief":"gedragen","Imperfectum":"gedroeg","Imperfectum_plural":"gedroegen","Perfectum":"gedragen","Vertaling":"to behave"},
+{"Infinitief":"genezen","Imperfectum":"genas","Imperfectum_plural":"genazen","Perfectum":"genezen","Vertaling":"to cure"},
+{"Infinitief":"genieten","Imperfectum":"genoot","Imperfectum_plural":"genoten","Perfectum":"genoten","Vertaling":"to enjoy"},
+{"Infinitief":"geven","Imperfectum":"gaf","Imperfectum_plural":"gaven","Perfectum":"gegeven","Vertaling":"to give"},
+{"Infinitief":"glijden","Imperfectum":"gleed","Imperfectum_plural":"gleden","Perfectum":"is gegleden","Vertaling":"to slide"},
+{"Infinitief":"grijpen","Imperfectum":"greep","Imperfectum_plural":"grepen","Perfectum":"gegrepen","Vertaling":"to grab"},
+{"Infinitief":"hangen","Imperfectum":"hing","Imperfectum_plural":"hingen","Perfectum":"gehangen","Vertaling":"to hang"},
+{"Infinitief":"hebben","Imperfectum":"had","Imperfectum_plural":"hadden","Perfectum":"gehad","Vertaling":"to have"},
+{"Infinitief":"helpen","Imperfectum":"hielp","Imperfectum_plural":"hielpen","Perfectum":"geholpen","Vertaling":"to help"},
+{"Infinitief":"houden","Imperfectum":"hield","Imperfectum_plural":"hielden","Perfectum":"gehouden","Vertaling":"to keep"},
+{"Infinitief":"kiezen","Imperfectum":"koos","Imperfectum_plural":"kozen","Perfectum":"gekozen","Vertaling":"to choose"},
+{"Infinitief":"kijken","Imperfectum":"keek","Imperfectum_plural":"keken","Perfectum":"gekeken","Vertaling":"to look"},
+{"Infinitief":"klimmen","Imperfectum":"klom","Imperfectum_plural":"klommen","Perfectum":"geklommen","Vertaling":"to climb"},
+{"Infinitief":"komen","Imperfectum":"kwam","Imperfectum_plural":"kwamen","Perfectum":"is gekomen","Vertaling":"to come"},
+{"Infinitief":"kopen","Imperfectum":"kocht","Imperfectum_plural":"kochten","Perfectum":"gekocht","Vertaling":"to buy"},
+{"Infinitief":"krijgen","Imperfectum":"kreeg","Imperfectum_plural":"kregen","Perfectum":"gekregen","Vertaling":"to get"},
+{"Infinitief":"kruipen","Imperfectum":"kroop","Imperfectum_plural":"kropen","Perfectum":"gekropen","Vertaling":"to crawl"},
+{"Infinitief":"kunnen","Imperfectum":"kon","Imperfectum_plural":"konden","Perfectum":"gekund","Vertaling":"be able"},
+{"Infinitief":"lachen","Imperfectum":"lachte","Imperfectum_plural":"lachten","Perfectum":"gelachen","Vertaling":"to laugh"},
+{"Infinitief":"laten","Imperfectum":"liet","Imperfectum_plural":"lieten","Perfectum":"gelaten","Vertaling":"to leave"},
+{"Infinitief":"lezen","Imperfectum":"las","Imperfectum_plural":"lazen","Perfectum":"gelezen","Vertaling":"to read"},
+{"Infinitief":"liegen","Imperfectum":"loog","Imperfectum_plural":"logen","Perfectum":"gelogen","Vertaling":"to lie"},
+{"Infinitief":"liggen","Imperfectum":"lag","Imperfectum_plural":"lagen","Perfectum":"gelegen","Vertaling":"to lie"},
+{"Infinitief":"lijden","Imperfectum":"leed","Imperfectum_plural":"leden","Perfectum":"geleden","Vertaling":"to suffer"},
+{"Infinitief":"lijken","Imperfectum":"leek","Imperfectum_plural":"leken","Perfectum":"geleken","Vertaling":"to appear"},
+{"Infinitief":"lopen","Imperfectum":"liep","Imperfectum_plural":"liepen","Perfectum":"is gelopen","Vertaling":"to walk"},
+{"Infinitief":"moeten","Imperfectum":"moest","Imperfectum_plural":"moesten","Perfectum":"gemoeten","Vertaling":"must"},
+{"Infinitief":"mogen","Imperfectum":"mocht","Imperfectum_plural":"mochten","Perfectum":"gemogen","Vertaling":"may"},
+{"Infinitief":"nemen","Imperfectum":"nam","Imperfectum_plural":"namen","Perfectum":"genomen","Vertaling":"to take"},
+{"Infinitief":"ontbreken","Imperfectum":"ontbrak","Imperfectum_plural":"ontbraken","Perfectum":"ontbroken","Vertaling":"to lack"},
+{"Infinitief":"ontvangen","Imperfectum":"ontving","Imperfectum_plural":"ontvingen","Perfectum":"ontvangen","Vertaling":"to receive"},
+{"Infinitief":"ophangen","Imperfectum":"hing op","Imperfectum_plural":"hingen op","Perfectum":"opgehangen","Vertaling":"to suspend"},
+{"Infinitief":"opsteken","Imperfectum":"stak op","Imperfectum_plural":"staken op","Perfectum":"opgestoken","Vertaling":"to light up"},
+{"Infinitief":"optreden","Imperfectum":"trad op","Imperfectum_plural":"traden op","Perfectum":"opgetreden","Vertaling":"to perform"},
+{"Infinitief":"rijden","Imperfectum":"reed","Imperfectum_plural":"reden","Perfectum":"is gereden","Vertaling":"to drive/ride"},
+{"Infinitief":"roepen","Imperfectum":"riep","Imperfectum_plural":"riepen","Perfectum":"geroepen","Vertaling":"to request"},
+{"Infinitief":"schenken","Imperfectum":"schonk","Imperfectum_plural":"schonken","Perfectum":"geschonken","Vertaling":"to donate"},
+{"Infinitief":"scheppen","Imperfectum":"schiep","Imperfectum_plural":"schiepen","Perfectum":"geschapen","Vertaling":"to create"},
+{"Infinitief":"schieten","Imperfectum":"schoot","Imperfectum_plural":"schoten","Perfectum":"geschoten","Vertaling":"to shoot"},
+{"Infinitief":"schijnen","Imperfectum":"scheen","Imperfectum_plural":"schenen","Perfectum":"geschenen","Vertaling":"to shine"},
+{"Infinitief":"schrijven","Imperfectum":"schreef","Imperfectum_plural":"schreven","Perfectum":"geschreven","Vertaling":"to write"},
+{"Infinitief":"schrikken","Imperfectum":"schrok","Imperfectum_plural":"schrokken","Perfectum":"is geschrokken","Vertaling":"to scare"},
+{"Infinitief":"schuiven","Imperfectum":"schoof","Imperfectum_plural":"schoven","Perfectum":"geschoven","Vertaling":"to slide"},
+{"Infinitief":"slaan","Imperfectum":"sloeg","Imperfectum_plural":"sloegen","Perfectum":"geslagen","Vertaling":"to beat"},
+{"Infinitief":"slapen","Imperfectum":"sliep","Imperfectum_plural":"sliepen","Perfectum":"geslapen","Vertaling":"to sleep"},
+{"Infinitief":"sluiten","Imperfectum":"sloot","Imperfectum_plural":"sloten","Perfectum":"gesloten","Vertaling":"to close"},
+{"Infinitief":"spreken","Imperfectum":"sprak","Imperfectum_plural":"spraken","Perfectum":"gesproken","Vertaling":"to speak"},
+{"Infinitief":"springen","Imperfectum":"sprong","Imperfectum_plural":"sprongen","Perfectum":"gesprongen","Vertaling":"to jump"},
+{"Infinitief":"staan","Imperfectum":"stond","Imperfectum_plural":"stonden","Perfectum":"gestaan","Vertaling":"to stand"},
+{"Infinitief":"steken","Imperfectum":"stak","Imperfectum_plural":"staken","Perfectum":"gestoken","Vertaling":"to stab"},
+{"Infinitief":"sterven","Imperfectum":"stierf","Imperfectum_plural":"stierven","Perfectum":"is gestorven","Vertaling":"to die"},
+{"Infinitief":"stijgen","Imperfectum":"steeg","Imperfectum_plural":"stegen","Perfectum":"is gestegen","Vertaling":"to rise"},
+{"Infinitief":"treden","Imperfectum":"trad","Imperfectum_plural":"traden","Perfectum":"getreden","Vertaling":"to step"},
+{"Infinitief":"treffen","Imperfectum":"trof","Imperfectum_plural":"troffen","Perfectum":"getroffen","Vertaling":"to hit"},
+{"Infinitief":"trekken","Imperfectum":"trok","Imperfectum_plural":"trokken","Perfectum":"getrokken","Vertaling":"to pull"},
+{"Infinitief":"vallen","Imperfectum":"viel","Imperfectum_plural":"vielen","Perfectum":"is gevallen","Vertaling":"to fall"},
+{"Infinitief":"vangen","Imperfectum":"ving","Imperfectum_plural":"vingen","Perfectum":"gevangen","Vertaling":"to catch"},
+{"Infinitief":"varen","Imperfectum":"voer","Imperfectum_plural":"voeren","Perfectum":"gevaren","Vertaling":"to sail"},
+{"Infinitief":"vechten","Imperfectum":"vocht","Imperfectum_plural":"vochten","Perfectum":"gevochten","Vertaling":"to fight"},
+{"Infinitief":"verbergen","Imperfectum":"verborg","Imperfectum_plural":"verborgen","Perfectum":"verborgen","Vertaling":"to hide"},
+{"Infinitief":"verbieden","Imperfectum":"verbood","Imperfectum_plural":"verboden","Perfectum":"verboden","Vertaling":"to forbid"},
+{"Infinitief":"verdwijnen","Imperfectum":"verdween","Imperfectum_plural":"verdwenen","Perfectum":"is verdwenen","Vertaling":"to disappear"},
+{"Infinitief":"vergelijken","Imperfectum":"vergeleek","Imperfectum_plural":"vergeleken","Perfectum":"vergeleken","Vertaling":"to compare"},
+{"Infinitief":"vergeten","Imperfectum":"vergat","Imperfectum_plural":"vergaten","Perfectum":"is vergeten","Vertaling":"to forget"},
+{"Infinitief":"verlaten","Imperfectum":"verliet","Imperfectum_plural":"verlieten","Perfectum":"verlaten","Vertaling":"to leave"},
+{"Infinitief":"verliezen","Imperfectum":"verloor","Imperfectum_plural":"verloren","Perfectum":"verloren","Vertaling":"to lose"},
+{"Infinitief":"verschijnen","Imperfectum":"verscheen","Imperfectum_plural":"verschenen","Perfectum":"is verschenen","Vertaling":"to show up"},
+{"Infinitief":"vinden","Imperfectum":"vond","Imperfectum_plural":"vonden","Perfectum":"gevonden","Vertaling":"to find"},
+{"Infinitief":"vliegen","Imperfectum":"vloog","Imperfectum_plural":"vlogen","Perfectum":"is gevlogen","Vertaling":"to fly"},
+{"Infinitief":"vragen","Imperfectum":"vroeg","Imperfectum_plural":"vroegen","Perfectum":"gevraagd","Vertaling":"to ask"},
+{"Infinitief":"wassen","Imperfectum":"waste","Imperfectum_plural":"wasten","Perfectum":"gewassen","Vertaling":"to wash"},
+{"Infinitief":"werpen","Imperfectum":"wierp","Imperfectum_plural":"wierpen","Perfectum":"geworpen","Vertaling":"to throw"},
+{"Infinitief":"weten","Imperfectum":"wist","Imperfectum_plural":"wisten","Perfectum":"geweten","Vertaling":"to know"},
+{"Infinitief":"willen","Imperfectum":"wilde","Imperfectum_plural":"wilden","Perfectum":"gewild","Vertaling":"to want"},
+{"Infinitief":"winnen","Imperfectum":"won","Imperfectum_plural":"wonnen","Perfectum":"gewonnen","Vertaling":"to win"},
+{"Infinitief":"worden","Imperfectum":"werd","Imperfectum_plural":"werden","Perfectum":"is geworden","Vertaling":"to become"},
+{"Infinitief":"zeggen","Imperfectum":"zei","Imperfectum_plural":"zeiden","Perfectum":"gezegd","Vertaling":"to say"},
+{"Infinitief":"zenden","Imperfectum":"zond","Imperfectum_plural":"zonden","Perfectum":"gezonden","Vertaling":"to send"},
+{"Infinitief":"zien","Imperfectum":"zag","Imperfectum_plural":"zagen","Perfectum":"gezien","Vertaling":"to see"},
+{"Infinitief":"zijn","Imperfectum":"was","Imperfectum_plural":"waren","Perfectum":"is geweest","Vertaling":"to be"},
+{"Infinitief":"zingen","Imperfectum":"zong","Imperfectum_plural":"zongen","Perfectum":"gezongen","Vertaling":"to sing"},
+{"Infinitief":"zitten","Imperfectum":"zat","Imperfectum_plural":"zaten","Perfectum":"gezeten","Vertaling":"to sit"},
+{"Infinitief":"zoeken","Imperfectum":"zocht","Imperfectum_plural":"zochten","Perfectum":"gezocht","Vertaling":"to search"},
+{"Infinitief":"zullen","Imperfectum":"zou","Imperfectum_plural":"zouden","Perfectum":"","Vertaling":"to will"},
+{"Infinitief":"zwijgen","Imperfectum":"zweeg","Imperfectum_plural":"zwegen","Perfectum":"gezwegen","Vertaling":"to keep silent"}
 ]
