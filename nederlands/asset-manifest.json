@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/nederlands/static/css/main.addba373.chunk.css",
-    "main.js": "/nederlands/static/js/main.0569e1ad.chunk.js",
-    "main.js.map": "/nederlands/static/js/main.0569e1ad.chunk.js.map",
-    "runtime-main.js": "/nederlands/static/js/runtime-main.783643f2.js",
-    "runtime-main.js.map": "/nederlands/static/js/runtime-main.783643f2.js.map",
-    "static/css/2.89f067aa.chunk.css": "/nederlands/static/css/2.89f067aa.chunk.css",
-    "static/js/2.9506cdf9.chunk.js": "/nederlands/static/js/2.9506cdf9.chunk.js",
-    "static/js/2.9506cdf9.chunk.js.map": "/nederlands/static/js/2.9506cdf9.chunk.js.map",
+    "main.css": "/nederlands/static/css/main.b2b0a1dd.chunk.css",
+    "main.js": "/nederlands/static/js/main.586fc48c.chunk.js",
+    "main.js.map": "/nederlands/static/js/main.586fc48c.chunk.js.map",
+    "runtime-main.js": "/nederlands/static/js/runtime-main.81256542.js",
+    "runtime-main.js.map": "/nederlands/static/js/runtime-main.81256542.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/nederlands/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.17ab2fde.chunk.js": "/nederlands/static/js/2.17ab2fde.chunk.js",
+    "static/js/2.17ab2fde.chunk.js.map": "/nederlands/static/js/2.17ab2fde.chunk.js.map",
     "index.html": "/nederlands/index.html",
-    "precache-manifest.0a08fabcc07f06250083dcb3840ad121.js": "/nederlands/precache-manifest.0a08fabcc07f06250083dcb3840ad121.js",
+    "precache-manifest.15b3b49b0b09b010aa2e523e91dbf960.js": "/nederlands/precache-manifest.15b3b49b0b09b010aa2e523e91dbf960.js",
     "service-worker.js": "/nederlands/service-worker.js",
-    "static/css/2.89f067aa.chunk.css.map": "/nederlands/static/css/2.89f067aa.chunk.css.map",
-    "static/css/main.addba373.chunk.css.map": "/nederlands/static/css/main.addba373.chunk.css.map",
-    "static/js/2.9506cdf9.chunk.js.LICENSE.txt": "/nederlands/static/js/2.9506cdf9.chunk.js.LICENSE.txt"
+    "static/css/2.829c9cb5.chunk.css.map": "/nederlands/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.b2b0a1dd.chunk.css.map": "/nederlands/static/css/main.b2b0a1dd.chunk.css.map",
+    "static/js/2.17ab2fde.chunk.js.LICENSE.txt": "/nederlands/static/js/2.17ab2fde.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.783643f2.js",
-    "static/css/2.89f067aa.chunk.css",
-    "static/js/2.9506cdf9.chunk.js",
-    "static/css/main.addba373.chunk.css",
-    "static/js/main.0569e1ad.chunk.js"
+    "static/js/runtime-main.81256542.js",
+    "static/css/2.829c9cb5.chunk.css",
+    "static/js/2.17ab2fde.chunk.js",
+    "static/css/main.b2b0a1dd.chunk.css",
+    "static/js/main.586fc48c.chunk.js"
   ]
 }
