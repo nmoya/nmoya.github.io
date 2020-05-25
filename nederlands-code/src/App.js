@@ -1,28 +1,28 @@
-import React from 'react';
+import React from 'react'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-} from "react-router-dom";
-import './App.css';
-import VerbsOpenQuestion from './components/verbs';
-import Home from './components/home';
+  Route
+} from 'react-router-dom'
+import './App.css'
+import VerbsOpenQuestion from './components/verbs'
+import Home from './components/home'
 
-function App() {
+function App () {
   return (
     <div className="App">
       <Router basename={'/nederlands'}>
         <Switch>
-          <Route exact path={`/`}>
+          <Route exact path={'/'}>
             <Home />
           </Route>
-          <Route path={`/:id`}>
+          <Route path={'/:id'}>
             <VerbsOpenQuestion />
           </Route>
         </Switch>
       </Router>
     </div >
-  );
+  )
 }
 
-export default App;
+export default App
