@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c8950e891d98f0e9e5046cc5433cf0a8",
+    "revision": "83308110afa77fc1bc90e71ac2a5fa2e",
     "url": "/nederlands-oefenen/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nederlands-oefenen/static/css/2.89f067aa.chunk.css"
   },
   {
-    "revision": "2ada2a2acbe336497445",
+    "revision": "5e42d36a0e011b03fd54",
     "url": "/nederlands-oefenen/static/css/main.addba373.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nederlands-oefenen/static/js/2.cd00c53f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2ada2a2acbe336497445",
-    "url": "/nederlands-oefenen/static/js/main.8e42f853.chunk.js"
+    "revision": "5e42d36a0e011b03fd54",
+    "url": "/nederlands-oefenen/static/js/main.0b1ab1f4.chunk.js"
   },
   {
     "revision": "b8588ce57598e04eb40e",

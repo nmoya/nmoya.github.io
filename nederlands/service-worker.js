@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/nederlands-oefenen/precache-manifest.bc6f8d615c8127565bc71427b982514d.js"
+  "/nederlands-oefenen/precache-manifest.7c67f7cee586750cb81e8f55c80acccb.js"
 );
 
 self.addEventListener('message', (event) => {

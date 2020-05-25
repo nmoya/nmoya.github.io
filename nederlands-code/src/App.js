@@ -22,7 +22,7 @@ const VerbsData = {
 function App() {
   return (
     <div className="App">
-      <Router basename={'/nederlands-oefenen'}>
+      <Router basename={'/nederlands'}>
         <Switch>
           <Route exact path={`/`}>
             <Home />
