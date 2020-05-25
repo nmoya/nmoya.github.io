@@ -3,11 +3,11 @@ import {
     withRouter
 } from "react-router-dom";
 import ResultsComponent from './results';
-import werkworden_json from '../werkworden.json';
+import werkworden_json from '../data/werkworden.json';
 import OpenQuestionForm from './openQuestion';
-import h1_json from '../h1.json';
-import h2_json from '../h2.json';
-import h3_json from '../h3.json';
+import h1_json from '../data/h1.json';
+import h2_json from '../data/h2.json';
+import h3_json from '../data/h3.json';
 
 const VerbsData = {
     "werkworden": werkworden_json,
