@@ -2,24 +2,32 @@ import React from 'react'
 import {
   Link
 } from 'react-router-dom'
+import './home.css'
 
 function Home () {
   return (
-    <div>
-      <h1>Welkom! Kies jouew werkworden collectie:</h1>
-      {/* Remember to give different URLs to each button and add to the router above */}
-      {/* <Link to="/basiswerkwoorden"><button class="btn btn-primary" type="submit">Basiswerkwoorden (Oranje)</button></Link> */}
-      <br></br><br></br><br></br>
-      <Link to={'/werkworden'}><button className="btn btn-primary" type="submit">Basiswerkwoorden (Oranje)</button></Link>
-      <br></br>
-      <br></br>
-      <Link to={'/h1'}><button className="btn btn-primary" type="submit">Hoofdstuck 1 werkworden</button></Link>
-      <br></br>
-      <br></br>
-      <Link to={'/h2'}><button className="btn btn-primary" type="submit">Hoofdstuck 2 werkworden</button></Link>
-      <br></br>
-      <br></br>
-      <Link to={'/h3'}><button className="btn btn-primary" type="submit">Hoofdstuck 3 werkworden</button></Link>
+    <div className="container">
+      <div className="row">
+        <div className="col"><h1>Welkom! Kies jouw opdracht:</h1></div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <h2>Werkworden</h2>
+          {/* Remember to give different URLs to each button and add to the router in App.js */}
+          <ul className="list-unstyleld">
+            <li className="list-group-item list-group-item-action rounded-top"><Link to={'/werkworden'}>Basiswerkwoorden (Oranje)</Link></li>
+            <li className="list-group-item list-group-item-action"><Link to={'/h1'}>Hoofdstuck 1 werkworden</Link></li>
+            <li className="list-group-item list-group-item-action"><Link to={'/h2'}>Hoofdstuck 2 werkworden</Link></li>
+            <li className="list-group-item list-group-item-action rounded-bottom"><Link to={'/h3'}>Hoofdstuck 3 werkworden</Link></li>
+          </ul>
+        </div>
+        <div className="col">
+          <h2 className="col">Vocabulaire</h2>
+          <ul className="list-unstyleld">
+            <li className="list-group-item list-group-item-action rounded-top rounded-bottom">Under construction</li>
+          </ul>
+        </div>
+      </div>
     </div>
   )
 }
