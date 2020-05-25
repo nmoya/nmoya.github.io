@@ -3,6 +3,7 @@ import {
   withRouter
 } from 'react-router-dom'
 import ResultsComponent from './results'
+import StreakCounter from './streakCounter'
 import werkwordenJson from '../data/werkworden.json'
 import OpenQuestionForm from './openQuestion'
 import h1Json from '../data/h1.json'
@@ -89,7 +90,7 @@ class PracticeWithoutRouter extends React.Component {
     render () {
       return (
         <div>
-          <h3>Streak: {this.state.score.currentStreak} Record: {this.state.score.maxStreak}</h3>
+          <StreakCounter current={this.state.score.currentStreak} record={this.state.score.maxStreak}/>
           <br></br>
           <OpenQuestionForm question={this.buildQuestion()} description={this.buildDescription()} placeholder={this.buildPlaceholder()} answerCallback={this.checkAnswer} />
           {this.state.lastAnswer.areAllCorrect === null ? null : <ResultsComponent lastAnswer={this.state.lastAnswer} />}
