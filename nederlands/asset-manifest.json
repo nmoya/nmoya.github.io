@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/nederlands-oefenen/static/css/main.addba373.chunk.css",
-    "main.js": "/nederlands-oefenen/static/js/main.0b1ab1f4.chunk.js",
-    "main.js.map": "/nederlands-oefenen/static/js/main.0b1ab1f4.chunk.js.map",
-    "runtime-main.js": "/nederlands-oefenen/static/js/runtime-main.a861ca9d.js",
-    "runtime-main.js.map": "/nederlands-oefenen/static/js/runtime-main.a861ca9d.js.map",
-    "static/css/2.89f067aa.chunk.css": "/nederlands-oefenen/static/css/2.89f067aa.chunk.css",
-    "static/js/2.cd00c53f.chunk.js": "/nederlands-oefenen/static/js/2.cd00c53f.chunk.js",
-    "static/js/2.cd00c53f.chunk.js.map": "/nederlands-oefenen/static/js/2.cd00c53f.chunk.js.map",
-    "index.html": "/nederlands-oefenen/index.html",
-    "precache-manifest.7c67f7cee586750cb81e8f55c80acccb.js": "/nederlands-oefenen/precache-manifest.7c67f7cee586750cb81e8f55c80acccb.js",
-    "service-worker.js": "/nederlands-oefenen/service-worker.js",
-    "static/css/2.89f067aa.chunk.css.map": "/nederlands-oefenen/static/css/2.89f067aa.chunk.css.map",
-    "static/css/main.addba373.chunk.css.map": "/nederlands-oefenen/static/css/main.addba373.chunk.css.map",
-    "static/js/2.cd00c53f.chunk.js.LICENSE.txt": "/nederlands-oefenen/static/js/2.cd00c53f.chunk.js.LICENSE.txt"
+    "main.css": "/nederlands/static/css/main.addba373.chunk.css",
+    "main.js": "/nederlands/static/js/main.0569e1ad.chunk.js",
+    "main.js.map": "/nederlands/static/js/main.0569e1ad.chunk.js.map",
+    "runtime-main.js": "/nederlands/static/js/runtime-main.783643f2.js",
+    "runtime-main.js.map": "/nederlands/static/js/runtime-main.783643f2.js.map",
+    "static/css/2.89f067aa.chunk.css": "/nederlands/static/css/2.89f067aa.chunk.css",
+    "static/js/2.9506cdf9.chunk.js": "/nederlands/static/js/2.9506cdf9.chunk.js",
+    "static/js/2.9506cdf9.chunk.js.map": "/nederlands/static/js/2.9506cdf9.chunk.js.map",
+    "index.html": "/nederlands/index.html",
+    "precache-manifest.0a08fabcc07f06250083dcb3840ad121.js": "/nederlands/precache-manifest.0a08fabcc07f06250083dcb3840ad121.js",
+    "service-worker.js": "/nederlands/service-worker.js",
+    "static/css/2.89f067aa.chunk.css.map": "/nederlands/static/css/2.89f067aa.chunk.css.map",
+    "static/css/main.addba373.chunk.css.map": "/nederlands/static/css/main.addba373.chunk.css.map",
+    "static/js/2.9506cdf9.chunk.js.LICENSE.txt": "/nederlands/static/js/2.9506cdf9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a861ca9d.js",
+    "static/js/runtime-main.783643f2.js",
     "static/css/2.89f067aa.chunk.css",
-    "static/js/2.cd00c53f.chunk.js",
+    "static/js/2.9506cdf9.chunk.js",
     "static/css/main.addba373.chunk.css",
-    "static/js/main.0b1ab1f4.chunk.js"
+    "static/js/main.0569e1ad.chunk.js"
   ]
 }
