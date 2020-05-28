@@ -16,7 +16,7 @@ function App () {
           <Route exact path={'/'}>
             <Home />
           </Route>
-          <Route path={'/:id'}>
+          <Route path={'/werkwoorden/:id'}>
             <VerbsOpenQuestion />
           </Route>
         </Switch>

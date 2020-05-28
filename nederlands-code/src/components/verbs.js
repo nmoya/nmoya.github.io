@@ -11,7 +11,7 @@ import h2Json from '../data/h2.json'
 import h3Json from '../data/h3.json'
 
 const VerbsData = {
-  werkworden: werkwordenJson,
+  basis: werkwordenJson,
   h1: h1Json,
   h2: h2Json,
   h3: h3Json
