@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 import './App.css'
 import VerbsOpenQuestion from './components/verbs'
+import VocabulaireClosedQuestion from './components/vocabulaire'
 import Home from './components/home'
 
 function App () {
@@ -18,6 +19,9 @@ function App () {
           </Route>
           <Route path={'/werkwoorden/:id'}>
             <VerbsOpenQuestion />
+          </Route>
+          <Route path={'/vocabulaire'}>
+            <VocabulaireClosedQuestion />
           </Route>
         </Switch>
       </Router>
