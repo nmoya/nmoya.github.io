@@ -45,6 +45,7 @@ class ClosedQuestionForm extends React.Component {
 
     handleKeyDown = (event) => {
       const code = event.keyCode
+      console.log(code)
       if (code >= 49 && code <= 52) {
         // It was a number within 1-4
         this.setAnswer(this.props.alternatives[code - 49])

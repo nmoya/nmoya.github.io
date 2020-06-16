@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nederlands/static/css/main.d7133ed3.chunk.css",
-    "main.js": "/nederlands/static/js/main.a72f8265.chunk.js",
-    "main.js.map": "/nederlands/static/js/main.a72f8265.chunk.js.map",
+    "main.js": "/nederlands/static/js/main.a1fc8af0.chunk.js",
+    "main.js.map": "/nederlands/static/js/main.a1fc8af0.chunk.js.map",
     "runtime-main.js": "/nederlands/static/js/runtime-main.81256542.js",
     "runtime-main.js.map": "/nederlands/static/js/runtime-main.81256542.js.map",
     "static/css/2.9587a33d.chunk.css": "/nederlands/static/css/2.9587a33d.chunk.css",
     "static/js/2.5d83f6a9.chunk.js": "/nederlands/static/js/2.5d83f6a9.chunk.js",
     "static/js/2.5d83f6a9.chunk.js.map": "/nederlands/static/js/2.5d83f6a9.chunk.js.map",
     "index.html": "/nederlands/index.html",
-    "precache-manifest.70d3a794debc84a63ad9f7191ad54ab0.js": "/nederlands/precache-manifest.70d3a794debc84a63ad9f7191ad54ab0.js",
+    "precache-manifest.a9f483b7b4685f85f7259aecdc73d0cc.js": "/nederlands/precache-manifest.a9f483b7b4685f85f7259aecdc73d0cc.js",
     "service-worker.js": "/nederlands/service-worker.js",
     "static/css/2.9587a33d.chunk.css.map": "/nederlands/static/css/2.9587a33d.chunk.css.map",
     "static/css/main.d7133ed3.chunk.css.map": "/nederlands/static/css/main.d7133ed3.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.9587a33d.chunk.css",
     "static/js/2.5d83f6a9.chunk.js",
     "static/css/main.d7133ed3.chunk.css",
-    "static/js/main.a72f8265.chunk.js"
+    "static/js/main.a1fc8af0.chunk.js"
   ]
 }
