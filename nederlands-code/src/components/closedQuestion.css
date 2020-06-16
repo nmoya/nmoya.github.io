@@ -1,0 +1,31 @@
+ul {
+    list-style: none;
+}
+
+.closed-question-btn {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 150%;
+}
+
+.closed-question-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.closed-question-form-container{
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.selected {
+    background-color: #210977;
+    opacity: 75%;
+}
+
+.submit {
+    background-color: #28AC75;
+}
