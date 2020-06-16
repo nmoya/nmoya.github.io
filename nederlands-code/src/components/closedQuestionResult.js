@@ -11,7 +11,7 @@ class CorrectAnswer extends React.Component {
           </ul>
         </div>
         <div className="result-button-container">
-          <button className="result-next-button" onClick={this.props.nextExercise}>Next Exercise</button>
+          <button className="result-next-button result-next-button-correct" onClick={this.props.nextExercise}>Next Exercise</button>
         </div>
       </div>
     )
@@ -23,14 +23,14 @@ class WrongAnswer extends React.Component {
     return (
       <div className="closed-answer closed-answer-wrong">
         <div className="result-text-container">
-          <ul>
-            <li className="font-small">Nee, Sorry ❌</li>
-            <li className="color-black">{this.props.exercise.question.Nederlands}</li>
-            <li>{this.props.exercise.question.Engels}</li>
-          </ul>
+            <p className="font-small">Nee, Sorry ❌</p>
+            <div>
+              <p className="color-black">{this.props.exercise.question.Nederlands}</p>
+              <p>{this.props.exercise.question.Engels}</p>
+            </div>
         </div>
         <div className="result-button-container">
-          <button className="result-next-button" onClick={this.props.nextExercise}>Next Exercise</button>
+          <button className="result-next-button result-next-button-wrong" onClick={this.props.nextExercise}>Next Exercise</button>
         </div>
       </div>
     )
