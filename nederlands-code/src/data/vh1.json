@@ -1,26 +1,61 @@
 [
-	{
-		"Nederlands": "althans",
-		"Engels": "at least"
-	},
-	{
-		"Nederlands": "beleven",
-		"Engels": "experience"
-	},
-	{
-		"Nederlands": "boeken",
-		"Engels": "to book / books"
-	},
-	{
-		"Nederlands": "creatief",
-		"Engels": "creative"
-	},
-	{
-		"Nederlands": "de aandacht",
-		"Engels": "attention"
-	},
-	{
-		"Nederlands": "de afstand",
-		"Engels": "distance"
-	}
+{"Nederlands":"althans","Engels":"at least"},
+{"Nederlands":"beleven","Engels":"experience"},
+{"Nederlands":"besteden aan","Engels":"spend on"},
+{"Nederlands":"bijdragen aan","Engels":"contribute to"},
+{"Nederlands":"bitter","Engels":"bitter"},
+{"Nederlands":"boeken","Engels":"to book / books"},
+{"Nederlands":"creatief","Engels":"creative"},
+{"Nederlands":"de aandacht","Engels":"attention"},
+{"Nederlands":"de afstand","Engels":"distance"},
+{"Nederlands":"de behoefte","Engels":"need"},
+{"Nederlands":"de indruk","Engels":"impression"},
+{"Nederlands":"de jeugd","Engels":"youth"},
+{"Nederlands":"de jongere","Engels":"the young boys"},
+{"Nederlands":"de keus","Engels":"choice"},
+{"Nederlands":"de kroeg","Engels":"pub / tavern"},
+{"Nederlands":"de mens","Engels":"people"},
+{"Nederlands":"de onderzoeker","Engels":"researcher"},
+{"Nederlands":"de reden","Engels":"reason"},
+{"Nederlands":"de stage","Engels":"internship"},
+{"Nederlands":"de tandarts","Engels":"dentist"},
+{"Nederlands":"de uitdaging","Engels":"challenge"},
+{"Nederlands":"de vergoeding","Engels":"compensation"},
+{"Nederlands":"de voldoening","Engels":"satisfaction"},
+{"Nederlands":"de volwassene","Engels":"adult / grown up"},
+{"Nederlands":"de wereld","Engels":"world"},
+{"Nederlands":"drijven","Engels":"float"},
+{"Nederlands":"dromen","Engels":"dream"},
+{"Nederlands":"een hekel hebben aan","Engels":"dislike"},
+{"Nederlands":"gek (zijn op)","Engels":"crazy about"},
+{"Nederlands":"gemiddeld","Engels":"mean / average"},
+{"Nederlands":"het bericht","Engels":"message"},
+{"Nederlands":"het deel","Engels":"share / part"},
+{"Nederlands":"het doel","Engels":"goal"},
+{"Nederlands":"het gedrag","Engels":"behaviour"},
+{"Nederlands":"het geheim","Engels":"secret / confidential"},
+{"Nederlands":"het inkomen","Engels":"income"},
+{"Nederlands":"het onderzoek","Engels":"research"},
+{"Nederlands":"het resultaat","Engels":"result"},
+{"Nederlands":"het tijdschrift","Engels":"magazine"},
+{"Nederlands":"het toneel","Engels":"stage / scene"},
+{"Nederlands":"jammer genoeg","Engels":"unfortunately"},
+{"Nederlands":"koppelen","Engels":"link"},
+{"Nederlands":"merken","Engels":"notice"},
+{"Nederlands":"netjes","Engels":"decently"},
+{"Nederlands":"ontdekken","Engels":"discover"},
+{"Nederlands":"opvallen","Engels":"stand out"},
+{"Nederlands":"overbrengen","Engels":"transfer"},
+{"Nederlands":"per","Engels":"per"},
+{"Nederlands":"persoonlijk","Engels":"personal / in person"},
+{"Nederlands":"solliciteren","Engels":"apply"},
+{"Nederlands":"uitkijken naar","Engels":"looking forward to"},
+{"Nederlands":"uitmaken","Engels":"break up"},
+{"Nederlands":"verdienen","Engels":"deserve"},
+{"Nederlands":"verschillen","Engels":"differences"},
+{"Nederlands":"vervolgens","Engels":"thereafter"},
+{"Nederlands":"voorzien in","Engels":"provide"},
+{"Nederlands":"zoet","Engels":"sweet"},
+{"Nederlands":"zout","Engels":"salt"},
+{"Nederlands":"zuur","Engels":"sour"}
 ]

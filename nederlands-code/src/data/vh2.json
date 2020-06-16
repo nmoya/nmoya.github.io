@@ -1,30 +1,67 @@
 [
-	{
-		"Nederlands": "aanbieden",
-		"Engels": "to offer"
-	},
-	{
-		"Nederlands": "actief",
-		"Engels": "active"
-	},
-	{
-		"Nederlands": "afhankelijk van",
-		"Engels": "depends on"
-	},
-	{
-		"Nederlands": "avontouurlijk",
-		"Engels": "adventurous"
-	},
-	{
-		"Nederlands": "behoren tot",
-		"Engels": "belongs to"
-	},
-	{
-		"Nederlands": "beoordelen",
-		"Engels": "judge"
-	},
-	{
-		"Nederlands": "bereiken",
-		"Engels": "to achieve"
-	}
+{"Nederlands":"aanbieden","Engels":"to offer"},
+{"Nederlands":"actief","Engels":"active"},
+{"Nederlands":"afhankelijk van","Engels":"depends on"},
+{"Nederlands":"avontouurlijk","Engels":"adventurous"},
+{"Nederlands":"behoren tot","Engels":"belongs to"},
+{"Nederlands":"beoordelen","Engels":"judge"},
+{"Nederlands":"bereiken","Engels":"to achieve"},
+{"Nederlands":"bestaan (uit)","Engels":""},
+{"Nederlands":"blijken (uit)","Engels":""},
+{"Nederlands":"de basis","Engels":""},
+{"Nederlands":"de bestemming","Engels":""},
+{"Nederlands":"de bezitter","Engels":""},
+{"Nederlands":"de ervaring","Engels":""},
+{"Nederlands":"de gewoonte","Engels":""},
+{"Nederlands":"de horeca","Engels":""},
+{"Nederlands":"de kust","Engels":""},
+{"Nederlands":"de omgeving","Engels":""},
+{"Nederlands":"de omzet","Engels":""},
+{"Nederlands":"de overnachting","Engels":""},
+{"Nederlands":"de plek","Engels":""},
+{"Nederlands":"de provincie","Engels":""},
+{"Nederlands":"de route","Engels":""},
+{"Nederlands":"de stapel","Engels":""},
+{"Nederlands":"de tocht","Engels":""},
+{"Nederlands":"de trekpleister","Engels":""},
+{"Nederlands":"de uitrusting","Engels":""},
+{"Nederlands":"de vergadering","Engels":""},
+{"Nederlands":"de verhouding","Engels":""},
+{"Nederlands":"deelnemen aan","Engels":""},
+{"Nederlands":"delen","Engels":""},
+{"Nederlands":"doorbrengen","Engels":""},
+{"Nederlands":"enig","Engels":""},
+{"Nederlands":"fraai","Engels":""},
+{"Nederlands":"geliefd","Engels":""},
+{"Nederlands":"het kenmerk","Engels":""},
+{"Nederlands":"het oordeel","Engels":""},
+{"Nederlands":"het platteland","Engels":""},
+{"Nederlands":"klikken","Engels":""},
+{"Nederlands":"lichtgewicht","Engels":""},
+{"Nederlands":"matig","Engels":""},
+{"Nederlands":"objectief","Engels":""},
+{"Nederlands":"onafhankelijk","Engels":""},
+{"Nederlands":"ontvangen","Engels":""},
+{"Nederlands":"onvergetelijk","Engels":""},
+{"Nederlands":"onverwacht","Engels":""},
+{"Nederlands":"onvoldoende","Engels":""},
+{"Nederlands":"op prijs stellen","Engels":""},
+{"Nederlands":"opleveren","Engels":""},
+{"Nederlands":"overbodig","Engels":""},
+{"Nederlands":"praktisch","Engels":""},
+{"Nederlands":"profiteren","Engels":""},
+{"Nederlands":"ruim","Engels":""},
+{"Nederlands":"slim","Engels":""},
+{"Nederlands":"spannend","Engels":""},
+{"Nederlands":"speciaal","Engels":""},
+{"Nederlands":"stijgen","Engels":""},
+{"Nederlands":"toenemen","Engels":""},
+{"Nederlands":"trekken","Engels":""},
+{"Nederlands":"uitdagend","Engels":""},
+{"Nederlands":"vies","Engels":""},
+{"Nederlands":"voldoende","Engels":""},
+{"Nederlands":"vooral","Engels":""},
+{"Nederlands":"vrijwel","Engels":""},
+{"Nederlands":"vuil","Engels":""},
+{"Nederlands":"zowel - als","Engels":""}
 ]

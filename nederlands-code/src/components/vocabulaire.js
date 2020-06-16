@@ -6,6 +6,7 @@ import ClosedQuestionResult from './closedQuestionResult'
 import StreakCounter from './streakCounter'
 import vh1Json from '../data/vh1.json'
 import vh2Json from '../data/vh2.json'
+import vh4Json from '../data/vh4.json'
 import ClosedQuestionForm from './closedQuestion'
 
 class PracticeWithoutRouter extends React.Component {
@@ -30,7 +31,8 @@ class PracticeWithoutRouter extends React.Component {
       difficulty: 'vh1',
       data: {
         vh1: vh1Json,
-        vh2: vh2Json
+        vh2: vh2Json,
+        vh4: vh4Json
       },
       numberOfAlternatives: 4
     }
@@ -123,6 +125,7 @@ class PracticeWithoutRouter extends React.Component {
           <select className="" value={this.state.difficulty} onChange={this.changeDifficulty}>
             <option value="vh1">Vocabulaire Hoofdstuck 1</option>
             <option value="vh2">Vocabulaire Hoofdstuck 2</option>
+            <option value="vh4">Vocabulaire Hoofdstuck 4</option>
           </select>
           {/* <ClosedQuestionResult isCorrect={true} exercise={{ Nederlands: 'tandarts', Engels: 'dentist' }} nextExercise={this.prepareExercise}/> */}
           {/* <ClosedQuestionResult isCorrect={false} exercise={{ Nederlands: 'tandarts', Engels: 'dentist' }} nextExercise={this.prepareExercise}/> */}
