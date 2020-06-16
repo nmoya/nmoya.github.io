@@ -58,7 +58,7 @@ class ClosedQuestionForm extends React.Component {
     render () {
       return (
         <div className="closed-question-form-container">
-          <h2>{this.props.question}</h2>
+          <ul><li><h2>{this.props.question}</h2></li></ul>
           <div className="closed-question-container">
             <ul>
               {this.renderAlternatives()}
