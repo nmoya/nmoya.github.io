@@ -1,4 +1,4 @@
-.answer {
+.closed-answer {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -14,12 +14,12 @@
 }
 
 /* https://coolors.co/533a71-6184d8-50c5b7-9cec5b-f0f465 */
-.answer-correct {
+.closed-answer-correct {
   border: 1px solid #3bb273;
   background-color: #3bb273;
 }
 
-.answer-wrong {
+.closed-answer-wrong {
   border: 1px solid #FDADAD;
   background-color: #FDADAD;
 }

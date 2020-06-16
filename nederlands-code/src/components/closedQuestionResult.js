@@ -4,7 +4,7 @@ import './closedQuestionResult.css'
 class CorrectAnswer extends React.Component {
   render () {
     return (
-      <div className="answer answer-correct">
+      <div className="closed-answer closed-answer-correct">
         <div className="result-text-container">
           <ul>
             <li>Goed Gedaan! ✅ </li>
@@ -21,7 +21,7 @@ class CorrectAnswer extends React.Component {
 class WrongAnswer extends React.Component {
   render () {
     return (
-      <div className="answer answer-wrong">
+      <div className="closed-answer closed-answer-wrong">
         <div className="result-text-container">
           <ul>
             <li className="font-small">Nee, Sorry ❌</li>
