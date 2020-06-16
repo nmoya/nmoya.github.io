@@ -121,8 +121,8 @@ class PracticeWithoutRouter extends React.Component {
 
     render () {
       return (
-        <div className="">
-          <select className="" value={this.state.difficulty} onChange={this.changeDifficulty}>
+        <div>
+          <select value={this.state.difficulty} onChange={this.changeDifficulty}>
             <option value="vh1">Vocabulaire Hoofdstuck 1</option>
             <option value="vh2">Vocabulaire Hoofdstuck 2</option>
             <option value="vh4">Vocabulaire Hoofdstuck 4</option>

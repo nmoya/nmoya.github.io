@@ -59,8 +59,8 @@ class ClosedQuestionResult extends React.Component {
       <div className="input-group mb-3">
         <div className="input-group-append">
           {this.props.isCorrect
-            ? <CorrectAnswer />
-            : <WrongAnswer exercise={this.props.exercise} />}
+            ? <CorrectAnswer nextExercise={this.props.nextExercise}/>
+            : <WrongAnswer exercise={this.props.exercise} nextExercise={this.props.nextExercise} />}
         </div>
       </div>)
   }
