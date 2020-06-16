@@ -1,27 +1,8 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
+  text-align: center;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
 .App-link {
@@ -33,20 +14,14 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   color: white;
-}
-
-body .App {
-  margin: 30px;
 }
 
 .form-layout {
   width: 100%;
   display: block;
   text-align: left;
-}
-
-.form-control {
 }
 
 /* https://coolors.co/edae49-d1495b-00798c-30638e-003d5b */
@@ -69,17 +44,6 @@ body .App {
 .input-group-append {
   margin: 0 auto;
   margin-top: 24px;
-}
-
-.answer {
-  display: block;
-  text-align: left;
-}
-
-/* https://coolors.co/533a71-6184d8-50c5b7-9cec5b-f0f465 */
-.answer-correct {
-  border: 1px solid #3bb273;
-  color: #3bb273;
 }
 
 .answer-wrong {

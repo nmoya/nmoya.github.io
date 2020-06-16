@@ -1,0 +1,52 @@
+.answer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-content: center;
+  align-items: safe center;
+  font-size: 26pt;
+  height: 400px;
+  width: 500px;
+  font-weight: bold;
+  align-content: space-between;
+  flex-grow: 1;
+  color: white;
+}
+
+/* https://coolors.co/533a71-6184d8-50c5b7-9cec5b-f0f465 */
+.answer-correct {
+  border: 1px solid #3bb273;
+  background-color: #3bb273;
+}
+
+.answer-wrong {
+  border: 1px solid #FDADAD;
+  background-color: #FDADAD;
+}
+
+.result-text-container {
+    display: flex;
+    align-self: center;
+    flex-grow: 1;
+    justify-content: center;
+    flex-direction: column;
+}
+.result-button-container {
+  display: flex;
+  transform: translateY(-100%);
+}
+
+.result-next-button {
+  background-color: #965252;
+  border: 0px;
+  font-size: 14pt;
+  color: white;
+  height: 100%;
+}
+.color-black {
+  color:black;
+}
+
+.font-small {
+  font-size:20pt;
+}

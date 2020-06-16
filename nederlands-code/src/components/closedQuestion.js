@@ -1,10 +1,10 @@
 import React from 'react'
+import './closedQuestion.css'
 
 class ClosedQuestionForm extends React.Component {
   constructor (props) {
     super(props)
-    this.state = { answer: '' }
-
+    this.state = { answer: ''}
     this.handleOptionSelection = this.handleOptionSelection.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -30,9 +30,16 @@ class ClosedQuestionForm extends React.Component {
       this.setState({ answer: '' })
     }
 
+    getOptionClass = (value) => {
+      if (this.state.answer === value) {
+        return `btn btn-primary closed-question-btn selected` 
+      }
+      return `btn btn-primary closed-question-btn` 
+    }
+
     renderAlternatives = () => {
       return this.props.alternatives.map((value, idx) =>
-        <button className="btn btn-primary" key={idx} onClick={this.handleOptionSelection} value={value}>{value}</button>
+        <li key={idx}><button className={this.getOptionClass(value)} key={idx} onClick={this.handleOptionSelection} value={value}>{value}</button></li>
       )
     }
 
@@ -49,15 +56,14 @@ class ClosedQuestionForm extends React.Component {
     }
 
     render () {
-      console.log(this.state.answer)
       return (
-        <div>
+        <div className="closed-question-form-container">
           <h2>{this.props.question}</h2>
-          <div className="input-group mb-3">
-            <div className="input-group-append">
+          <div className="closed-question-container">
+            <ul>
               {this.renderAlternatives()}
-              <button className="btn btn-outline-secondary" type="submit" onClick={this.handleSubmit}>Check</button>
-            </div>
+              <li key="submit"><button className="btn btn-primary closed-question-btn submit" type="submit" onClick={this.handleSubmit}>Check</button></li>
+            </ul>
           </div>
         </div>
       )

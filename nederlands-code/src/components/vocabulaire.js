@@ -21,7 +21,10 @@ class PracticeWithoutRouter extends React.Component {
         words: [],
         results: [],
         criteria: [],
-        exercise: {},
+        exercise: {
+          question: '',
+          options: [],
+        },
         areAllCorrect: null
       },
       difficulty: 'vh1',
@@ -116,18 +119,15 @@ class PracticeWithoutRouter extends React.Component {
 
     render () {
       return (
-        <div>
-          <select value={this.state.difficulty} onChange={this.changeDifficulty}>
+        <div className="">
+          <select className="" value={this.state.difficulty} onChange={this.changeDifficulty}>
             <option value="vh1">Vocabulaire Hoofdstuck 1</option>
             <option value="vh2">Vocabulaire Hoofdstuck 2</option>
           </select>
           {/* <ClosedQuestionResult isCorrect={true} exercise={{ Nederlands: 'tandarts', Engels: 'dentist' }} nextExercise={this.prepareExercise}/> */}
           {/* <ClosedQuestionResult isCorrect={false} exercise={{ Nederlands: 'tandarts', Engels: 'dentist' }} nextExercise={this.prepareExercise}/> */}
           <StreakCounter current={this.state.score.currentScore} record={this.state.score.maxScore}/>
-          <br></br>
           {this.renderMainArea()}
-          <br></br>
-          <br></br>
         </div>
       )
     }

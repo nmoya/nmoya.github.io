@@ -1,12 +1,18 @@
 import React from 'react'
+import './closedQuestionResult.css'
 
 class CorrectAnswer extends React.Component {
   render () {
     return (
       <div className="answer answer-correct">
-        <p>
-          <span>Goed Gedaan! ✅ </span>
-        </p>
+        <div className="result-text-container">
+          <ul>
+            <li>Goed Gedaan! ✅ </li>
+          </ul>
+        </div>
+        <div className="result-button-container">
+          <button className="result-next-button" onClick={this.props.nextExercise}>Next Exercise</button>
+        </div>
       </div>
     )
   }
@@ -16,10 +22,16 @@ class WrongAnswer extends React.Component {
   render () {
     return (
       <div className="answer answer-wrong">
-        <p>Nee, Sorry ❌</p>
-        <p></p>
-        <p>{this.props.exercise.Nederlands}</p>
-        <p>{this.props.exercise.Engels}</p>
+        <div className="result-text-container">
+          <ul>
+            <li className="font-small">Nee, Sorry ❌</li>
+            <li className="color-black">{this.props.exercise.question.Nederlands}</li>
+            <li>{this.props.exercise.question.Engels}</li>
+          </ul>
+        </div>
+        <div className="result-button-container">
+          <button className="result-next-button" onClick={this.props.nextExercise}>Next Exercise</button>
+        </div>
       </div>
     )
   }
@@ -50,7 +62,6 @@ class ClosedQuestionResult extends React.Component {
             ? <CorrectAnswer />
             : <WrongAnswer exercise={this.props.exercise} />}
         </div>
-        <button onClick={this.props.nextExercise}>Next Exercise</button>
       </div>)
   }
 }
