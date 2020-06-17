@@ -24,7 +24,7 @@ function Home () {
         <div className="col">
           <h2 className="col">Vocabulaire</h2>
           <ul className="list-unstyleld">
-            <li className="list-group-item list-group-item-action rounded-top rounded-bottom"><Link to={'/vocabulaire'}>Under construction</Link></li>
+            <li className="list-group-item list-group-item-action rounded-top rounded-bottom"><Link to={'/vocabulaire'}>Vocabulaire</Link></li>
           </ul>
         </div>
       </div>
