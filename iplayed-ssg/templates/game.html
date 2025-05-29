@@ -1,51 +1,31 @@
 {% extends "base.html" %}
 
-{% block body %}
 
-<body id="games" class="inner-post-page">{% endblock body %}
+
+<body id="games" class="inner-post-page">
   {% block left %}
   <div class="post-title-section">
     <h1 class="section-title">{{ page.title | safe }}</h1>
-    {% if page.taxonomies["tags"] %}
-    <ul class="tags" {%-for tag in page.taxonomies["tags"] %}>
-      <li><a href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li {%- if not loop.last %} {%- endif -%} {% endfor %}>
+    {% if page.taxonomies["platforms"] %}
+    <ul class="tags" {%-for platform in page.taxonomies["platforms"] %}>
+      <li><a href="/platforms/{{ platform | slugify }}/">{{ platform }}</a></li {%- if not loop.last %} {%- endif -%} {%
+        endfor %}>
+    </ul>
+    <ul class="tags" {%-for genre in page.taxonomies["genres"] %}>
+      <li><a href="/genres/{{ genre | slugify }}/">{{ genre }}</a></li {%- if not loop.last %} {%- endif -%} {% endfor
+        %}>
+    </ul>
+    <ul class="tags" {%-for rating in page.taxonomies["rating"] %}>
+      <li><a href="/rating/{{ rating | slugify }}/">{{ rating }}</a></li {%- if not loop.last %} {%- endif -%} {% endfor
+        %}>
     </ul>
     {% endif %}
   </div>
   {% endblock left %}
   {% block right %}
   <div class="inner-post content">
-    {% block date %}{{ super() }}{% endblock date %}
-    {% if page.extra.subtitle %}<h1>{{ page.extra.subtitle | safe}}</h1>{% endif %}
-    {% if current_path is starting_with("/games/") %}
-    {% if config.extra.read_time == true or page.updated %}
-    <div class="post-info">
-      <div class="post-ext-info">
-        {% if config.extra.read_time == true %}
-        <p>{{ page.reading_time }} minute{{ page.reading_time | pluralize }} reading time</p>
-        {% endif %}
-        {% if page.updated %}<p>Updated {{ page.updated | date(format="%d %b %Y") }}</p>{% endif %}
-      </div>
-      {% endif %}
-      {% block music %}
-      {% if page.extra.music %}
-      {%- if page.extra.music | length != 2 %}{{ throw(message="'" ~ page.title ~ "' page has invalid 'music' variable")
-      }}{% endif %}
-      {{ macros::music(artist=page.extra.music[0], track=page.extra.music[1]) }}
-      {% endif %}
-      {% endblock music %}
-    </div>
-    {% if config.extra.toc == true and not page.extra.disable_toc %}{% if page.toc %}{% if page.toc | length >= 2 %}
-    <div class="toc-block">
-      <ul>
-        {% for h2 in page.toc %}
-        <li>
-          <a class="toc-anchor toc" href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}{% endif %}{% endif %}{% endif %}
+    {% block date %}<div class="date-highlight">{{page.title}}</div>{% endblock date %}
+
     {{ page.content | safe }}
     <br>
     {% if page.lower or page.higher %}

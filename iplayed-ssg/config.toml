@@ -4,8 +4,9 @@ base_url = "https://nikolasmoya.com/iplayed"
 
 
 taxonomies = [
-    { name = "categories", feed = true },
-    { name = "tags", feed = true },
+    { name = "platforms", feed = true },
+    { name = "genres", feed = true },
+    { name = "rating", feed = true },
 ]
 
 [search]
@@ -34,9 +35,9 @@ anchors = "safe"
 locale = "en_US"
 logo = "icon-192x192.png"
 manifest = "manifest.json"
-read_time = true
+read_time = false
 toc = true
-csp = true
+csp = false
 description = "Two-column retro theme for Zola"
 default_language = "en"
 author = "charlesrocket"

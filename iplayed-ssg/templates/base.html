@@ -1,6 +1,6 @@
 {%- import "macros/macros.html" as macros %}
-{% set categories = get_taxonomy(kind="categories") %}
-{%- set tags = get_taxonomy(kind="tags") %}
+{% set platforms = get_taxonomy(kind="platforms") %}
+{%- set rating = get_taxonomy(kind="rating") %}
 {%- set active_path = current_path | default(value="none") %}
 {%- set hash = "NA" %}
 
@@ -33,24 +33,25 @@
           <ul class="nav-menu">
             <li{% if active_path=="/" %} class="nav-active" {% endif %}><a href="{{ " /" | safe }}">Home</a></li>
               {% if config.extra.menu.posts == true %}
-              <li{% if active_path is starting_with("/posts/") or active_path is starting_with("/tags/") or active_path
-                is starting_with("/categories/")%} class="nav-active" {% endif %}><a href="{{ " /posts/" | safe }}"
+              <li{% if active_path is starting_with("/games/") or active_path is starting_with("/tags/") or active_path
+                is starting_with("/platforms/")%} class="nav-active" {% endif %}><a href="{{ " /games/" | safe }}"
                   aria-haspopup="true">{{ config.extra.menu.posts_label }}</a>
                 <ul class="dropdown" aria-label="submenu">
-                  <li><a href="{{ " /posts/" | safe }}">Index</a></li>
-                  <li><a href="{{ " /tags/" | safe }}">Tags</a></li>
-                  <li><a href="{{ " /categories/" | safe }}">Categories</a></li>
+                  <li><a href="{{ " /games/" | safe }}">Games</a></li>
+                  <li><a href="{{ " /rating/" | safe }}">Ratings</a></li>
+                  <li><a href="{{ " /platforms/" | safe }}">Platforms</a></li>
                 </ul>
                 </li>
                 {% endif %}
                 {% for link in config.extra.menu.links %}
                 <li{% if page %}{% if active_path is starting_with(link.url) %} class="nav-active" {% endif %}{% endif
-                  %}><a href="{% if link.url is starting_with(" @") %}{{ get_url(path=link.url, trailing_slash=true) |
-                    safe }}{% else %}{{ link.url | safe }}{% endif %}">{{ link.name }}</a></li>
+                  %}>
+                  <a href="{% if link.url is starting_with(" @") %}{{ get_url(path=link.url, trailing_slash=true) | safe
+                    }}{% else %}{{ link.url | safe }}{% endif %}">{{ link.name }}</a></li>
                   {% endfor %}
           </ul>
         </nav>
-        {% if config.build_search_index == true %}
+        {% if config.extra.build_search_index == true %}
         <script defer
           src="{{ '/elasticlunr.min.js?v=' ~ get_hash(path='/elasticlunr.min.js', sha_type=512, base64=false) | safe }}"></script>
         <script defer src="/search.js" ,
@@ -118,13 +119,13 @@
     </div>
     {% if config.extra.manifest %}
     <div class="toastBox"></div>
-    {% if config.extra.menu.posts == true %}
-    {% set posts = get_section(path="posts/_index.md") %}
-    {% set raw_posts_config = load_data(path="/games/_index.md", format="plain") | replace(from="+++", to="") %}
-    {% set posts_config = load_data(literal=raw_posts_config, format="toml") %}
-    {% set post_count = posts.pages | length %}
-    {% if posts_config.paginate_by %}
-    {% set posts_page_count = post_count / posts_config.paginate_by | round(method="ceil") | int | default(value=0) %}
+    {% if config.extra.menu.games == true %}
+    {% set games = get_section(path="games/_index.md") %}
+    {% set raw_games_config = load_data(path="/games/_index.md", format="plain") | replace(from="+++", to="") %}
+    {% set games_config = load_data(literal=raw_games_config, format="toml") %}
+    {% set post_count = games.pages | length %}
+    {% if games_config.paginate_by %}
+    {% set games_page_count = post_count / games_config.paginate_by | round(method="ceil") | int | default(value=0) %}
     {% endif %}
     {% endif %}
     <span id="precache-payload">/sw-load.js?v={{get_hash(path='/sw-load.js', sha_type=512, base64=false) | safe }}
