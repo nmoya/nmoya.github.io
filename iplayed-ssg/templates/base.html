@@ -95,8 +95,8 @@
           {% if config.extra.footer.links %}
           <nav class="nav-footer" role="navigation">
             <ul class="footer-links" aria-label="footer links">
-              <li><a href="{{ " /" | safe }}">index</a></li>
-              {%- if config.generate_sitemap %}<li><a href="/sitemap.xml">sitemap</a></li>{% endif %}
+              <li><a href="{{ " /" | safe }}">home</a></li>
+              {%- if config.extra.generate_sitemap %}<li><a href="/sitemap.xml">sitemap</a></li>{% endif %}
               {%- for link in config.extra.footer.links -%}
               <li><a href="{% if link.url is starting_with(" @") %}{{ get_url(path=link.url, trailing_slash=true) | safe
                   }}{% else %}{{ link.url | safe }}{% endif %}">{{ link.name }}</a></li>

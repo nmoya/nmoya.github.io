@@ -44,7 +44,7 @@ compile_sass = true
 minify_html = true
 generate_feeds = true
 build_search_index = true
-generate_sitemap = true
+generate_sitemap = false
 
 
 [extra.placeholders]
@@ -77,11 +77,12 @@ links = [
 [extra.footer]
 enabled = true
 author = true
-copyright = true
-hash = true
+copyright = false
+hash = false
 stack = true
 links = [
-    { name = "posts", url = "/posts/" },
+    { name = "games", url = "/games/" },
+    { name = "stats", url = "/stats/" }
 ]
 
 [extra.social]
