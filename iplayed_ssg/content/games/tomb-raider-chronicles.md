@@ -1,21 +1,23 @@
 +++
 title = "Tomb Raider: Chronicles"
-description = "Tomb Raider: Chronicles"
+description = "PlayStation"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["PC (Microsoft Windows), PlayStation, PlayStation 3, Mac, Dreamcast, PlayStation Portable, PlayStation Vita"]
+platforms = ['playstation']
 rating = []
-genres = ["Shooter, Adventure"]
+genres = ['shooter', 'adventure']
 [extra]
 subtitle = "PlayStation"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co3h20.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co3h20.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co3h20.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PlayStation |
+| Played platforms    | PlayStation |
 | Completed at | 2023/03/18 |
 

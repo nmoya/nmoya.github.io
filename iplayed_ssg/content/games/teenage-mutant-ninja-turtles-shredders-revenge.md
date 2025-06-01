@@ -1,21 +1,23 @@
 +++
 title = "Teenage Mutant Ninja Turtles: Shredder's Revenge"
-description = "Teenage Mutant Ninja Turtles: Shredder's Revenge"
+description = "PC"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["Linux, PC (Microsoft Windows), Android, iOS, PlayStation 4, Xbox One, Nintendo Switch, PlayStation 5, Xbox Series X|S"]
+platforms = ['pc']
 rating = []
-genres = ["Hack and slash/Beat 'em up, Indie, Arcade"]
+genres = ["hack and slash/beat 'em up", 'indie', 'arcade']
 [extra]
 subtitle = "PC"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co4w87.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co4w87.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co4w87.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PC |
+| Played platforms    | PC |
 | Completed at | 2023/03/18 |
 

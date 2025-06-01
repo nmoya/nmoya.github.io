@@ -115,7 +115,7 @@ function makeTeaser(body, terms) {
 function formatSearchResultItem(item, terms) {
   return '<div class="search-results__item">'
   + `<a href="${item.ref}">${item.doc.title}</a>`
-  + `<div>${makeTeaser(item.doc.body, terms)}</div>`
+  + `<div>${makeTeaser(item.doc.description, terms)}</div>`
   + '</div>';
 }
 

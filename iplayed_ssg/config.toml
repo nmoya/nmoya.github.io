@@ -4,9 +4,9 @@ base_url = "https://nikolasmoya.com/iplayed"
 
 
 taxonomies = [
-    { name = "platforms", feed = true },
-    { name = "genres", feed = true },
-    { name = "rating", feed = true },
+    { name = "platforms", slugify = "lower", feed = true },
+    { name = "genres", slugify = "lower", feed = true },
+    { name = "rating", slugify = "none", feed = true },
 ]
 
 build_search_index = true

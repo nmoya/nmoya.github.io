@@ -1,21 +1,23 @@
 +++
 title = "DOOM"
-description = "DOOM"
+description = "PC"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["Linux, DOS, PC-9800 Series, Windows Mobile"]
+platforms = ['pc']
 rating = []
-genres = ["Shooter"]
+genres = ['shooter']
 [extra]
 subtitle = "PC"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co5rav.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co5rav.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co5rav.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PC |
+| Played platforms    | PC |
 | Completed at | 2023/03/18 |
 

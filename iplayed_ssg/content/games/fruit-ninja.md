@@ -1,21 +1,23 @@
 +++
 title = "Fruit Ninja"
-description = "Fruit Ninja"
+description = "Android"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["PC (Microsoft Windows), Xbox 360, Android, iOS, PlayStation Vita, Legacy Mobile Device, Windows Phone"]
+platforms = ['android']
 rating = []
-genres = ["Arcade"]
+genres = ['arcade']
 [extra]
 subtitle = "Android"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co554v.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co554v.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co554v.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | Android |
+| Played platforms    | Android |
 | Completed at | 2023/03/18 |
 

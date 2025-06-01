@@ -1,21 +1,23 @@
 +++
 title = "The Walking Dead: The Telltale Definitive Series"
-description = "The Walking Dead: The Telltale Definitive Series"
+description = "PC"
 date = "2025-05-19"
 updated = "2025-05-19"
 in_search_index = true
 [taxonomies]
-platforms = ["PC (Microsoft Windows), PlayStation 4, Xbox One"]
+platforms = ['pc']
 rating = []
-genres = ["Point-and-click, Adventure"]
+genres = ['point-and-click', 'adventure']
 [extra]
-subtitle = "PC (Microsoft Windows)"
+subtitle = "PC"
 completed_at = "2025-05-19"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co7axc.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co7axc.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7axc.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PC (Microsoft Windows) |
+| Played platforms    | PC |
 | Completed at | 2025/05/19 |
 

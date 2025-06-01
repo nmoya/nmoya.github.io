@@ -1,21 +1,23 @@
 +++
 title = "Risk of Rain"
-description = "Risk of Rain"
+description = "PC"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["Linux, PC (Microsoft Windows), Mac, PlayStation Vita, PlayStation 4, Xbox One, Nintendo Switch"]
+platforms = ['pc']
 rating = []
-genres = ["Shooter, Platform, Role-playing (RPG), Hack and slash/Beat 'em up, Adventure, Indie"]
+genres = ['shooter', 'platform', 'role-playing (rpg)', "hack and slash/beat 'em up", 'adventure', 'indie']
 [extra]
 subtitle = "PC"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co2k2z.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co2k2z.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2k2z.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PC |
+| Played platforms    | PC |
 | Completed at | 2023/03/18 |
 

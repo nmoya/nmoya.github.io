@@ -1,21 +1,23 @@
 +++
 title = "God of War: Chains of Olympus"
-description = "God of War: Chains of Olympus"
+description = "PlayStation 3"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["PlayStation Portable"]
+platforms = ['playstation 3']
 rating = []
-genres = ["Hack and slash/Beat 'em up, Adventure"]
+genres = ["hack and slash/beat 'em up", 'adventure']
 [extra]
 subtitle = "PlayStation 3"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co3dip.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co3dip.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co3dip.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PlayStation 3 |
+| Played platforms    | PlayStation 3 |
 | Completed at | 2023/03/18 |
 

@@ -1,21 +1,23 @@
 +++
 title = "Monster Train"
-description = "Monster Train"
+description = "PC"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["PC (Microsoft Windows), iOS, Xbox One, Nintendo Switch, PlayStation 5, Xbox Series X|S"]
+platforms = ['pc']
 rating = []
-genres = ["Role-playing (RPG), Strategy, Turn-based strategy (TBS), Indie, Card & Board Game"]
+genres = ['role-playing (rpg)', 'strategy', 'turn-based strategy (tbs)', 'indie', 'card & board game']
 [extra]
 subtitle = "PC"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co8tqp.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co8tqp.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co8tqp.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PC |
+| Played platforms    | PC |
 | Completed at | 2023/03/18 |
 

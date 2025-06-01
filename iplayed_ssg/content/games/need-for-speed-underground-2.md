@@ -1,21 +1,23 @@
 +++
 title = "Need for Speed: Underground 2"
-description = "Need for Speed: Underground 2"
+description = "PC"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["PC (Microsoft Windows), PlayStation 2, Xbox, Nintendo GameCube"]
+platforms = ['pc']
 rating = []
-genres = ["Racing"]
+genres = ['racing']
 [extra]
 subtitle = "PC"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co209h.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co209h.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co209h.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PC |
+| Played platforms    | PC |
 | Completed at | 2023/03/18 |
 

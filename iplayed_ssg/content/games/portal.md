@@ -1,21 +1,23 @@
 +++
 title = "Portal"
-description = "Portal"
+description = "PC"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["Linux, PC (Microsoft Windows), PlayStation 3, Xbox 360, Mac, Android, Nintendo Switch"]
+platforms = ['pc']
 rating = []
-genres = ["Shooter, Platform, Puzzle"]
+genres = ['shooter', 'platform', 'puzzle']
 [extra]
 subtitle = "PC"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co1x7d.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co1x7d.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1x7d.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PC |
+| Played platforms    | PC |
 | Completed at | 2023/03/18 |
 

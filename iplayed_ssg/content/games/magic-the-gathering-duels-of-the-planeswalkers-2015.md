@@ -1,21 +1,23 @@
 +++
 title = "Magic: The Gathering - Duels of the Planeswalkers 2015"
-description = "Magic: The Gathering - Duels of the Planeswalkers 2015"
+description = "PlayStation 3"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["PC (Microsoft Windows), Xbox 360, Android, iOS, Xbox One"]
+platforms = ['playstation 3']
 rating = []
-genres = ["Strategy, Turn-based strategy (TBS), Tactical, Card & Board Game"]
+genres = ['strategy', 'turn-based strategy (tbs)', 'tactical', 'card & board game']
 [extra]
 subtitle = "PlayStation 3"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/zq3yopwdxgbwiforg3l3.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/zq3yopwdxgbwiforg3l3.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/zq3yopwdxgbwiforg3l3.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PlayStation 3 |
+| Played platforms    | PlayStation 3 |
 | Completed at | 2023/03/18 |
 

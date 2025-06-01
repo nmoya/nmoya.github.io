@@ -6,11 +6,6 @@
   {% block left %}
   <div class="post-title-section">
     <h1 class="section-title">{{ page.title | safe }}</h1>
-    {% if page.taxonomies["platforms"] %}
-    <ul class="tags" {%-for platform in page.taxonomies["platforms"] %}>
-      <li><a href="/platforms/{{ platform | slugify }}/">{{ platform }}</a></li {%- if not loop.last %} {%- endif -%} {%
-        endfor %}>
-    </ul>
     <ul class="tags" {%-for genre in page.taxonomies["genres"] %}>
       <li><a href="/genres/{{ genre | slugify }}/">{{ genre }}</a></li {%- if not loop.last %} {%- endif -%} {% endfor
         %}>
@@ -19,7 +14,6 @@
       <li><a href="/rating/{{ rating | slugify }}/">{{ rating }}</a></li {%- if not loop.last %} {%- endif -%} {% endfor
         %}>
     </ul>
-    {% endif %}
   </div>
   {% endblock left %}
   {% block right %}
@@ -28,7 +22,7 @@
 
     {{ page.content | safe }}
     <br>
-    {% if page.lower or page.higher %}
+    <!-- {% if page.lower or page.higher %}
     <nav class="pagination">
       {% if page.higher %}
       <a class="pagination_pager" href="{{ " /games/" ~ page.higher.slug ~ "/" | safe }}">prev</a>
@@ -41,7 +35,7 @@
       <a href="#" class="pagination_pager disabled">next</a>
       {% endif %}
     </nav>
-    {% endif %}
+    {% endif %} -->
     {% block comments %}{% endblock comments %}
   </div>
   {% endblock right %}

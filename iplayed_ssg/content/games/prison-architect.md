@@ -1,22 +1,24 @@
 +++
 title = "Prison Architect"
-description = "Prison Architect"
+description = "80 hours - PC"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["Linux, PC (Microsoft Windows), Xbox 360, Mac, Android, iOS, PlayStation 4, Xbox One, Nintendo Switch"]
+platforms = ['pc']
 rating = []
-genres = ["Simulator, Strategy, Adventure, Indie"]
+genres = ['simulator', 'strategy', 'adventure', 'indie']
 [extra]
 subtitle = "80 hours - PC"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co62ch.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co62ch.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co62ch.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
 | Time played  | 3 days |
-| Platforms    | PC |
+| Played platforms    | PC |
 | Completed at | 2023/03/18 |
 

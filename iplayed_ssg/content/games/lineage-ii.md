@@ -1,16 +1,18 @@
 +++
 title = "Lineage II"
-description = "Lineage II"
+description = ""
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["PC (Microsoft Windows)"]
+platforms = []
 rating = []
-genres = ["Role-playing (RPG), Adventure"]
+genres = ['role-playing (rpg)', 'adventure']
 [extra]
 subtitle = ""
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co1nhg.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nhg.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1nhg.jpg") }}
 

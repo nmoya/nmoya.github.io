@@ -1,21 +1,23 @@
 +++
 title = "Diablo III: Reaper of Souls"
-description = "Diablo III: Reaper of Souls"
+description = "PC"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["PC (Microsoft Windows), PlayStation 3, Xbox 360, Mac, PlayStation 4, Xbox One"]
+platforms = ['pc']
 rating = []
-genres = ["Role-playing (RPG), Hack and slash/Beat 'em up, Adventure"]
+genres = ['role-playing (rpg)', "hack and slash/beat 'em up", 'adventure']
 [extra]
 subtitle = "PC"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co3gfx.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co3gfx.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co3gfx.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PC |
+| Played platforms    | PC |
 | Completed at | 2023/03/18 |
 

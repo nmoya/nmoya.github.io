@@ -1,21 +1,23 @@
 +++
 title = "Tomb Raider: Anniversary"
-description = "Tomb Raider: Anniversary"
+description = "PC"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["Wii, PC (Microsoft Windows), PlayStation 2, PlayStation 3, Xbox 360, Mac, PlayStation Portable, OnLive Game System"]
+platforms = ['pc']
 rating = []
-genres = ["Shooter, Platform, Simulator, Strategy, Adventure"]
+genres = ['shooter', 'platform', 'simulator', 'strategy', 'adventure']
 [extra]
 subtitle = "PC"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co1vo9.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vo9.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1vo9.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PC |
+| Played platforms    | PC |
 | Completed at | 2023/03/18 |
 

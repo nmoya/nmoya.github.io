@@ -1,21 +1,23 @@
 +++
 title = "Quake III Arena"
-description = "Quake III Arena"
+description = "PC"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["Linux, PC (Microsoft Windows), PlayStation 2, Xbox 360, Mac, Dreamcast"]
+platforms = ['pc']
 rating = []
-genres = ["Shooter"]
+genres = ['shooter']
 [extra]
 subtitle = "PC"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co1ybj.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ybj.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1ybj.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PC |
+| Played platforms    | PC |
 | Completed at | 2023/03/18 |
 

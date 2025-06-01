@@ -1,21 +1,23 @@
 +++
 title = "Lara Croft and the Guardian of Light"
-description = "Lara Croft and the Guardian of Light"
+description = "PlayStation 3"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["PC (Microsoft Windows), PlayStation 3, Xbox 360, Android, iOS, Nintendo Switch, Google Stadia"]
+platforms = ['playstation 3']
 rating = []
-genres = ["Shooter, Platform, Puzzle, Adventure"]
+genres = ['shooter', 'platform', 'puzzle', 'adventure']
 [extra]
 subtitle = "PlayStation 3"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co1vod.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vod.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1vod.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PlayStation 3 |
+| Played platforms    | PlayStation 3 |
 | Completed at | 2023/03/18 |
 

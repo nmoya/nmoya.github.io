@@ -1,21 +1,23 @@
 +++
 title = "International Superstar Soccer Deluxe"
-description = "International Superstar Soccer Deluxe"
+description = "SNES"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["PlayStation, Super Nintendo Entertainment System, Sega Mega Drive/Genesis, Super Famicom"]
+platforms = ['snes']
 rating = []
-genres = ["Sport"]
+genres = ['sport']
 [extra]
 subtitle = "SNES"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co3vl4.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co3vl4.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co3vl4.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | SNES |
+| Played platforms    | SNES |
 | Completed at | 2023/03/18 |
 

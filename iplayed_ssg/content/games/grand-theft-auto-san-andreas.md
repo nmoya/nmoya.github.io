@@ -1,21 +1,23 @@
 +++
 title = "Grand Theft Auto: San Andreas"
-description = "Grand Theft Auto: San Andreas"
+description = "PlayStation 2"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["PC (Microsoft Windows), PlayStation 2, PlayStation 3, Xbox, Xbox 360, Mac, Android, iOS, PlayStation 4"]
+platforms = ['playstation 2']
 rating = []
-genres = ["Shooter, Racing, Adventure"]
+genres = ['shooter', 'racing', 'adventure']
 [extra]
 subtitle = "PlayStation 2"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co2lb9.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lb9.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2lb9.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PlayStation 2 |
+| Played platforms    | PlayStation 2 |
 | Completed at | 2023/03/18 |
 

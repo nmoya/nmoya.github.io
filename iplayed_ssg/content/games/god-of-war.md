@@ -1,21 +1,23 @@
 +++
 title = "God of War"
-description = "God of War"
+description = "PlayStation 2"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["PlayStation 2"]
+platforms = ['playstation 2']
 rating = []
-genres = ["Puzzle, Hack and slash/Beat 'em up, Adventure"]
+genres = ['puzzle', "hack and slash/beat 'em up", 'adventure']
 [extra]
 subtitle = "PlayStation 2"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co3ddc.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co3ddc.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co3ddc.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PlayStation 2 |
+| Played platforms    | PlayStation 2 |
 | Completed at | 2023/03/18 |
 

@@ -1,21 +1,23 @@
 +++
 title = "Rogue Legacy"
-description = "Rogue Legacy"
+description = "PlayStation 3"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["Linux, PC (Microsoft Windows), PlayStation 3, Mac, PlayStation Vita, PlayStation 4, Xbox One, Nintendo Switch"]
+platforms = ['playstation 3']
 rating = []
-genres = ["Platform, Puzzle, Role-playing (RPG), Adventure, Indie"]
+genres = ['platform', 'puzzle', 'role-playing (rpg)', 'adventure', 'indie']
 [extra]
 subtitle = "PlayStation 3"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co27fi.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co27fi.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co27fi.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PlayStation 3 |
+| Played platforms    | PlayStation 3 |
 | Completed at | 2023/03/18 |
 

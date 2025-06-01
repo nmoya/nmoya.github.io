@@ -1,21 +1,23 @@
 +++
 title = "Darksiders"
-description = "Darksiders"
+description = "PlayStation 3"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["Linux, PC (Microsoft Windows), PlayStation 3, Xbox 360"]
+platforms = ['playstation 3']
 rating = []
-genres = ["Role-playing (RPG), Hack and slash/Beat 'em up, Adventure"]
+genres = ['role-playing (rpg)', "hack and slash/beat 'em up", 'adventure']
 [extra]
 subtitle = "PlayStation 3"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co29t0.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co29t0.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co29t0.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PlayStation 3 |
+| Played platforms    | PlayStation 3 |
 | Completed at | 2023/03/18 |
 

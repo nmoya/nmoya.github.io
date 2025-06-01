@@ -12,6 +12,8 @@ from iplayed_cli.data_schema import DataEntry
 
 def render_list_value(key: str, value: list):
     if len(value) > 0:
+        if isinstance(value[0], str):
+            return f"{key} = {value}"
         return f'{key} = ["{", ".join(value)}"]'
     else:
         return f"{key} = []"
@@ -74,18 +76,20 @@ def completion_to_frontmatter(data: DataEntry):
         subtitle = f"{', '.join(data.completion.played_platforms)}"
     frontmatter = {
         "title": data.game.name,
-        "description": data.game.name,
+        "description": subtitle,
         "date": data.completion.completed_at.strftime("%Y-%m-%d"),
         "updated": data.completion.completed_at.strftime("%Y-%m-%d"),
         "in_search_index": True,
         "taxonomies": {
-            "platforms": [p.name for p in data.game.platforms],
+            "platforms": [s.lower() for s in data.completion.played_platforms],
             "rating": [str(data.completion.rating)] if data.completion.rating else [],
-            "genres": [g.name for g in data.game.genres],
+            "genres": [g.name.lower() for g in data.game.genres],
         },
         "extra": {
             "subtitle": subtitle,
             "completed_at": data.completion.completed_at.strftime("%Y-%m-%d"),
+            "url_cover_small": data.game.cover.sized_url("t_cover_small") if data.game.cover else None,
+            "url_cover_big": data.game.cover.sized_url("t_cover_big") if data.game.cover else None,
         },
     }
     return dict_to_frontmatter(frontmatter)
@@ -113,7 +117,7 @@ def completion_to_markdown_body(data: DataEntry):
         hours_played_str = humanize.naturaldelta(dt.timedelta(hours=data.completion.hours_played))
         markdown.append(f"| Time played  | {hours_played_str} |")
     if data.completion.played_platforms:
-        markdown.append(f"| Platforms    | {', '.join(data.completion.played_platforms)} |")
+        markdown.append(f"| Played platforms    | {', '.join(data.completion.played_platforms)} |")
     if data.completion.completed_at:
         markdown.append(f"| Completed at | {data.completion.completed_at.strftime('%Y/%m/%d')} |")
     markdown.append("\n")

@@ -1,21 +1,23 @@
 +++
 title = "Into the Breach"
-description = "Into the Breach"
+description = "PC"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["Linux, PC (Microsoft Windows), Mac, Android, iOS, Nintendo Switch, Google Stadia"]
+platforms = ['pc']
 rating = []
-genres = ["Puzzle, Role-playing (RPG), Simulator, Strategy, Turn-based strategy (TBS), Indie"]
+genres = ['puzzle', 'role-playing (rpg)', 'simulator', 'strategy', 'turn-based strategy (tbs)', 'indie']
 [extra]
 subtitle = "PC"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co2gjp.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co2gjp.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2gjp.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PC |
+| Played platforms    | PC |
 | Completed at | 2023/03/18 |
 

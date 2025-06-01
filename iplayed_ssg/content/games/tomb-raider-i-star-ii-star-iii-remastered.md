@@ -1,21 +1,23 @@
 +++
 title = "Tomb Raider I•II•III Remastered"
-description = "Tomb Raider I•II•III Remastered"
+description = "PC"
 date = "2025-03-05"
 updated = "2025-03-05"
 in_search_index = true
 [taxonomies]
-platforms = ["PC (Microsoft Windows), PlayStation 4, Xbox One, Nintendo Switch, PlayStation 5, Xbox Series X|S"]
+platforms = ['pc']
 rating = []
-genres = ["Shooter, Puzzle, Strategy, Adventure"]
+genres = ['shooter', 'puzzle', 'strategy', 'adventure']
 [extra]
-subtitle = "PC (Microsoft Windows)"
+subtitle = "PC"
 completed_at = "2025-03-05"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co8xte.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co8xte.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co8xte.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PC (Microsoft Windows) |
+| Played platforms    | PC |
 | Completed at | 2025/03/05 |
 

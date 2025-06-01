@@ -1,3 +1,6 @@
 [submodule "iplayed-ssg/themes/halve-z"]
 	path = iplayed-ssg/themes/halve-z
 	url = https://github.com/charlesrocket/halve-z
+[submodule "iplayed_ssg/themes/halve-z"]
+	path = iplayed_ssg/themes/halve-z
+	url = https://github.com/charlesrocket/halve-z

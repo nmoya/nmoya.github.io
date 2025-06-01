@@ -1,21 +1,23 @@
 +++
 title = "METAL SLUG"
-description = "METAL SLUG"
+description = "Neo Geo"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["Linux, Wii, PC (Microsoft Windows), PlayStation, Mac, Sega Saturn, Android, iOS, Neo Geo MVS, Neo Geo AES, Neo Geo CD"]
+platforms = ['neo geo']
 rating = []
-genres = ["Shooter, Platform, Arcade"]
+genres = ['shooter', 'platform', 'arcade']
 [extra]
 subtitle = "Neo Geo"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co20gf.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co20gf.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co20gf.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | Neo Geo |
+| Played platforms    | Neo Geo |
 | Completed at | 2023/03/18 |
 

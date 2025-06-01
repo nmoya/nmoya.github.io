@@ -1,21 +1,23 @@
 +++
 title = "Sid Meier's Civilization VI"
-description = "Sid Meier's Civilization VI"
+description = "PC"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["Linux, PC (Microsoft Windows), Mac, iOS, PlayStation 4, Xbox One, Nintendo Switch"]
+platforms = ['pc']
 rating = []
-genres = ["Simulator, Strategy, Turn-based strategy (TBS)"]
+genres = ['simulator', 'strategy', 'turn-based strategy (tbs)']
 [extra]
 subtitle = "PC"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co5r54.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co5r54.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co5r54.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PC |
+| Played platforms    | PC |
 | Completed at | 2023/03/18 |
 

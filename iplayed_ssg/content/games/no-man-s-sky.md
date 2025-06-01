@@ -1,21 +1,23 @@
 +++
 title = "No Man's Sky"
-description = "No Man's Sky"
+description = "PC"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["PC (Microsoft Windows), Mac, PlayStation 4, Xbox One, SteamVR, PlayStation VR, PlayStation 5, Xbox Series X|S, Oculus Rift, PlayStation VR2"]
+platforms = ['pc']
 rating = []
-genres = ["Role-playing (RPG), Simulator, Adventure, Indie"]
+genres = ['role-playing (rpg)', 'simulator', 'adventure', 'indie']
 [extra]
 subtitle = "PC"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co8j8v.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co8j8v.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co8j8v.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PC |
+| Played platforms    | PC |
 | Completed at | 2023/03/18 |
 

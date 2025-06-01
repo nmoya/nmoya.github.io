@@ -1,21 +1,23 @@
 +++
 title = "Terraria"
-description = "Terraria"
+description = "PC"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["Linux, PC (Microsoft Windows), PlayStation 3, Xbox 360, Mac, Android, Nintendo 3DS, iOS, Wii U, PlayStation Vita, PlayStation 4, Xbox One, Windows Phone, Nintendo Switch, Google Stadia"]
+platforms = ['pc']
 rating = []
-genres = ["Platform, Role-playing (RPG), Simulator, Strategy, Adventure, Indie"]
+genres = ['platform', 'role-playing (rpg)', 'simulator', 'strategy', 'adventure', 'indie']
 [extra]
 subtitle = "PC"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co1rbo.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rbo.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1rbo.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PC |
+| Played platforms    | PC |
 | Completed at | 2023/03/18 |
 

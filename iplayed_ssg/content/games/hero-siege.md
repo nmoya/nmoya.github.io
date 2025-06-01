@@ -1,21 +1,23 @@
 +++
 title = "Hero Siege"
-description = "Hero Siege"
+description = "PC"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["Linux, PC (Microsoft Windows), Mac, Android, iOS"]
+platforms = ['pc']
 rating = []
-genres = ["Role-playing (RPG), Hack and slash/Beat 'em up, Adventure, Indie"]
+genres = ['role-playing (rpg)', "hack and slash/beat 'em up", 'adventure', 'indie']
 [extra]
 subtitle = "PC"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co3jtb.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co3jtb.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co3jtb.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PC |
+| Played platforms    | PC |
 | Completed at | 2023/03/18 |
 

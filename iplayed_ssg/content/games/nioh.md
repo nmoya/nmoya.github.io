@@ -1,21 +1,23 @@
 +++
 title = "Nioh"
-description = "Nioh"
+description = "PlayStation 4"
 date = "2023-03-18"
 updated = "2023-03-18"
 in_search_index = true
 [taxonomies]
-platforms = ["PlayStation 3, PlayStation 4"]
+platforms = ['playstation 4']
 rating = []
-genres = ["Role-playing (RPG), Hack and slash/Beat 'em up, Adventure"]
+genres = ['role-playing (rpg)', "hack and slash/beat 'em up", 'adventure']
 [extra]
 subtitle = "PlayStation 4"
 completed_at = "2023-03-18"
+url_cover_small = "https://images.igdb.com/igdb/image/upload/t_cover_small/co20xg.jpg"
+url_cover_big = "https://images.igdb.com/igdb/image/upload/t_cover_big/co20xg.jpg"
 +++
 {{ image(src="https://images.igdb.com/igdb/image/upload/t_cover_big/co20xg.jpg") }}
 
 |              |            |
 | ------------ | ---------- |
-| Platforms    | PlayStation 4 |
+| Played platforms    | PlayStation 4 |
 | Completed at | 2023/03/18 |
 
