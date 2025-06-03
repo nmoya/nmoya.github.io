@@ -24,7 +24,7 @@ function command() {
         break;
   
       case "q":
-        window.location.href = "about:home";
+        window.location.href = "about:blank";
         break;
   
       default:
