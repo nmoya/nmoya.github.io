@@ -1,0 +1,24 @@
+base_url = "https://nikolasmoya.com"
+compile_sass = true
+build_search_index = false
+theme = "neovim-theme"
+
+[markdown]
+highlight_code = true
+
+[extra]
+blog_name = "nikolasmoya.com"
+
+#####################
+# Optional settings #
+#####################
+
+# set the background image u want
+background-image = "assets/background.jpg"
+
+# this parameter allow you to configure specific init functions/shortcuts and commands
+# the value has to be the path of you're config.js file
+config_js = "config.js"
+
+# allow you to include custom css into u're blog
+custom_css = "style.css"
