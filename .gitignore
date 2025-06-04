@@ -1,4 +1,6 @@
-iplayed-ssg/public
+iplayed_ssg/public
+nikolasmoya_ssg/public
+iplayed_cli/iplayed.users.json
 
 # Created by https://www.gitignore.io/api/node,code,react,macos
 # Edit at https://www.gitignore.io/?templates=node,code,react,macos
