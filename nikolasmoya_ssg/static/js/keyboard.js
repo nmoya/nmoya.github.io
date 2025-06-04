@@ -33,16 +33,23 @@ const commands = {
   },
 };
 
+function compare_urls(url1, url2) {
+  normalized_url1 = url1.toLocaleLowerCase().replace(/\/$/, "");
+  normalized_url2 = url2.toLocaleLowerCase().replace(/\/$/, "");
+  return normalized_url1 === normalized_url2;
+}
+
+
 function get_current_link(links) {
   console.log(window.location.href);
   let readme = null;
   console.log(links);
   for (let link of links) {
-    console.log(link);
+    console.log(link.href.toLocaleLowerCase(), window.location.href.toLocaleLowerCase());
     if (link.href.includes("/readme/")) {
       readme = link;
     }
-    if (link.href === window.location.href) {
+    if (compare_urls(link.href, window.location.href)) {
       return link;
     }
   }
