@@ -16,4 +16,6 @@ We built a full fledged backend along side all the necessary auxiliary tools to 
 
 Ponto de Largada is online since July 2012 and thousands users are already registered.
 
+The tech stack was: PHP, CodeIgniter, SQL, Javascript, Python
+
 ![Ponto de Largada](project-pontolargada.png "Ponto de Largada - User Interface")
