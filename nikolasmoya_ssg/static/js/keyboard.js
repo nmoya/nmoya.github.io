@@ -42,18 +42,18 @@ function compare_urls(url1, url2) {
 
 function get_current_link(links) {
   console.log(window.location.href);
-  let readme = null;
+  let about = null;
   console.log(links);
   for (let link of links) {
     console.log(link.href.toLocaleLowerCase(), window.location.href.toLocaleLowerCase());
-    if (link.href.includes("/readme/")) {
-      readme = link;
+    if (link.href.includes("/about/")) {
+      about = link;
     }
     if (compare_urls(link.href, window.location.href)) {
       return link;
     }
   }
-  return readme;
+  return about;
 }
 
 

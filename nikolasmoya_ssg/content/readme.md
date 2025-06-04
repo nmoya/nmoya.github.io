@@ -4,35 +4,31 @@ title="README.md"
 
 # README
 
-## Table of content
+## About this project
 
-- [README](#readme)
-  - [Table of content](#table-of-content)
-  - [Shortcuts](#shortcuts)
-  - [Commands](#commands)
+This is a fun project that simulates a filesystem right in your browser. Every page behaves like a file you can navigate through. You can use keyboard shortcuts for quick navigation, or interact with the interface using your mouse just like any other website. The experience is designed to encourage exploration — a great place to start is the [**about** page](/about).
+
 
 ## Shortcuts
 
-`shift+h/l` to switch from file browser to file viewer 
+- Use **left** or **right arrows** *or* `shift+h` / `shift+l` to switch between the file browser and the file viewer.
 
-`j/k` to scroll through the file content 
+- Whether you're in the file browser or viewing file content, use **up** or **down arrows** *or* `j` / `k` to navigate:
+  - Scroll through the file content when viewing a file.
+  - Move through files in the file browser.
 
-`j/k` to go through files in file browser 
+- Press **enter** to open the currently selected file.
 
-`enter` to open the currently selected file 
+- You can also press **esc**, then type a command starting with a semicolon (`;`). See [## Commands](#commands) for available commands.
 
-`esc+command` see [## Commands](#Commands) 
+- Use `shift+t` or **enter** (while holding `shift`) to open the file in a new tab.
 
-`shift+t/enter` to open the file in a new tab 
+- Press **tab** to switch to the next tab.
 
-`tab` to go to the next tab 
-
-`shift+q` to close the current tab 
+- Use `shift+q` to close the current tab.
 
 ## Commands
 
-`:help` to show this page
+- `:help` — show this page.
 
-`:q` exit website
-
-`:set mouse=true|false` to set the mouse (true=showed, false=hidden)
+- `:q` — exit the website.
