@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>nikolasmoya.com</title>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"
+            integrity="sha256-WCzAhd2P6gRJF9Hv3oOOd+hFJi/QJbv+Azn4CGB8gfY=" crossorigin="anonymous" defer></script>
+        <script src="/js/index.js" defer></script>
+        <script src="/js/prompt.js" defer></script>
+        <script src="/js/keyboard.js" defer></script>
+        <script src="/js/tab.js" defer></script>
+        <script src="/js/commands.js" defer></script>
+        <script src="/js/config.js" defer></script><script src="/config.js"></script><link rel="stylesheet" href="/css/base.css"><link rel="stylesheet" href="style.css"></head><body onkeydown='exec(event)' style='background-image: url("/assets/background.png");'><main>
+                <div class="files" id="files" tabindex="0">
+<ul>
+
+  <li class="file">
+    <span><a href='https://nikolasmoya.com/about/'
+      tabindex="-2">  About.md</a></span>
+  </li><li class="file">
+    <span><a href='https://nikolasmoya.com/readme/'
+      tabindex="-3">  README.md</a></span>
+  </li>
+
+<li class="folder"><span>
+      
+      <a href='https://nikolasmoya.com/work/'
+        tabindex="-4">  Work
+      </a>
+    </span>
+
+    <ul>
+      
+      <li class="file">
+        <span>└──
+          <a href='https://nikolasmoya.com/work/health-answers/'
+            tabindex="-5">  Health Answers by Pfizer.md</a>
+        </span>
+      </li><li class="file">
+        <span>└──
+          <a href='https://nikolasmoya.com/work/ponto-de-largada/'
+            tabindex="-6">  Ponto de Largada.md</a>
+        </span>
+      </li><li class="file">
+        <span>└──
+          <a href='https://nikolasmoya.com/work/visva/'
+            tabindex="-7">  VISVA.md</a>
+        </span>
+      </li>
+        
+    </ul>
+  </li>
+</ul>
+</div>
+                <div class="viewer " id="viewer" tabindex="0">
+                    <div class="tab">
+<div class="file-manager" onclick='document.getElementById("files").classList.toggle("open"); document.getElementById("content").classList.toggle("close")'> </div>
+<ul id="tabs">
+</ul>
+
+
+</div>
+                    <div class="content" id="content"><h1 id="nikolas-moya">Nikolas Moya</h1>
+<p><img src="https://nikolasmoya.com/about/IcelandSmall.png" alt="Nikolas Moya" title="Nikolas Moya, 2019" /></p>
+<p>I'm a computer scientist with a strong foundation in software engineering and a background in computer vision. I hold a <a href="https://nikolasmoya.com/about/MoyaN-Dissertation.pdf">master's degree</a> from the University of Campinas (Unicamp), where I focused on image segmentation using graph-based methods, and contributed to research published at <a href="https://link.springer.com/chapter/10.1007/978-3-319-10404-1_86">MICCAI 2014</a>.</p>
+<p>Over the years, I’ve worked across a variety of environments—from large enterprises to fast-paced startups—gaining full-stack development experience and learning what it takes to build software that scales. Since 2015, I’ve been part of international teams, developing digital products in collaboration with designers, managers, developers, and QA professionals. My journey has taken me from Brazil to the Netherlands, and I currently work at Accenture, where I continue to lead and contribute to product development initiatives.</p>
+<p>For a detailed overview of my experience and skills, please take a moment to read my <a href="https://nikolasmoya.com/about/NikolasMoyaResumeEN.pdf">resume</a>. You can also explore my work in the <a href="/work">Work</a> section of this website, where I showcase projects and achievements. Additionally, I invite you to check out my personal project, <a href="https://nikolasmoya/iplayed">iplayed</a>, which highlights my passion for creating engaging digital experiences.</p>
+<p>I bring a blend of academic insight and hands-on industry experience, combining strong technical expertise with proven leadership abilities. My areas of interest include software architecture, machine learning, and automation. Beyond technical skills, I excel in client communication, requirement gathering, and team planning—ensuring projects align with business goals and deliver value. I’m experienced in providing technical leadership, mentoring team members, and fostering collaboration across multidisciplinary teams. Always eager to learn and explore new technologies, I thrive on taking on complex challenges and driving impactful solutions.</p>
+<h2 id="contact-me">Contact Me</h2>
+<p>Feel free to reach out if you'd like to connect, collaborate, or learn more about my work:</p>
+<p>Email: <a href="mailto:nikolasmoya@gmail.com">nikolasmoya@gmail.com</a></p>
+<p>GitHub: <a href="https://github.com/nmoya">@nmoya</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/nikolas-moya-49940598/">https://www.linkedin.com/in/nikolas-moya-49940598/</a></p>
+
+                    </div>
+                </div>
+                <div class="prompt" id="terminal"><input
+    type="text"
+    id="setter"
+    onkeydown="writeit(this, event);moveIt(this.value.length, event)"
+    onchange="writeit(this, event)"
+    onkeyup="writeit(this, event)"
+    onkeypress="writeit(this, event);"
+    >
+<label for="setter" id="writer"> </label><b class="cursor" id="cursor"></b></div>
+            </main>
+        </body>
+
+</html>
