@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-homepage:
-    name: Build and push homepage
+    name: Deploy nikolasmoya_ssg
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo with submodules
@@ -23,7 +23,7 @@ jobs:
           KEEP_FILES: true
 
   build-iplayed:
-    name: Build and push iplayed_ssg (subfolder)
+    name: Deploy iplayed_ssg
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo with submodules
@@ -38,3 +38,4 @@ jobs:
           OUT_DIR: iplayed
           PAGES_BRANCH: gh-pages
           KEEP_FILES: true
+          CREATE_PAGES_BRANCH: true
