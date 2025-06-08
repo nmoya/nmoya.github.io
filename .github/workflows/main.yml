@@ -1,33 +1,40 @@
 name: Zola GH Actions config
 
-on: 
- push:
-  branches:
-   - master
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build-homepage:
     name: Build and push homepage
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout main
-      uses: actions/checkout@v4
-    - name: Build and deploy
-      uses: shalzz/zola-deploy-action@v0.20.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BUILD_DIR: nikolasmoya_ssg
-        PAGES_BRANCH: gh-pages
+      - name: Checkout repo with submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Build and deploy nikolasmoya_ssg (root)
+        uses: shalzz/zola-deploy-action@v0.20.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BUILD_DIR: nikolasmoya_ssg
+          PAGES_BRANCH: gh-pages
+          KEEP_FILES: true
+
   build-iplayed:
-    name: Build and push iplayed
+    name: Build and push iplayed_ssg (subfolder)
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout main
-      uses: actions/checkout@v4
-    - name: Build and deploy
-      uses: shalzz/zola-deploy-action@v0.20.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BUILD_DIR: iplayed_ssg
-        OUT_DIR: iplayed
-        PAGES_BRANCH: gh-pages
+      - name: Checkout repo with submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Build and deploy iplayed_ssg to /iplayed
+        uses: shalzz/zola-deploy-action@v0.20.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BUILD_DIR: iplayed_ssg
+          OUT_DIR: iplayed
+          PAGES_BRANCH: gh-pages
+          KEEP_FILES: true
