@@ -1,4 +1,4 @@
-name: Build and Deploy Zola Sites
+name: Build and Deploy Zola Site
 
 on:
   push:
@@ -27,16 +27,3 @@ jobs:
           mkdir -p dist
           cp -r nikolasmoya_ssg/public/* dist/
           cp nikolasmoya_ssg/static/CNAME dist/
-
-      - name: Build iplayed_ssg
-        run: |
-          zola --root iplayed_ssg build --base-url https://nikolasmoya.com/iplayed
-          mkdir -p dist/iplayed
-          cp -r iplayed_ssg/public/* dist/iplayed/
-
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
