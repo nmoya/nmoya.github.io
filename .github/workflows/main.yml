@@ -1,4 +1,4 @@
-name: Zola GH Actions config
+name: Build and Deploy Zola Sites
 
 on:
   push:
@@ -6,36 +6,37 @@ on:
       - master
 
 jobs:
-  build-homepage:
-    name: Deploy nikolasmoya_ssg
+  build-and-deploy:
+    name: Build and deploy
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo with submodules
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
-      - name: Build and deploy nikolasmoya_ssg (root)
-        uses: shalzz/zola-deploy-action@v0.20.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BUILD_DIR: nikolasmoya_ssg
-          PAGES_BRANCH: gh-pages
-          KEEP_FILES: true
 
-  build-iplayed:
-    name: Deploy iplayed_ssg
-    runs-on: ubuntu-latest
     steps:
       - name: Checkout repo with submodules
         uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Build and deploy iplayed_ssg to /iplayed
-        uses: shalzz/zola-deploy-action@v0.20.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BUILD_DIR: iplayed_ssg
-          OUT_DIR: iplayed
-          PAGES_BRANCH: gh-pages
-          KEEP_FILES: true
-          CREATE_PAGES_BRANCH: true
+
+      - name: Install Zola
+        run: |
+          curl -sSL https://github.com/getzola/zola/releases/download/v0.20.0/zola-v0.20.0-x86_64-unknown-linux-gnu.tar.gz | tar -xz
+          sudo mv zola /usr/local/bin/zola
+
+      - name: Build nikolasmoya_ssg
+        run: |
+          zola build --root nikolasmoya_ssg
+          mkdir -p dist
+          cp -r nikolasmoya_ssg/public/* dist/
+          cp nikolasmoya_ssg/CNAME dist/ || true
+
+      - name: Build iplayed_ssg
+        run: |
+          zola build --root iplayed_ssg
+          mkdir -p dist/iplayed
+          cp -r iplayed_ssg/public/* dist/iplayed/
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
