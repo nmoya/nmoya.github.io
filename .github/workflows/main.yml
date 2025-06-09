@@ -26,7 +26,7 @@ jobs:
           zola --root nikolasmoya_ssg build
           mkdir -p dist
           cp -r nikolasmoya_ssg/public/* dist/
-          cp nikolasmoya_ssg/CNAME dist/ || true
+          cp nikolasmoya_ssg/static/CNAME dist/
 
       - name: Build iplayed_ssg
         run: |
