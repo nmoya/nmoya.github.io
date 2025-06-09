@@ -23,14 +23,14 @@ jobs:
 
       - name: Build nikolasmoya_ssg
         run: |
-          zola build --root nikolasmoya_ssg
+          zola --root nikolasmoya_ssg build
           mkdir -p dist
           cp -r nikolasmoya_ssg/public/* dist/
           cp nikolasmoya_ssg/CNAME dist/ || true
 
       - name: Build iplayed_ssg
         run: |
-          zola build --root iplayed_ssg
+          zola --root iplayed_ssg build
           mkdir -p dist/iplayed
           cp -r iplayed_ssg/public/* dist/iplayed/
 
