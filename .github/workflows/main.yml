@@ -30,7 +30,7 @@ jobs:
 
       - name: Build iplayed_ssg
         run: |
-          zola --root iplayed_ssg build
+          zola --root iplayed_ssg build --base-url https://nikolasmoya.com/iplayed
           mkdir -p dist/iplayed
           cp -r iplayed_ssg/public/* dist/iplayed/
 
