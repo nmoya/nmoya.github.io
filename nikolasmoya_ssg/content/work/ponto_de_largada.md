@@ -10,7 +10,7 @@ in_search_index = false
 
 # Ponto de Largada
 
-Ponto de Largada (Starting Point, in english), was developed with a team of four people (a software engineer (me), a designer, a personal trainer and a QA). Its objective is to recommend personalised running exercises based on the runner's physical condition (i.e. height, weight, age, family history, etc.).
+Launched in 2012, Ponto de Largada (Starting Point, in english), was developed with a team of four people (a software engineer (me), a designer, a personal trainer and a QA). Its objective is to recommend personalised running exercises based on the runner's physical condition (i.e. height, weight, age, family history, etc.).
 
 We built a full fledged backend along side all the necessary auxiliary tools to keep the platform running.
 
