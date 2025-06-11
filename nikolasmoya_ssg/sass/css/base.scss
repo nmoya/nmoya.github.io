@@ -93,14 +93,14 @@ body {
 @media only screen and (min-width: 768px) {
   .viewer {
     width: 80%;
-    margin-left: 30%;
+    margin-left: 25%;
     position: absolute;
   }
 
   .files {
     position: sticky;
     top: 0;
-    width: calc(30% - 10px);
+    width: calc(25% - 10px);
     height: calc(100% - 58px);
 
     box-shadow: 3px 0px 0px 0px var(--font-color);
