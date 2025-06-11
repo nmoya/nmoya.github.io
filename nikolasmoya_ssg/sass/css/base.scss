@@ -155,7 +155,10 @@ main {
       overflow-y: scroll;
       overflow-x: clip;
       margin-top: 3px;
-      max-width: 50%;
+
+      @media (min-width: 1024px) {
+        width: 50%;
+      }
 
       a:hover,
       .selected {
